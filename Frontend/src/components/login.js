@@ -12,7 +12,7 @@ const Login = () => {
     >
       <Modal.Header>Select a Photo</Modal.Header>
       <Modal.Content image>
-        <Image size='medium' src='/images/avatar/large/rachel.png' wrapped />
+        <Image size='medium' src='https://cdn.pixabay.com/photo/2018/07/08/19/59/blood-pressure-3524615__480.jpg' wrapped />
         <Modal.Description>
           <Header>Default Profile Image</Header>
           <p>
