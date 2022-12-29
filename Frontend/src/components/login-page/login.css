@@ -1,0 +1,53 @@
+.ui.modal {
+  width: 55% !important;
+}
+.page-title {
+  padding-top: 5%;
+}
+
+.first-para {
+  font-size: small;
+}
+.input-field {
+  margin-top: 25%;
+}
+
+.login-btn-class {
+  margin-top: 15%;
+}
+.login-btn {
+  width: 100%;
+  background-color: tomato !important;
+  color: white !important;
+}
+.signup-form {
+  padding-left: 2em;
+  padding-top: 1em;
+}
+
+.signup-firstName {
+  width: 45%;
+}
+.signup-lasttName {
+  width: 45%;
+  margin-left: 5%;
+}
+.signup-btn {
+  width: 100%;
+  margin-top: 5% !important;
+  background-color: tomato !important;
+  color: white !important;
+}
+.ui.modal > .content > .icon + .description,
+.ui.modal > .content > .image + .description {
+  flex: 0 1 auto;
+  width: 55%;
+}
+
+.second-para {
+  padding-top: 10%;
+  font-size: small;
+  width: 60;
+  justify-content: space-evenly;
+  text-align: center;
+}
