@@ -1651,7 +1651,6 @@ export const categoryItems = [
         "Do not exceed the recommended dosage",
         "Pregnant or lactating or prone to any food allergy or under any medical condition or undergoing any treatment, consult the health care professional",
         "Read the label carefully before use",
-        "Do not exceed the recommended dosage",
       ],
     },
     itemImage:
