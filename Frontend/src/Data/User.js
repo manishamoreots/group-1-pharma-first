@@ -7,6 +7,13 @@ export const user = [
 		mobile: 854600170,
 	},
 	{
+		userId: 6461,
+		email: 'kiran.rauniyar@otssolutions.com',
+		name: 'Kiran rauniyar',
+		password: 'kiran@##12566',
+		mobile: 'Malum Nhi',
+	},
+	{
 		userId: 846,
 		email: 'manisha@otssolutions.com',
 		name: 'manisha',

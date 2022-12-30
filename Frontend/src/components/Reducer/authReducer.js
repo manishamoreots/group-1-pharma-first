@@ -1,25 +1,30 @@
 /* eslint-disable array-callback-return */
 import { createSlice, current } from '@reduxjs/toolkit';
 import { user } from '../../Data/User';
-const initialState = { data: { users: [...user], isAuthenticated: false, errors: {} } };
+const initialState = { data: { users: [...user], isAuthenticated: false, errors: {}, loading: false } };
 
 export const authSlice = createSlice({
 	name: 'auth',
 	initialState,
 	reducers: {
 		Register: (state, action) => {
-			state.data = { users: [...state.data.users, action.payload], errors: {}, isAuthenticated: false };
-			console.log(state.data);
+			let email = action.payload.email.trim();
+			const data = current(state.data.users).find((user) => user.email === email);
+			if (data) {
+				state.data = { ...current(state.data), errors: { msg: 'User Already Exists!!' } };
+			} else {
+				state.data = { users: [...state.data.users, action.payload], errors: {}, isAuthenticated: false, loading: true };
+			}
 		},
 		Login: (state, action) => {
-			let email = action.payload.email;
-			let password = action.payload.password;
+			let email = action.payload.email.trim();
+			let password = action.payload.password.trim();
 			const checkUser = current(state.data.users).find((user) => user.email === email && user.password === password);
 			if (checkUser) {
 				localStorage.setItem('user', JSON.stringify(checkUser));
-				state.data = { ...state.data, isAuthenticated: true };
+				state.data = { ...state.data, isAuthenticated: true, loading: true };
 			} else {
-				state.data = { ...state.data, isAuthenticated: false, errors: { msg: 'something Went Wrong' } };
+				state.data = { ...state.data, isAuthenticated: false, errors: { msg: 'Email or password incorrect' }, loading: false };
 			}
 		},
 		logout: (state, action) => {

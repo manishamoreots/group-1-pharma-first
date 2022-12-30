@@ -1,50 +1,48 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
-import { Button, Image, Modal, Checkbox, Form, Label } from 'semantic-ui-react';
+import { Button, Image, Modal, Checkbox, Form, Label, Segment } from 'semantic-ui-react';
 import { Login, Register } from '../Reducer/authReducer';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 
-const LoginSignUpModal = ({ title, btnType }) => {
+const LoginSignUpDetailsModal = ({ title, btnType }) => {
 	let navigate = useNavigate();
 	const dispatch = useDispatch();
-	const { isAuthenticated, errors, users } = useSelector((state) => state.auth.data);
+	const { isAuthenticated, errors, loading } = useSelector((state) => state.auth.data);
 	const [open, setOpen] = useState(false);
 	const [condition, setCondition] = useState(true);
-	const [error, setError] = useState(null);
-	console.log(users);
-	useEffect(() => {
-		if (errors.msg) {
-			setError({ ...errors });
-		}
-	}, [errors]);
 
 	useEffect(() => {
 		if (isAuthenticated) {
-			navigate('/dashboard');
+			setTimeout(() => {
+				navigate('/dashboard');
+			}, 1000);
 		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isAuthenticated]);
 
 	const submit = (e) => {
 		const form = new FormData(e.target);
-		const loginSignUp = {
+		const loginSignUpDetails = {
 			userId: uuidv4(),
 			name: form.get('name'),
 			email: form.get('email'),
 			password: form.get('password'),
 			mobile: form.get('mobile'),
 		};
-		if (loginSignUp.name) {
-			dispatch(Register(loginSignUp));
-			setOpen(false);
+		if (loginSignUpDetails.name) {
+			dispatch(Register(loginSignUpDetails));
+			setTimeout(() => {
+				setOpen(false);
+				navigate('/login');
+			}, 1000);
 		} else {
-			dispatch(Login(loginSignUp));
+			dispatch(Login(loginSignUpDetails));
 		}
 	};
 
 	return (
-		<Modal size="small" onClose={() => setOpen(false)} onOpen={() => setOpen(true)} open={open} trigger={<Button>{title}</Button>}>
+		<Modal size="small" onClose={() => setOpen(false)} onOpen={() => setOpen(true)} open={open} trigger={<div>{title}</div>}>
 			<Modal.Header>{title}</Modal.Header>
 			<Modal.Content image>
 				<Image
@@ -56,33 +54,42 @@ const LoginSignUpModal = ({ title, btnType }) => {
 					<Form onSubmit={submit}>
 						{title === 'login' ? (
 							<>
+								{errors.msg ? (
+									<Label basic color="red" pointing="below">
+										{errors.msg}
+									</Label>
+								) : null}
 								<Form.Input
 									name="email"
 									icon="user"
 									iconPosition="left"
 									label="Email"
 									placeholder="Email"
-									error={error ? true : false}
+									error={errors.msg ? true : false}
 									required
 								/>
-								{error ? (
-									<Label basic color="red" pointing="below">
-										Please enter a value
-									</Label>
-								) : null}
+
 								<Form.Input
 									name="password"
 									icon="lock"
 									iconPosition="left"
-									error={error ? true : false}
+									error={errors.msg ? true : false}
 									label="Password"
 									type="password"
 									required
 								/>
-								<Button positive>{btnType}</Button>
+
+								<Button loading={loading} positive>
+									{btnType}
+								</Button>
 							</>
 						) : (
 							<>
+								{errors.msg && (
+									<Segment size="tini" color="red">
+										{errors.msg}
+									</Segment>
+								)}
 								<Form.Input name="name" label="Name" type="text" required placeholder="Full Name" />
 								<Form.Input name="email" label="Email" type="email" required placeholder="Email" />
 								<Form.Input name="mobile" label="Mobile" type="Number" required placeholder="Mobile" />
@@ -100,7 +107,7 @@ const LoginSignUpModal = ({ title, btnType }) => {
 										onClick={() => setCondition(!condition)}
 									/>
 								</Form.Field>
-								<Button positive disabled={condition}>
+								<Button positive disabled={condition} loading={loading}>
 									{btnType}
 								</Button>
 							</>
@@ -112,4 +119,4 @@ const LoginSignUpModal = ({ title, btnType }) => {
 	);
 };
 
-export default LoginSignUpModal;
+export default LoginSignUpDetailsModal;
