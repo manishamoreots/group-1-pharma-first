@@ -619,7 +619,7 @@ export const categoryItems = [
   // categoryId3 will starts from here
   {
     id: 21,
-    categoryId: 2,
+    categoryId: 3,
     itemName: "Softovac-O Orange Powder",
     itemPrice: "₹134",
     highlights: [
@@ -650,7 +650,7 @@ export const categoryItems = [
   },
   {
     id: 22,
-    categoryId: 2,
+    categoryId: 3,
     itemName: "WOW Life Science Probiotics Vegetarian Capsules",
     itemPrice: "₹639",
     highlights: [
@@ -678,7 +678,7 @@ export const categoryItems = [
   },
   {
     id: 23,
-    categoryId: 2,
+    categoryId: 3,
     itemName: "Kayam Tablet",
     itemPrice: "₹107",
     highlights: [
@@ -704,7 +704,7 @@ export const categoryItems = [
   },
   {
     id: 24,
-    categoryId: 2,
+    categoryId: 3,
     itemName:
       "Panchamrit Triphala Effervescent Tablet with Goodness of Triphala, Fennel & Prebiotics Lime",
     itemPrice: "₹399",
@@ -731,7 +731,7 @@ export const categoryItems = [
   },
   {
     id: 25,
-    categoryId: 2,
+    categoryId: 3,
     itemName: "Gynoveda Anasid Fast Relief Acidity Syrup (200ml Each) Rose",
     itemPrice: "₹299",
     highlights: ["Reduces heartburn", "Relieves acidity", "Improves digestion"],
@@ -777,7 +777,7 @@ export const categoryItems = [
   },
   {
     id: 27,
-    categoryId: 2,
+    categoryId: 3,
     itemName: "Digene Acidity & Gas Relief Tablet Mint",
     itemPrice: "₹19",
     highlights: [
@@ -801,7 +801,7 @@ export const categoryItems = [
   },
   {
     id: 28,
-    categoryId: 2,
+    categoryId: 3,
     itemName: "Polycrol Antacid Gel Mint Xpress Relief Sugar-Free",
     itemPrice: "₹180",
     highlights: [
@@ -829,7 +829,7 @@ export const categoryItems = [
   },
   {
     id: 29,
-    categoryId: 2,
+    categoryId: 3,
     itemName: "Dabur Hajmola Regular",
     itemPrice: "₹55",
     highlights: [
@@ -857,7 +857,7 @@ export const categoryItems = [
   },
   {
     id: 30,
-    categoryId: 2,
+    categoryId: 3,
     itemName: "Cremaffin Constipation Relief Liquid Mixed Fruit",
     itemPrice: "₹279",
     highlights: [
@@ -888,7 +888,7 @@ export const categoryItems = [
   // categoryId4 will starts from here
   {
     id: 31,
-    categoryId: 2,
+    categoryId: 4,
     itemName:
       "Tata 1mg Milk Thistle Veg Capsule for Liver Detox, 70% Silymarin with Dandelion & Ginger, Supports Liver Detox & Prevents Fatty Liver",
     itemPrice: "₹426",
@@ -918,7 +918,7 @@ export const categoryItems = [
   },
   {
     id: 32,
-    categoryId: 2,
+    categoryId: 4,
     itemName: "Himalaya Liv. 52 Tablet",
     itemPrice: "₹141",
     highlights: [
@@ -944,7 +944,7 @@ export const categoryItems = [
   },
   {
     id: 33,
-    categoryId: 2,
+    categoryId: 4,
     itemName:
       "Zeroharm Sciences Vegan Omega-DHA Algae Based Vegan Capsule for Brain, Heart, Joint and Muscle Support",
     itemPrice: "₹871",
@@ -973,7 +973,7 @@ export const categoryItems = [
   },
   {
     id: 34,
-    categoryId: 2,
+    categoryId: 4,
     itemName: "Dr. Biswas Good Health Capsule",
     itemPrice: "₹210",
     highlights: [
@@ -1001,7 +1001,7 @@ export const categoryItems = [
   },
   {
     id: 35,
-    categoryId: 2,
+    categoryId: 4,
     itemName: "Himalaya Liv.52 Syrup",
     itemPrice: "₹210",
     highlights: [
@@ -1031,7 +1031,7 @@ export const categoryItems = [
   },
   {
     id: 36,
-    categoryId: 2,
+    categoryId: 4,
     itemName: "SBL Liv T Tonic",
     itemPrice: "₹130",
     highlights: [
@@ -1061,7 +1061,7 @@ export const categoryItems = [
   },
   {
     id: 37,
-    categoryId: 2,
+    categoryId: 4,
     itemName: "Humming Herbs The Detox",
     itemPrice: "₹435",
     highlights: [
@@ -1091,7 +1091,7 @@ export const categoryItems = [
   },
   {
     id: 38,
-    categoryId: 2,
+    categoryId: 4,
     itemName: "Aimil Amlycure DS Syrup",
     itemPrice: "₹258",
     highlights: [
@@ -1119,7 +1119,7 @@ export const categoryItems = [
   },
   {
     id: 39,
-    categoryId: 2,
+    categoryId: 4,
     itemName: "Dhootapapeshwar Arogyavardhini Bati",
     itemPrice: "₹325",
     highlights: [
@@ -1145,5 +1145,215 @@ export const categoryItems = [
     },
     itemImage:
       "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/ojyohfyqi9bd8hl72kod.jpg",
+  },
+  {
+    id: 40,
+    categoryId: 4,
+    itemName: "Bakson's Biocombination 7 Tablet",
+    itemPrice: "₹557",
+    highlights: [
+      "Helps with liver and kidney functions",
+      "Relieves cramps and sleeplessness",
+      "Aids in regulating sugar levels",
+    ],
+    desc: {
+      keybenefit: [
+        "Increased micturition, excessive thirst & dryness, cramps, prostration and sleeplessness",
+        "Helps better assimilation of glucose and kidney and liver functions are also improved",
+        "Improves urination with less sensation of weakness and pain in the region of kidneys when lifting or blowing the nose",
+      ],
+      directions: [
+        "Read the label carefully or as directed by your physician.",
+      ],
+      Safetyinfo: [
+        "Do not exceed the recommended dosage",
+        "Pregnant or lactating or prone to any food allergy or under any medical condition or undergoing any treatment, consult the health care professional",
+        "Read the label carefully before use",
+        "Do not exceed the recommended dosage",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/dgbwegdi582n5g7pv9mm.jpg",
+  },
+  // categoryID:5 starts here
+  {
+    id: 41,
+    categoryId: 5,
+    itemName:
+      "Tata 1mg Calcium + Vitamin D3, Zinc, Magnesium and Alfalfa Tablet, Joint Support, Bones Health, Immunity & Energy Support",
+    itemPrice: "₹277",
+    highlights: [
+      "Improves bone density, bone strength and muscle functions",
+      "It may help lower the risk of osteoporosis",
+      "Helps to maintain strong bones and improve immunity",
+    ],
+    desc: {
+      keybenefit: [
+        "It is a dietary supplement that supports bone and joint health",
+        "It promotes mobility and flexibility of joints",
+        "Calcium citrate malate boosts collagen synthesis, aids muscle function, helps build muscle strength and enhances recovery",
+      ],
+      directions: [
+        "Take two tablets daily or as prescribed by your medical practitioner.",
+      ],
+      Safetyinfo: [
+        "Do not exceed the recommended dosage",
+        "Pregnant or lactating or prone to any food allergy or under any medical condition or undergoing any treatment, consult the health care professional",
+        "Read the label carefully before use",
+        "Do not exceed the recommended dosage",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/gc3u9gfc331wtsipnljl.jpg",
+  },
+  {
+    id: 42,
+    categoryId: 5,
+    itemName: "Tata 1mg Vitamin D3 Capsule",
+    itemPrice: "₹277",
+    highlights: [
+      "Helps in better calcium absorption in the body ",
+      "Helps reduce fatigue, stress and muscular pains",
+      "Can help reduce the risk of osteoporosis",
+      "Helps prevent vitamin D deficiency ",
+    ],
+    desc: {
+      keybenefit: [
+        "Facilitates the absorption of calcium and phosphorus in the body",
+        "Essential for the development and growth of bones and teeth ",
+        "It helps reduce the risk of osteoporosis and prevent bone loss and fractures",
+      ],
+      directions: [
+        "Take one softgel capsule daily or use as suggested by your healthcare professional ",
+      ],
+      Safetyinfo: [
+        "Do not exceed the recommended dosage",
+        "Pregnant or lactating or prone to any food allergy or under any medical condition or undergoing any treatment, consult the health care professional",
+        "Read the label carefully before use",
+        "Do not exceed the recommended dosage",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/d3fe87a68c7c4b27a0061dea72209a76.jpg",
+  },
+  {
+    id: 43,
+    categoryId: 5,
+    itemName:
+      "Tata 1mg Senior 50+ Multivitamin & Multimineral Veg Tablet with Zinc, Vitamin C, Calcium and Vitamin D, Supports Immunity, Strength & Overall Health",
+    itemPrice: "₹397",
+    highlights: [
+      "Fulfils the micronutrient needs ",
+      "Helps enhance memory and delays ageing",
+      "Supports eye and heart health",
+      "Aids in improving joint mobility and flexibility",
+    ],
+    desc: {
+      keybenefit: [
+        "Helps to enhance memory",
+        "Aids in improving the immunity level",
+        "Supports eye and heart health",
+      ],
+      directions: [
+        "One tablet per day or as directed by the healthcare practitioner ",
+      ],
+      Safetyinfo: [
+        "Do not exceed the recommended dosage",
+        "Pregnant or lactating or prone to any food allergy or under any medical condition or undergoing any treatment, consult the health care professional",
+        "Read the label carefully before use",
+        "Do not exceed the recommended dosage",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/klpj2khvaphkvpqmchui.jpg",
+  },
+  {
+    id: 44,
+    categoryId: 5,
+    itemName: "Flexiqule Capsule, Strength & Overall Health",
+    itemPrice: "₹397",
+    highlights: [
+      "Clinically tested solution that reduces joint stiffness and pain with no side effects seen",
+      "Supports normal joint function, mobility and flexibility",
+      "Natural formulation packed with ‘Phyto-actives’ (most powerful active ingredients in medicinal plants) of ginger and boswellia",
+    ],
+    desc: {
+      keybenefit: [
+        "Helps to enhance memory",
+        "Aids in improving the immunity level",
+        "Supports eye and heart health",
+      ],
+      directions: [
+        "One tablet per day or as directed by the healthcare practitioner ",
+      ],
+      Safetyinfo: [
+        "Do not exceed the recommended dosage",
+        "Pregnant or lactating or prone to any food allergy or under any medical condition or undergoing any treatment, consult the health care professional",
+        "Read the label carefully before use",
+        "Do not exceed the recommended dosage",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/ysgxiaa0janhe8vg7vx5.png",
+  },
+  {
+    id: 45,
+    categoryId: 5,
+    itemName: "Iron Lifters Glutamine Powder",
+    itemPrice: "₹1540",
+    highlights: [
+      "Contains essential amino acid",
+      "Can help in protein synthesis",
+      "May increase muscle mass",
+      "Speeds up muscle recovery after workout",
+    ],
+    desc: {
+      keybenefit: [
+        "This product can increase the response time of the immune system during workout sessions",
+        "It may help in protein synthesis that increases muscle mass and strength",
+        "This product is vegan-friendly",
+      ],
+      directions: [
+        "Use the scoop provided and one scoop to a glass of 200-250 ml of water or a drink, fruit juice, or protein shake of your choice",
+      ],
+      Safetyinfo: [
+        "Do not exceed the recommended dosage",
+        "Pregnant or lactating or prone to any food allergy or under any medical condition or undergoing any treatment, consult the health care professional",
+        "Read the label carefully before use",
+        "Do not exceed the recommended dosage",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/faxrfoyl373kic256ucc.jpg",
+  },
+  {
+    id: 46,
+    categoryId: 5,
+    itemName: "Dr Ortho Knee Cap",
+    itemPrice: "₹299",
+    highlights: [
+      "Made with cotton lycra fabric",
+      "Provides a warm and mild compression",
+      "Skin-friendly",
+      "Speeds up muscle recovery after workout",
+    ],
+    desc: {
+      keybenefit: [
+        "It is made with cotton lycra fabric",
+        "Specially designed to provide support to the knee",
+        "It helps provide a warm and mild compression to the knee joint",
+      ],
+      directions: [
+        "Use the scoop provided and one scoop to a glass of 200-250 ml of water or a drink, fruit juice, or protein shake of your choice",
+      ],
+      Safetyinfo: [
+        "Do not exceed the recommended dosage",
+        "Pregnant or lactating or prone to any food allergy or under any medical condition or undergoing any treatment, consult the health care professional",
+        "Read the label carefully before use",
+        "Do not exceed the recommended dosage",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/pbt0c9o6a1lmmbznusnl.jpg",
   },
 ];
