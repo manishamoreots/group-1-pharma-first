@@ -1366,9 +1366,9 @@ export const categoryItems = [
     ],
     desc: {
       keybenefit: [
-        "It is made with cotton lycra fabric",
-        "Specially designed to provide support to the knee",
-        "It helps provide a warm and mild compression to the knee joint",
+        "Enriched With Natural Vitamin D3: Shine Power uses natural Vitamin D3 in the form of Cholecalciferol. It helps assist calcium absorption. Lower levels of calcium in the body lead to other health issues.",
+        "Vitamin D3 is known to support healthy immune system function and healthy bone development. ",
+        "It helps support joint and bone growth. It also helps maintain healthy bone and muscle strength. ",
       ],
       directions: ["Take 1 tablet once a day"],
       Safetyinfo: [
@@ -1379,5 +1379,87 @@ export const categoryItems = [
     },
     itemImage:
       "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/nq89kt3btuq60dlkvleq.jpg",
+  },
+  {
+    id: 48,
+    categoryId: 5,
+    itemName: "OneLife 100% Plant Protein Powder Mocha",
+    itemPrice: "₹1534",
+    highlights: [
+      "Vegan, sugar-free and soy-free",
+      "Rrich in antioxidants and easy to digest",
+      "A unique blend of 4 high-quality proteins",
+    ],
+    desc: {
+      keybenefit: ["Pea protein", "Brown rice protein", "Quinoa protein"],
+      directions: [
+        "Mix one scoop (34g) in 250-300 ml of milk/water/smoothies/any beverage of choice. Shake well and consume or substitute flour in your favourite baking recipes.",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Store in a cool dry place away from direct sunlight",
+        "Keep out of reach of the children",
+        "This product is not intended to diagnose, prevent, treat or cure any disease",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/sv8bsieatprm3fg2cgyi.jpg",
+  },
+  {
+    id: 49,
+    categoryId: 5,
+    itemName: "Jiva Pain Calm Oil",
+    itemPrice: "₹199",
+    highlights: [
+      "Promotes flow of blood to the affected area and eases the pain",
+      "It has natural anti-inflammatory properties which help to reduce swelling",
+      "Acts as a pain reliever that helps to ease stiffness and relax muscles",
+    ],
+    desc: {
+      keybenefit: [
+        "Relieves muscles pain, bloating and inflammation in joints and muscles",
+        "Provide relief in headache, increases alertness and concentration is boosted",
+        "Works wonder for joint pain, back pain, muscle pain, neck or shoulder pain and reduce muscle stiffness and soreness",
+      ],
+      directions: [
+        "Warm the oil and gently apply to the affected parts and massage in a circular motion",
+        "Massage by applying gentle pressure on the affected areas",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Store in a cool dry place away from direct sunlight",
+        "Keep out of reach of the children",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/zmsryggcuruy3gwxwztm.jpg",
+  },
+  {
+    id: 50,
+    categoryId: 5,
+    itemName: "Hiral Health Boheal Tablet",
+    itemPrice: "₹329",
+    highlights: [
+      "It enhance the absorption of calcium and phosphorus in the body",
+      "It prevent from osteoporosis and bone weakness",
+      "Helps to reduce cortisol level and inflammation",
+    ],
+    desc: {
+      keybenefit: [
+        "It helps to reduce bone,joint pain and prevent metabolic syndrome",
+        "It consist of medicinal herbs prevent bone weakness,stress,anxitey and psycological disorder",
+        "Ashwagandha helps to reduce cortisol level and inflammation",
+      ],
+      directions: [
+        "One tablet daily preferably after a meal or as directed by the dietician",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Store in a cool dry place away from direct sunlight",
+        "Keep out of reach of the children",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/a6b00a115352473eb3998c0e7266866a.jpg",
   },
 ];
