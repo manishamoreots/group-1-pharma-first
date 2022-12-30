@@ -1343,9 +1343,7 @@ export const categoryItems = [
         "Specially designed to provide support to the knee",
         "It helps provide a warm and mild compression to the knee joint",
       ],
-      directions: [
-        "Use the scoop provided and one scoop to a glass of 200-250 ml of water or a drink, fruit juice, or protein shake of your choice",
-      ],
+      directions: ["use as directions by doctor"],
       Safetyinfo: [
         "Do not exceed the recommended dosage",
         "Pregnant or lactating or prone to any food allergy or under any medical condition or undergoing any treatment, consult the health care professional",
@@ -1354,5 +1352,32 @@ export const categoryItems = [
     },
     itemImage:
       "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/pbt0c9o6a1lmmbznusnl.jpg",
+  },
+  {
+    id: 47,
+    categoryId: 5,
+    itemName:
+      "Blackmores Shine Power D3 Capsule for Healthy Teeth, Stronger Bones & Boosted Immunity",
+    itemPrice: "₹1007",
+    highlights: [
+      "Helps enhance the function of immune cells to help fight off infections",
+      "Vitamin D3 is known to help boost the absorption of calcium and phosphate",
+      "Improves muscle strength ",
+    ],
+    desc: {
+      keybenefit: [
+        "It is made with cotton lycra fabric",
+        "Specially designed to provide support to the knee",
+        "It helps provide a warm and mild compression to the knee joint",
+      ],
+      directions: ["Take 1 tablet once a day"],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Store in a cool dry place away from direct sunlight",
+        "Keep out of reach of the children",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/nq89kt3btuq60dlkvleq.jpg",
   },
 ];
