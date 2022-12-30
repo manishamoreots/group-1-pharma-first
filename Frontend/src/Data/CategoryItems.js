@@ -576,6 +576,7 @@ export const categoryItems = [
 			'https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/o42s0ximi17m0gfzv13s.jpg',
 	},
 
+<<<<<<< HEAD
 	// categoryId3 will starts from here
 	{
 		id: 21,
@@ -1237,4 +1238,770 @@ export const categoryItems = [
 		itemImage:
 			'https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/pbt0c9o6a1lmmbznusnl.jpg',
 	},
+=======
+  // categoryId3 will starts from here
+  {
+    id: 21,
+    categoryId: 3,
+    itemName: "Softovac-O Orange Powder",
+    itemPrice: "₹134",
+    highlights: [
+      "Provides effective relief from constipation",
+      "Regulates bowel movements and detoxifies the body",
+      "Ayurvedic formulation helps user pass stool more effectively",
+    ],
+    desc: {
+      keybenefit: [
+        "Used as a bulking agent to help users pass stool more effectively",
+        "Softovac Powder is also used for providing relief from symptoms of acidity and gas",
+        "Cleanses the colon & detoxifies the body",
+      ],
+      directions: [
+        "Pour 2 spoonfuls of Softovac powder into a glass",
+        "Pour water into the glass and stir the mixture",
+        "Make sure there are no lumps formed",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Store in a cool dry place away from direct sunlight",
+        "Keep out of reach of the children",
+        "Do not exceed the recommended dosage",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/vawxkyegilcudfeiifzs.png",
+  },
+  {
+    id: 22,
+    categoryId: 3,
+    itemName: "WOW Life Science Probiotics Vegetarian Capsules",
+    itemPrice: "₹639",
+    highlights: [
+      "This product may help build strong immunity",
+      "It can promote healthy digestion",
+      "It may maximise nutrient absorption",
+    ],
+    desc: {
+      keybenefit: [
+        "These capsules can help promote digestion and immunity",
+        "It may aid in nutrient absorption",
+        "It might assist in balancing the intestinal flora to help the gut absorb maximum nutrition from the food eaten",
+      ],
+      directions: [
+        "Take 1 capsule 1-2 times daily, with water at meal times or as directed by your healthcare professional.",
+      ],
+      Safetyinfo: [
+        "Do not exceed the recommended dosage",
+        "Pregnant or nursing mothers, children below 18 years of age and individuals with known medical conditions should consult their healthcare professional before using this product",
+        "Read the label carefully before use",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/366edc098ac8498a91f672852d3c16d4.jpg",
+  },
+  {
+    id: 23,
+    categoryId: 3,
+    itemName: "Kayam Tablet",
+    itemPrice: "₹107",
+    highlights: [
+      "Formulated with potent Ayurvedic herbs",
+      "Helps relieve chronic constipation",
+      "Relieves acidity and gas",
+    ],
+    desc: {
+      keybenefit: [
+        "It helps improve gut mobility and bowel movements",
+        "Provides effective relief from gas and flatulence",
+        "Helps stimulate appetite and relieve intestinal disorders",
+      ],
+      directions: ["1 to 2 tablets at bedtime with normal or lukewarm water."],
+      Safetyinfo: [
+        "Do not exceed the recommended dosage",
+        "Pregnant or nursing mothers, children below 18 years of age and individuals with known medical conditions should consult their healthcare professional before using this product",
+        "Read the label carefully before use",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/ejpoyifxqkviv9mcvyoh.jpg",
+  },
+  {
+    id: 24,
+    categoryId: 3,
+    itemName:
+      "Panchamrit Triphala Effervescent Tablet with Goodness of Triphala, Fennel & Prebiotics Lime",
+    itemPrice: "₹399",
+    highlights: [
+      "Good source of prebiotics",
+      "Aids digestion",
+      "Regulate bowel movements",
+    ],
+    desc: {
+      keybenefit: [
+        "Triphala is high in antioxidants and anti-inflammatory properties that help relieve constipation and eliminates toxins from your body",
+        "It helps regulate the metabolism and is a good source of prebiotics that improves gut health",
+        "Helps stimulate appetite and relieve intestinal disorders",
+      ],
+      directions: ["One tablet per day or as directed by the physician"],
+      Safetyinfo: [
+        "Do not exceed the recommended dosage",
+        "Use under medical supervision",
+        "Read the label carefully before use",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/52023e21fc0e4731905d48009096022c.jpg",
+  },
+  {
+    id: 25,
+    categoryId: 3,
+    itemName: "Gynoveda Anasid Fast Relief Acidity Syrup (200ml Each) Rose",
+    itemPrice: "₹299",
+    highlights: ["Reduces heartburn", "Relieves acidity", "Improves digestion"],
+    desc: {
+      keybenefit: [
+        "Amla is traditionally known to balance acid levels in the stomach by turning them into harmless alkaline form",
+        "Shwet kamal is a proven formula to reduce heartburn",
+        "Ancient ayurvedic scripture ‘charak samhita’ and 100s of clinical research papers found herbs like yashtimadhu, kamdudha ras and giloy to be powerful ingredients for reducing excessive pitta naturally",
+        "A powerful blend of 12 ayurvedic herbs helps you get relief from acidity naturally without consuming any synthetic chemicals",
+      ],
+      directions: [
+        "Consume daily 10 ml syrup before breakfast and 10 ml before dinner.",
+      ],
+      Safetyinfo: [
+        "Do not exceed the recommended dosage",
+        "Use under medical supervision",
+        "Read the label carefully before use",
+        "Keep out of reach of children",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/f87703ead5904671aca37455f380036b.jpg",
+  },
+  {
+    id: 26,
+    categoryId: 2,
+    itemName: "Zandu Nityam Churna",
+    itemPrice: "₹88",
+    highlights: ["Reduces heartburn", "Relieves acidity", "Improves digestion"],
+    desc: {
+      keybenefit: [
+        "Nityam Churna is an Ayurvedic laxative, enriched with seven laxative herbs like castor oil, triphala and saunf. This herbal composition increases the movement of the intestines, improves digestion and potentates adrenergic function.",
+        "Nityam Churna is indicated for relief from constipation, acidity, nausea and indigestion. It cleanses, lubricates and moisturizes intestinal walls naturally, ensuring regular bowel movements.",
+      ],
+      directions: [
+        "Add 1-2 teaspoons of Nityam Churna to a glass of water,Stir gently unless the powder dissolves well.Consume immediately.",
+        "Nityam Churna powder should be consumed during bedtime. Individual results may vary. ",
+      ],
+      Safetyinfo: ["It is not recommended during pregnancy."],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/wv7eescusjzqm9oxjiht.jpg",
+  },
+  {
+    id: 27,
+    categoryId: 3,
+    itemName: "Digene Acidity & Gas Relief Tablet Mint",
+    itemPrice: "₹19",
+    highlights: [
+      "Helps to relieve bloating, belching, and gas",
+      "Helps to relieve the feeling of discomfort in the stomach",
+      "Helps to treat heartburn (acidity) and indigestion",
+    ],
+    desc: {
+      keybenefit: [
+        "Neutralizes excess stomach acid and protects the lining of the stomach from irritation",
+        "Helps to relieve symptoms of extra gas such as, bloating and feeling of discomfort in the stomach",
+        "Helps to reduce the overall acid level in the stomach",
+      ],
+      directions: [
+        "Ideally, adults are advised to chew or suck 2-4 tablets, after meals, preferably at bedtime or as advised by your physician. Children can take the tablets as per their doctor’s recommendation.  ",
+      ],
+      Safetyinfo: ["It is not recommended during pregnancy."],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/n1t9q5dstymk2xdknbd7.jpg",
+  },
+  {
+    id: 28,
+    categoryId: 3,
+    itemName: "Polycrol Antacid Gel Mint Xpress Relief Sugar-Free",
+    itemPrice: "₹180",
+    highlights: [
+      "For Polycrol the action starts in 10 seconds",
+      "Provides an immediate cooling effect",
+      "Helps to treat heartburn (acidity) and indigestion",
+    ],
+    desc: {
+      keybenefit: [
+        "The action starts in 10 secs*",
+        "Provides immediate cooling effect*",
+        "It is sugar-free with a mint flavour",
+      ],
+      directions: [
+        "2 teaspoonfuls (10 ml) after meals and at bedtime, or as advised by the physician.",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Keep out of the reach of children",
+        "Store in a cool dry place",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/rl7y3bg1y4g1ziib92cc.jpg",
+  },
+  {
+    id: 29,
+    categoryId: 3,
+    itemName: "Dabur Hajmola Regular",
+    itemPrice: "₹55",
+    highlights: [
+      "Helps in the digestion process",
+      "Provides gastrointestinal functions",
+      "Enhances the digestive functions",
+    ],
+    desc: {
+      keybenefit: [
+        "Black pepper is a gastrointestinal stimulant",
+        "Long pepper and black salt have carminative properties",
+        "Ginger is a powerful digestive tonic",
+        "Lemon is a digestive stimulant",
+        "Cumin seeds are antispasmodic",
+      ],
+      directions: ["Read the label carefully before use"],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Do not exceed the daily recommended dosage",
+        "Store in a cool, dry place, away from direct heat and sunlight",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/bxbeojn9xappfjrircbb.jpg",
+  },
+  {
+    id: 30,
+    categoryId: 3,
+    itemName: "Cremaffin Constipation Relief Liquid Mixed Fruit",
+    itemPrice: "₹279",
+    highlights: [
+      "Acts promptly and provides effective relief from constipation",
+      "Softens the stool and makes it easy to pass",
+      "Lubricates the intestinal lining which helps in easy passing of the stools",
+    ],
+    desc: {
+      keybenefit: [
+        "Provides gentle and effective relief from constipation",
+        "Provides prompt defecation in around 8 hours",
+        "Helps in softening the stool by drawing water through osmosis",
+        "Promotes healthy bowel movement and improves bowel function",
+        "Suits kids, adults as well as older people and is sugar-free",
+      ],
+      directions: [
+        "It should be taken as advised by your doctor. However, the best time to take this syrup is at bedtime, preferably with water and if necessary, again in the morning.",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Do not exceed the daily recommended dosage",
+        "Store in a cool, dry place, away from direct heat and sunlight",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/fifua5s1kcpidqpikgbd.jpg",
+  },
+  // categoryId4 will starts from here
+  {
+    id: 31,
+    categoryId: 4,
+    itemName:
+      "Tata 1mg Milk Thistle Veg Capsule for Liver Detox, 70% Silymarin with Dandelion & Ginger, Supports Liver Detox & Prevents Fatty Liver",
+    itemPrice: "₹426",
+    highlights: [
+      "Useful in  alcoholic and non-alcoholic fatty liver problems",
+      "Supports healthy liver functions ",
+      "Helps in reducing excess fat stored in the liver",
+    ],
+    desc: {
+      keybenefit: [
+        "Helps in liver detoxification",
+        "Has anti-inflammatory properties that help reduce liver inflammation",
+        "Helps to improve liver functions",
+        "Contains antioxidants that protect the liver from damage caused by oxidative stress",
+      ],
+      directions: [
+        "1 capsule per day or as suggested by the healthcare practitioner",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Do not exceed the daily recommended dosage",
+        "Store in a cool, dry place, away from direct heat and sunlight",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/2b1dea512d474ab48100f1969cb9f6e8.jpg",
+  },
+  {
+    id: 32,
+    categoryId: 4,
+    itemName: "Himalaya Liv. 52 Tablet",
+    itemPrice: "₹141",
+    highlights: [
+      "Helps to protect the liver against hepatotoxins",
+      "Guards the liver against jaundice and hepatitis A & B",
+      "Stimulates the overall growth and appetite of the body",
+    ],
+    desc: {
+      keybenefit: [
+        "Facilitates the rapid elimination of acetaldehyde, which is responsible for causing hangovers, and protects from alcohol-induced hepatic damage",
+        "Lowers the effect of lipotropic effect in chronic alcoholism and prevents fatty infiltration of the liver",
+        "Protects the liver from further damage and promotes its optimal functioning",
+      ],
+      directions: ["As directed by the physician."],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Do not exceed the daily recommended dosage",
+        "Store in a cool, dry place, away from direct heat and sunlight",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/m4pgzop080oaibzxwxtc.jpg",
+  },
+  {
+    id: 33,
+    categoryId: 4,
+    itemName:
+      "Zeroharm Sciences Vegan Omega-DHA Algae Based Vegan Capsule for Brain, Heart, Joint and Muscle Support",
+    itemPrice: "₹871",
+    highlights: [
+      "Complete vegan omega-DHA (marine algae)",
+      "It is suitable for heart, brain and eye health",
+      "It may prevent fatty liver",
+    ],
+    desc: {
+      keybenefit: [
+        "It may promote eye, brain, heart and joint health",
+        "The zero harms omega contains algae as the main source of DHA, and hence it is vegan and has a higher absorption",
+        "It is algae movie-based omega",
+        "Algae in this capsule is non-toxic and contamination-free",
+      ],
+      directions: ["As directed by the physician."],
+      Safetyinfo: [
+        "This is a nutraceutical product and is not intended to diagnose, prevent, treat or cure any disease",
+        "Pregnant or lactating or prone to any food allergy or under any medical condition or undergoing any treatment, consult the health care professional",
+        "Read the label carefully before use",
+        "Do not exceed the recommended dosage",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/hml2wpvmk5faa0vrms4k.jpg",
+  },
+  {
+    id: 34,
+    categoryId: 4,
+    itemName: "Dr. Biswas Good Health Capsule",
+    itemPrice: "₹210",
+    highlights: [
+      "Stimulates the appetite",
+      "Helps in protein synthesis resulting in weight gain",
+      "Improves the functioning of the liver",
+    ],
+    desc: {
+      keybenefit: [
+        "Withania somnifera",
+        "Hemidesmus indicus",
+        "Vitis vinifera",
+        "Asparagus racemosus",
+      ],
+      directions: ["As directed by the physician."],
+      Safetyinfo: [
+        "This is a nutraceutical product and is not intended to diagnose, prevent, treat or cure any disease",
+        "Pregnant or lactating or prone to any food allergy or under any medical condition or undergoing any treatment, consult the health care professional",
+        "Read the label carefully before use",
+        "Do not exceed the recommended dosage",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/sp0ulunikdslhjepd5gr.jpg",
+  },
+  {
+    id: 35,
+    categoryId: 4,
+    itemName: "Himalaya Liv.52 Syrup",
+    itemPrice: "₹210",
+    highlights: [
+      "It protects the liver from chemically-induced hepatotoxicity",
+      "Helps restore liver function",
+      "Improves overall digestive health",
+      "Improves appetite and promotes weight gain",
+    ],
+    desc: {
+      keybenefit: [
+        "Chicory is a potent antioxidant that protects the cell against alcohol toxicity and helps protect against free radical damage",
+        "The caper bush has antioxidant and hepatoprotective properties that improve the functional efficiency of the liver",
+        "It improves loss of appetite, enhances the digestive process and promotes weight gain",
+      ],
+      directions: [
+        "Please consult a healthcare professional to prescribe the dosage that best suits the condition.",
+      ],
+      Safetyinfo: [
+        "This is a nutraceutical product and is not intended to diagnose, prevent, treat or cure any disease",
+        "Pregnant or lactating or prone to any food allergy or under any medical condition or undergoing any treatment, consult the health care professional",
+        "Read the label carefully before use",
+        "Do not exceed the recommended dosage",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/z4x6mnuiyhfdjhb0qf3w.jpg",
+  },
+  {
+    id: 36,
+    categoryId: 4,
+    itemName: "SBL Liv T Tonic",
+    itemPrice: "₹130",
+    highlights: [
+      "It helps manage various liver conditions like jaundice, hepatitis and indigestion",
+      "It combats liver disorders caused by chronic gastric indiscretion, viral and bacterial infection, drugs, chemicals and alcohol",
+      "It rejuvenates the hepatic cells, detoxifies the liver and promotes the flow of bile",
+      "It helps to provide relief in case of lack of appetite",
+    ],
+    desc: {
+      keybenefit: [
+        "It performs many essential functions like aiding digestion and detoxifying poisonous substances into non-poisonous ones",
+        "It rejuvenates the hepatic cells, detoxifies the liver and promotes the flow of bile",
+        "It helps to provide relief in case of lack of appetite",
+      ],
+      directions: [
+        "Adults: Two teaspoonfuls three times a day half an hour after meals or as prescribed by the physician",
+      ],
+      Safetyinfo: [
+        "Do not exceed the recommended dosage",
+        "Pregnant or lactating or prone to any food allergy or under any medical condition or undergoing any treatment, consult the health care professional",
+        "Read the label carefully before use",
+        "Do not exceed the recommended dosage",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/syzqdci2dlkskg6a7swm.jpg",
+  },
+  {
+    id: 37,
+    categoryId: 4,
+    itemName: "Humming Herbs The Detox",
+    itemPrice: "₹435",
+    highlights: [
+      "Cleanses the liver",
+      "Reduces bloating",
+      "Prevents indigestion",
+      "Keeps the tummy stabilised",
+    ],
+    desc: {
+      keybenefit: [
+        "This product helps manage the health of the liver",
+        "It is also beneficial for blood sugar levels",
+        "This formula helps control cholesterol levels",
+      ],
+      directions: [
+        "Take one capsule twice a day before food or as directed by your healthcare professional.",
+      ],
+      Safetyinfo: [
+        "Do not exceed the recommended dosage",
+        "Pregnant or lactating or prone to any food allergy or under any medical condition or undergoing any treatment, consult the health care professional",
+        "Read the label carefully before use",
+        "Do not exceed the recommended dosage",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/788188b0b96f4a8d90bc429156b8fac9.jpg",
+  },
+  {
+    id: 38,
+    categoryId: 4,
+    itemName: "Aimil Amlycure DS Syrup",
+    itemPrice: "₹258",
+    highlights: [
+      "Desired strength liver corrective and protective drug",
+      "Enriched with potent bioactive constituents",
+      "Normalises deranged LFT parameters",
+      "Boosts metabolism",
+    ],
+    desc: {
+      keybenefit: [
+        "Enriched with the highest number of synergistically acting herbal extracts in optimal concentration (desired strength) to provide therapeutic effect during treatment",
+        "It comprehensively activates the complete digestive system from appetite, digestion, assimilation, and metabolism by toning the liver. It also boosts immunity",
+        "The one-stop formula for effective treatment of liver diseases such as poor liver functions, fatty liver, alcohol-induced liver damage, hepatocytes degeneration, etc.",
+      ],
+      directions: ["For adults: 2-3 teaspoonfuls thrice a day"],
+      Safetyinfo: [
+        "Do not exceed the recommended dosage",
+        "Pregnant or lactating or prone to any food allergy or under any medical condition or undergoing any treatment, consult the health care professional",
+        "Read the label carefully before use",
+        "Do not exceed the recommended dosage",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/qc3fu8vdrms4az0wfjhe.jpg",
+  },
+  {
+    id: 39,
+    categoryId: 4,
+    itemName: "Dhootapapeshwar Arogyavardhini Bati",
+    itemPrice: "₹325",
+    highlights: [
+      "Improves quality of skin",
+      "Supports functioning of the liver",
+      "Alleviate symptoms of pain and fever",
+    ],
+    desc: {
+      keybenefit: [
+        "It can help to support the functioning of the liver",
+        "Helps to improve the quality of skin and makes the skin healthier",
+        "Helps to alleviate the symptoms of fever and reduce body temperature",
+      ],
+      directions: [
+        "Take Dhootapapeshwar Arogyavardhini Bati as directed by the physician.",
+      ],
+      Safetyinfo: [
+        "Do not exceed the recommended dosage",
+        "Pregnant or lactating or prone to any food allergy or under any medical condition or undergoing any treatment, consult the health care professional",
+        "Read the label carefully before use",
+        "Do not exceed the recommended dosage",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/ojyohfyqi9bd8hl72kod.jpg",
+  },
+  {
+    id: 40,
+    categoryId: 4,
+    itemName: "Bakson's Biocombination 7 Tablet",
+    itemPrice: "₹557",
+    highlights: [
+      "Helps with liver and kidney functions",
+      "Relieves cramps and sleeplessness",
+      "Aids in regulating sugar levels",
+    ],
+    desc: {
+      keybenefit: [
+        "Increased micturition, excessive thirst & dryness, cramps, prostration and sleeplessness",
+        "Helps better assimilation of glucose and kidney and liver functions are also improved",
+        "Improves urination with less sensation of weakness and pain in the region of kidneys when lifting or blowing the nose",
+      ],
+      directions: [
+        "Read the label carefully or as directed by your physician.",
+      ],
+      Safetyinfo: [
+        "Do not exceed the recommended dosage",
+        "Pregnant or lactating or prone to any food allergy or under any medical condition or undergoing any treatment, consult the health care professional",
+        "Read the label carefully before use",
+        "Do not exceed the recommended dosage",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/dgbwegdi582n5g7pv9mm.jpg",
+  },
+  // categoryID:5 starts here
+  {
+    id: 41,
+    categoryId: 5,
+    itemName:
+      "Tata 1mg Calcium + Vitamin D3, Zinc, Magnesium and Alfalfa Tablet, Joint Support, Bones Health, Immunity & Energy Support",
+    itemPrice: "₹277",
+    highlights: [
+      "Improves bone density, bone strength and muscle functions",
+      "It may help lower the risk of osteoporosis",
+      "Helps to maintain strong bones and improve immunity",
+    ],
+    desc: {
+      keybenefit: [
+        "It is a dietary supplement that supports bone and joint health",
+        "It promotes mobility and flexibility of joints",
+        "Calcium citrate malate boosts collagen synthesis, aids muscle function, helps build muscle strength and enhances recovery",
+      ],
+      directions: [
+        "Take two tablets daily or as prescribed by your medical practitioner.",
+      ],
+      Safetyinfo: [
+        "Do not exceed the recommended dosage",
+        "Pregnant or lactating or prone to any food allergy or under any medical condition or undergoing any treatment, consult the health care professional",
+        "Read the label carefully before use",
+        "Do not exceed the recommended dosage",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/gc3u9gfc331wtsipnljl.jpg",
+  },
+  {
+    id: 42,
+    categoryId: 5,
+    itemName: "Tata 1mg Vitamin D3 Capsule",
+    itemPrice: "₹277",
+    highlights: [
+      "Helps in better calcium absorption in the body ",
+      "Helps reduce fatigue, stress and muscular pains",
+      "Can help reduce the risk of osteoporosis",
+      "Helps prevent vitamin D deficiency ",
+    ],
+    desc: {
+      keybenefit: [
+        "Facilitates the absorption of calcium and phosphorus in the body",
+        "Essential for the development and growth of bones and teeth ",
+        "It helps reduce the risk of osteoporosis and prevent bone loss and fractures",
+      ],
+      directions: [
+        "Take one softgel capsule daily or use as suggested by your healthcare professional ",
+      ],
+      Safetyinfo: [
+        "Do not exceed the recommended dosage",
+        "Pregnant or lactating or prone to any food allergy or under any medical condition or undergoing any treatment, consult the health care professional",
+        "Read the label carefully before use",
+        "Do not exceed the recommended dosage",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/d3fe87a68c7c4b27a0061dea72209a76.jpg",
+  },
+  {
+    id: 43,
+    categoryId: 5,
+    itemName:
+      "Tata 1mg Senior 50+ Multivitamin & Multimineral Veg Tablet with Zinc, Vitamin C, Calcium and Vitamin D, Supports Immunity, Strength & Overall Health",
+    itemPrice: "₹397",
+    highlights: [
+      "Fulfils the micronutrient needs ",
+      "Helps enhance memory and delays ageing",
+      "Supports eye and heart health",
+      "Aids in improving joint mobility and flexibility",
+    ],
+    desc: {
+      keybenefit: [
+        "Helps to enhance memory",
+        "Aids in improving the immunity level",
+        "Supports eye and heart health",
+      ],
+      directions: [
+        "One tablet per day or as directed by the healthcare practitioner ",
+      ],
+      Safetyinfo: [
+        "Do not exceed the recommended dosage",
+        "Pregnant or lactating or prone to any food allergy or under any medical condition or undergoing any treatment, consult the health care professional",
+        "Read the label carefully before use",
+        "Do not exceed the recommended dosage",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/klpj2khvaphkvpqmchui.jpg",
+  },
+  {
+    id: 44,
+    categoryId: 5,
+    itemName: "Flexiqule Capsule, Strength & Overall Health",
+    itemPrice: "₹397",
+    highlights: [
+      "Clinically tested solution that reduces joint stiffness and pain with no side effects seen",
+      "Supports normal joint function, mobility and flexibility",
+      "Natural formulation packed with ‘Phyto-actives’ (most powerful active ingredients in medicinal plants) of ginger and boswellia",
+    ],
+    desc: {
+      keybenefit: [
+        "Helps to enhance memory",
+        "Aids in improving the immunity level",
+        "Supports eye and heart health",
+      ],
+      directions: [
+        "One tablet per day or as directed by the healthcare practitioner ",
+      ],
+      Safetyinfo: [
+        "Do not exceed the recommended dosage",
+        "Pregnant or lactating or prone to any food allergy or under any medical condition or undergoing any treatment, consult the health care professional",
+        "Read the label carefully before use",
+        "Do not exceed the recommended dosage",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/ysgxiaa0janhe8vg7vx5.png",
+  },
+  {
+    id: 45,
+    categoryId: 5,
+    itemName: "Iron Lifters Glutamine Powder",
+    itemPrice: "₹1540",
+    highlights: [
+      "Contains essential amino acid",
+      "Can help in protein synthesis",
+      "May increase muscle mass",
+      "Speeds up muscle recovery after workout",
+    ],
+    desc: {
+      keybenefit: [
+        "This product can increase the response time of the immune system during workout sessions",
+        "It may help in protein synthesis that increases muscle mass and strength",
+        "This product is vegan-friendly",
+      ],
+      directions: [
+        "Use the scoop provided and one scoop to a glass of 200-250 ml of water or a drink, fruit juice, or protein shake of your choice",
+      ],
+      Safetyinfo: [
+        "Do not exceed the recommended dosage",
+        "Pregnant or lactating or prone to any food allergy or under any medical condition or undergoing any treatment, consult the health care professional",
+        "Read the label carefully before use",
+        "Do not exceed the recommended dosage",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/faxrfoyl373kic256ucc.jpg",
+  },
+  {
+    id: 46,
+    categoryId: 5,
+    itemName: "Dr Ortho Knee Cap",
+    itemPrice: "₹299",
+    highlights: [
+      "Made with cotton lycra fabric",
+      "Provides a warm and mild compression",
+      "Skin-friendly",
+      "Speeds up muscle recovery after workout",
+    ],
+    desc: {
+      keybenefit: [
+        "It is made with cotton lycra fabric",
+        "Specially designed to provide support to the knee",
+        "It helps provide a warm and mild compression to the knee joint",
+      ],
+      directions: ["use as directions by doctor"],
+      Safetyinfo: [
+        "Do not exceed the recommended dosage",
+        "Pregnant or lactating or prone to any food allergy or under any medical condition or undergoing any treatment, consult the health care professional",
+        "Read the label carefully before use",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/pbt0c9o6a1lmmbznusnl.jpg",
+  },
+  {
+    id: 47,
+    categoryId: 5,
+    itemName:
+      "Blackmores Shine Power D3 Capsule for Healthy Teeth, Stronger Bones & Boosted Immunity",
+    itemPrice: "₹1007",
+    highlights: [
+      "Helps enhance the function of immune cells to help fight off infections",
+      "Vitamin D3 is known to help boost the absorption of calcium and phosphate",
+      "Improves muscle strength ",
+    ],
+    desc: {
+      keybenefit: [
+        "It is made with cotton lycra fabric",
+        "Specially designed to provide support to the knee",
+        "It helps provide a warm and mild compression to the knee joint",
+      ],
+      directions: ["Take 1 tablet once a day"],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Store in a cool dry place away from direct sunlight",
+        "Keep out of reach of the children",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/nq89kt3btuq60dlkvleq.jpg",
+  },
+>>>>>>> d82076b86c654f99855a5e83541562ea41b1ddd3
 ];
