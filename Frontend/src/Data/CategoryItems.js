@@ -1462,4 +1462,7 @@ export const categoryItems = [
     itemImage:
       "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/a6b00a115352473eb3998c0e7266866a.jpg",
   },
+
+  // categoryId:6 starts here
+  
 ];
