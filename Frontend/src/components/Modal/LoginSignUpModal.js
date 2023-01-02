@@ -1,10 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from 'react';
-import { Button, Image, Modal, Checkbox, Form, Label, Segment } from 'semantic-ui-react';
-import { Login, Register } from '../Reducer/authReducer';
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { v4 as uuidv4 } from 'uuid';
+import React, { useEffect, useState } from "react";
+import { Button, Image, Modal, Checkbox, Form, Label, Segment } from "semantic-ui-react";
+import { Login, Register } from "../Reducer/authReducer";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 
 const LoginSignUpDetailsModal = ({ title, btnType }) => {
 	let navigate = useNavigate();
@@ -16,7 +16,7 @@ const LoginSignUpDetailsModal = ({ title, btnType }) => {
 	useEffect(() => {
 		if (isAuthenticated) {
 			setTimeout(() => {
-				navigate('/dashboard');
+				navigate("/dashboard");
 			}, 1000);
 		}
 	}, [isAuthenticated]);
@@ -25,16 +25,16 @@ const LoginSignUpDetailsModal = ({ title, btnType }) => {
 		const form = new FormData(e.target);
 		const loginSignUpDetails = {
 			userId: uuidv4(),
-			name: form.get('name'),
-			email: form.get('email'),
-			password: form.get('password'),
-			mobile: form.get('mobile'),
+			name: form.get("name"),
+			email: form.get("email"),
+			password: form.get("password"),
+			mobile: form.get("mobile"),
 		};
 		if (loginSignUpDetails.name) {
 			dispatch(Register(loginSignUpDetails));
 			setTimeout(() => {
 				setOpen(false);
-				navigate('/login');
+				navigate("/login");
 			}, 1000);
 		} else {
 			dispatch(Login(loginSignUpDetails));
@@ -48,11 +48,11 @@ const LoginSignUpDetailsModal = ({ title, btnType }) => {
 				<Image
 					size="medium"
 					src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1000"
-					style={{ height: 'auto' }}
+					style={{ height: "auto" }}
 				/>
 				<Modal.Description>
 					<Form onSubmit={submit}>
-						{title === 'login' ? (
+						{title === "login" ? (
 							<>
 								{errors.msg ? (
 									<Label basic color="red" pointing="below">

@@ -1,7 +1,7 @@
-import { configureStore } from '@reduxjs/toolkit';
-import { authSlice } from './components/Reducer/authReducer';
-import { categorySlice } from './components/Reducer/categoryReducer';
-import { itemSlice } from './components/Reducer/itemReducer';
+import { configureStore } from "@reduxjs/toolkit";
+import { authSlice } from "./components/Reducer/authReducer";
+import { categorySlice } from "./components/Reducer/categoryReducer";
+import { itemSlice } from "./components/Reducer/itemReducer";
 // import { errorSlice } from './components/Reducer/errorReducer';
 export const store = configureStore({
 	reducer: {
