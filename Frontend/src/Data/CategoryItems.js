@@ -1463,5 +1463,576 @@ export const categoryItems = [
       "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/a6b00a115352473eb3998c0e7266866a.jpg",
   },
 
-  // categoryId:6 starts here
+  // categoryId:6 starts here eye
+  {
+    id: 51,
+    categoryId: 6,
+    itemName:
+      "Zingavita Sharp Eye Multivitamin Gummies for Kids (with Essential Eye Vitamins) Strawberry Mix",
+    itemPrice: "₹249",
+    highlights: [
+      "Supports eye health",
+      "Improves sleep quality",
+      "Helps in brain development",
+    ],
+    desc: {
+      keybenefit: [
+        "The yummy gummies are packed with meticulously sourced nutrients such as DHA, lutein, zeaxanthin, vitamin A, C and E",
+        "These gummies for eyes help protect kid’s eyes from high energy blue light emanating from digital screens",
+        "Improves sleep quality",
+        "Promotes healthy brain development",
+      ],
+      directions: [
+        "Children 5+ years old: Chew 2 gummies daily or as directed.",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Keep out of reach of the children",
+        "The product should not be used as a substitute for a varied diet",
+        "This product should be used under medical advice by a physician/certified dietician/nutritionist for children below 3 years of age",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/gt6ij71dfd3k9egrfia3.jpg",
+  },
+  {
+    id: 52,
+    categoryId: 6,
+    itemName: "Lubistar 1% Eye Drop",
+    itemPrice: "₹128",
+    highlights: [
+      "Dry eyes is a condition in which your eyes do not produce enough tears to keep them moist. It can be caused by sitting in front of the computer for a long time, certain medications or environmental conditions. Lubistar 1% Eye Drop adds moisture to your eyes and keeps them lubricated. This gives relief from burning sensation and discomfort due to dryness of the eyes. If you wear soft contact lenses, you should remove them before applying Lubistar 1% Eye Drop.",
+    ],
+    desc: {
+      keybenefit: [
+        "Lubistar 1% Eye Drop is a prescription medicine used to treat symptoms of dry eyes. It lubricates the eyes helps in maintaining the moisture of the eyes. This way it provides temporary relief from burning and discomfort caused by dry eyes. It also reduces redness and swelling of the eye.",
+        "Lubistar 1% Eye Drop is to be used only in the affected eye. Use it in the dose and duration as advised by the doctor. Read the label carefully for instruction before you use the medicine. Wash your hands before using this medicine. Do not use too much or too little. Use it in the exact dose as prescribed by the doctor or as instructed in the label.",
+        "Use of this medicine may cause burning sensation, stinging, and irritation at the application site. These are usually temporary and resolve with time. However, if they persist or get worse, inform your doctor. In case of accidental contact with your ears, nose, or mouth, immediately rinse it with water.",
+      ],
+      directions: [
+        "Children 5+ years old: Chew 2 gummies daily or as directed.",
+      ],
+      Safetyinfo: [
+        "Your doctor has prescribed Lubistar 1% Eye Drop to reduce dryness in the eyes.",
+        "Keep out of reach of the children",
+        "Stinging sensation may occur for 1-2 minutes. Notify your doctor if it persists for longer.",
+        "Wait for at least 5-10 minutes before delivering the next medication in the same eye to avoid dilution of this medicine.",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/hp7slixc8rawaogqodid.jpg",
+  },
+  {
+    id: 53,
+    categoryId: 6,
+    itemName: "Itone Eye Drop",
+    itemPrice: "₹55",
+    highlights: [
+      "Prevents further damage by keeping the eye lubricated",
+      "Helps treat infection and irritation of the conjunctiva",
+      "Helps in healing and preventing rejection of the donor tissue",
+    ],
+    desc: {
+      keybenefit: [
+        "Itone Eye Drop relieves dryness and irritation, promoting comfort",
+        "Itone Eye Drop increases comfort by reducing the feeling of a surface scratch and flushing out any residual contaminating or injurious particles",
+        "Itone Eye Drops are also useful in pink eyes, conjunctivitis, swollen eyelid bump, itching and burning sensation in the eyes",
+      ],
+      directions: ["Use as directed on the label."],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Do not exceed the recommended dosage",
+        "Store in a cool and dry place",
+        "Keep it away from the reach of children",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/xn0n7khy5vzfnqkxwfn8.jpg",
+  },
+  {
+    id: 54,
+    categoryId: 6,
+    itemName: "Himalaya Ophthacare Eye Drop",
+    itemPrice: "₹69",
+    highlights: [
+      "Relieves dry eyes, eyestrain, swelling, redness and inflammation",
+      "Contains anti-inflammatory action",
+      "Keeps the eyes safe from infection and allergic disorders",
+    ],
+    desc: {
+      keybenefit: [
+        "Helps to keep the eyes safe from infections and allergic disorders",
+        "Its cooling and antibacterial effects soothe the eyes in case of irritation",
+        "Facilitates the quick healing of minor wounds",
+      ],
+      directions: ["Use as directed by the physician."],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Store in a cool and dry place",
+        "Keep it away from the reach of children",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/bwajzknm1li1zhcb7vii.jpg",
+  },
+  {
+    id: 55,
+    categoryId: 6,
+    itemName: "Zingavita Omega 3 Fish Oil 1000mg Soft Gelatin Capsule",
+    itemPrice: "₹249",
+    highlights: [
+      "Free from sugar, soy and gluten",
+      "Promotes a healthy heart",
+      "Promotes good cognitive health",
+      "Enhanced absorption and bioavailability",
+    ],
+    desc: {
+      keybenefit: [
+        "It is free from sugar, soy and gluten",
+        "It promotes a healthy heart",
+        "It promotes good cognitive health",
+        "It also supports strong muscle and bone health",
+      ],
+      directions: [
+        "Daily 1 tablet after lunch or dinner. Do not take on an empty stomach.",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Store in a cool and dry place",
+        "Keep it away from the reach of children",
+        "Consult your healthcare professional in case you are pregnant, lactating or taking any medication",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/ivxygrk9z7qhpegk3zkd.jpg",
+  },
+  {
+    id: 56,
+    categoryId: 6,
+    itemName: "I-Site AF Capsule",
+    itemPrice: "₹229",
+    highlights: [
+      "Protects your eyes from the damage caused by free radicals and UV rays",
+      "Manages the risk of ARMD (age-related macular degeneration)",
+      "Effective in managing skin-related concerns",
+    ],
+    desc: {
+      keybenefit: [
+        "I-site capsule helps filter the high-energy blue light exposure to the eye",
+        "Boosts the immune system, prevents cell damage and reduces eye inflammation",
+        "The capsule is used to manage eye-related concerns, such as ARMD, glaucoma, ocular pressure, and cataract",
+      ],
+      directions: [
+        "Take one capsule daily for adults as directed by your healthcare professional.",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Store in a cool and dry place",
+        "Keep it away from the reach of children",
+        "Consult your healthcare professional in case you are pregnant, lactating or taking any medication",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/uc8kjna18khpskowgxnx.jpg",
+  },
+  {
+    id: 57,
+    categoryId: 6,
+    itemName: "Renu Fresh Solution",
+    itemPrice: "₹608",
+    highlights: [
+      "Helps fight germs and disinfect the lenses",
+      "Moisturises the lenses and prevents them from drying out",
+      "Can be used to store, clean and rinse contact lenses",
+    ],
+    desc: {
+      keybenefit: [
+        "It helps kill germs and disinfect the lenses",
+        "Creates a cushion of moisture between the eye and the lenses",
+        "Provides sustained wettability and conditioning to the eye",
+      ],
+      directions: [
+        "Place the solution in your contact case",
+        "Insert your contact lenses gently into the case",
+        "Replace the contact solution after each use",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Store in a cool and dry place",
+        "Keep it away from the reach of children",
+        "Consult your healthcare professional in case you are pregnant, lactating or taking any medication",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/mwsb8nuqe6178r1clzlp.jpg",
+  },
+  {
+    id: 58,
+    categoryId: 6,
+    itemName: "Lutivit NF Soft Gelatin Capsule",
+    itemPrice: "₹190",
+    highlights: [
+      "It can improve eye health",
+      "It may enhance skin health",
+      "It has antioxidant properties",
+    ],
+    desc: {
+      keybenefit: [
+        "Beta-carotene is a provitamin of Vitamin A which can help improve vision and improve skin health",
+        "Lutein may help support eye functions",
+        "It has antioxidant and anti-inflammatory properties",
+      ],
+      directions: ["Take one capsule daily or as directed by the physician."],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Store in a cool and dry place",
+        "Keep it away from the reach of children",
+        "Consult your healthcare professional in case you are pregnant, lactating or taking any medication",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/iylaaw0ytq3kisjgx7oc.jpg",
+  },
+  {
+    id: 59,
+    categoryId: 6,
+    itemName: "Dr. Reckeweg R78 Eye Care Drop",
+    itemPrice: "₹251",
+    highlights: [
+      "Relieves eye pain and discomfort",
+      "Prevents irritation in the mucous membrane of the eye",
+      "Reduces inflammation in upper eyelid",
+    ],
+    desc: {
+      keybenefit: [
+        "Dr. Reckeweg R78 Eye Care Drop is beneficial for relieving eye-related issues such as eyestrain and conjunctivitis",
+        "It helps in reducing irritation in the mucous membrane, ulcerous cornea, and swelling of eyelids with discharge",
+        "It contains Euphrasia which helps in reducing eye strain, and manages intraocular pressure, lacrimation and blepharitis",
+      ],
+      directions: [
+        "Use as directed on the label or as advised by the physician.",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Store in a cool and dry place",
+        "Keep it away from the reach of children",
+        "Consult your healthcare professional in case you are pregnant, lactating or taking any medication",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/rj8njkvga0vodhv42dev.jpg",
+  },
+  {
+    id: 60,
+    categoryId: 6,
+    itemName: "Wellman 70+ Health Supplement for Men Tablet",
+    itemPrice: "₹356",
+    highlights: [
+      "Pumpkin seed extract lowers urinary dysfunction and improves overactive bladder",
+      "Vitamin C lowers the risk of Coronary Heart Disease and improves immune function",
+      "Lipoic acid restores age-associated impairment of brain energy metabolism",
+    ],
+    desc: {
+      keybenefit: [
+        "Wellman 70+ contains thiamine (vit.B1), copper and iron which contribute to normal energy release",
+        "Vitamin B6 and B12 are included as they contribute to normal red blood cell formation plus iron contributes to normal formation of red blood cells and hemoglobin, the substance that helps to transport oxygen around the body",
+        "Wellman 70+ also includes vitamin C, B6, B12, and D plus minerals zinc and iron which contribute to the normal function of the immune system",
+      ],
+      directions: [
+        "One tablet per day with or immediately after your main meal. Swallow with a full glass of water or a cold drink. Wellman should only be taken on a full stomach.",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Store in a cool and dry place",
+        "Keep it away from the reach of children",
+        "Consult your healthcare professional in case you are pregnant, lactating or taking any medication",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/ychrjptrenqpfjo4dzvj.jpg",
+  },
+
+  // categoryID:7 starts here
+  {
+    id: 61,
+    categoryId: 7,
+    itemName: "Nepro HP Powder Vanilla Toffee",
+    itemPrice: "₹1020",
+    highlights: [
+      "Used by pre and post kidney transplant patients with elevated calorie and protein needs",
+      "Useful for hospitalized patients with acute or chronic kidney disease",
+    ],
+    desc: {
+      keybenefit: [
+        "Suitable for patients with non-dialyzed chronic kidney disease patients with elevated calorie and protein needs",
+        "Helps pre and post kidney transplant patients with elevated calorie and protein needs, hospitalized patients with acute or chronic kidney disease",
+        "It is high in calories and protein (19.2g/237ml serving) which helps to meet the nutritional needs and replace protein lost during dialysis",
+      ],
+      directions: [
+        "To prepare 237ml serving providing 446kcal, pour 167ml of clean, sterile water (room temperature or warm (<350C)) in a glass and gradually add 10 level scoop (enclosed) or 89g of powder while stirring and mix until dissolved. Can be given orally or by tube feeding as per physician's/ dietitian's advice.",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Keep out of reach of the children",
+        "The product should not be used as a substitute for a varied diet",
+        "This product should be used under medical advice by a physician/certified dietician/nutritionist for children below 3 years of age",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/wuxk6kilycwu0swrc9yp.jpg",
+  },
+  {
+    id: 62,
+    categoryId: 7,
+    itemName: "Himalaya Cystone Tablet",
+    itemPrice: "₹152",
+    highlights: [
+      "Contains diuretic, demulcent, and antimicrobial actions ",
+      "Helps to treat and prevent the formation of kidney stones ",
+      "Provides relief in the case of burning micturition (urination)",
+    ],
+    desc: {
+      keybenefit: [
+        "As a diuretic, the herb helps to flush out small stones and gravel along with urine",
+        "Shilapushpa (Didymocarpus pedicellata) prevents the formation of urinary stone and helps dissolve kidney stones",
+        "It can be used as an adjuvant in chronic UTI, painful urination or blood present in urine and burning micturition (urination)",
+      ],
+      directions: ["Use as directed by the physician."],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Keep out of reach of the children",
+        "The product should not be used as a substitute for a varied diet",
+        "This product should be used under medical advice by a physician/certified dietician/nutritionist for children below 3 years of age",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/ky7nvrfdcdgh6nlen7do.jpg",
+  },
+  {
+    id: 63,
+    categoryId: 7,
+    itemName: "Lobun Forte Capsule",
+    itemPrice: "₹849",
+    highlights: [
+      "Useful in case of Uremic detoxification and Chronic Kidney diseases",
+      "Helps to neutralize the uremic toxins",
+      "Helps to control the survival of putrefying bacteria in the colon",
+    ],
+    desc: {
+      keybenefit: [
+        "Lobun forte contains streptococcus thermophilus that is the major probiotic and used for its capacity to neutralize the uremic toxins like creatinine, urea and others",
+        "Lobun forte is used because of pH lowering capability, which reduces the survival of other putrefying bacteria in the colon",
+        "Lobun forte also increases the permeability of colon which further increases the toxin excreation",
+      ],
+      directions: [
+        "Take Lobun Forte Capsule orally, twice a day or as directed by the physician.",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Keep out of reach of the children",
+        "The product should not be used as a substitute for a varied diet",
+        "This product should be used under medical advice by a physician/certified dietician/nutritionist for children below 3 years of age",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/paibgfydhxnssgqltrfe.jpg",
+  },
+  {
+    id: 64,
+    categoryId: 7,
+    itemName: "Swisse Ultiboost High Strength Cranberry 25000mg Capsule",
+    itemPrice: "₹961",
+    highlights: [
+      "Prevents urinary tract infections",
+      "It helps in keeping the urinary bladder healthy",
+      "Is rich in antioxidants and help fight free-radical damage to cells through the presence of flavonols",
+    ],
+    desc: {
+      keybenefit: [
+        "The cranberry capsules contain unique powered pacran, a powdered form of the cranberry fruit that ensures every part of the fruit is used",
+        "Daily intake of these cranberry capsules help fight free-radical damage to cells through the presence of flavonols, which have antioxidant properties",
+        "These capsules assist in reducing bacterial adhesion to the urinary tract",
+      ],
+      directions: [
+        "One capsule daily, during or immediately after a meal, or as recommended by a healthcare professional.",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Keep out of reach of the children",
+        "The product should not be used as a substitute for a varied diet",
+        "This product should be used under medical advice by a physician/certified dietician/nutritionist for children below 3 years of age",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/kokziptrbu8pgg86xpye.jpg",
+  },
+  {
+    id: 65,
+    categoryId: 7,
+    itemName: "Dabur Chandraprabha Vati",
+    itemPrice: "₹127",
+    highlights: [
+      "Helps relieve urinary tract problems",
+      "Used for treating indigestion",
+      "Increases strength in the body",
+    ],
+    desc: {
+      keybenefit: [
+        "It is helpful in treating urinary tract infections as well as difficulty in urinating",
+        "It helps in the treatment of urinary calculi",
+        "Used in the treatment of indigestion and increases the body's strength",
+      ],
+      directions: ["Take 2 tablets twice a day or as directed by a physician."],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Keep out of reach of the children",
+        "The product should not be used as a substitute for a varied diet",
+        "This product should be used under medical advice by a physician/certified dietician/nutritionist for children below 3 years of age",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/sx5dxobxchlrntmrk5v4.jpg",
+  },
+  {
+    id: 66,
+    categoryId: 7,
+    itemName: "Patanjali Divya Shudh Shilajeet (R.T.)",
+    itemPrice: "₹110",
+    highlights: [
+      "Useful in maintaining a healthy blood pressure level",
+      "Helps to strengthen nerves and muscles",
+      "Helps to boost strength and energy",
+    ],
+    desc: {
+      keybenefit: [
+        "Beneficial for the nervous system diseases of male reproductive organs and urinary system",
+        "Improves the quality of the sperms and treats male infertility",
+        "It improves mental as well as physical endurance of the body",
+      ],
+      directions: [
+        "Take 2 tablets a day, post meals with lukewarm water or as directed by the physician.",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Keep out of reach of the children",
+        "The product should not be used as a substitute for a varied diet",
+        "This product should be used under medical advice by a physician/certified dietician/nutritionist for children below 3 years of age",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/u3eysaqfuaccqagtzj6b.jpg",
+  },
+  {
+    id: 67,
+    categoryId: 7,
+    itemName: "SBL Arsenicum Album Dilution 30 CH",
+    itemPrice: "₹86",
+    highlights: [
+      "Helps in treating the increased temperature with marked periodicity",
+      "Provides support in difficult, suffocating, and wheezing respiration with dry cough and spitting of blood with sputum",
+      "Useful in treating respiratory ailments such as breathing issues",
+    ],
+    desc: {
+      keybenefit: [
+        "Helps in treating respiratory ailments such as cough, wheezing, and breathing difficulties",
+        "Useful in treating fever and weakness caused due to infections",
+        "Relieves anxiety and stress related to recurrent health problems",
+      ],
+      directions: [
+        "Take 2-3 drops of dilution in 1 teaspoon of water thrice a day or as directed by the physician.",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Keep out of reach of the children",
+        "The product should not be used as a substitute for a varied diet",
+        "This product should be used under medical advice by a physician/certified dietician/nutritionist for children below 3 years of age",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/ergrpppp0crrivsypqj9.png",
+  },
+  {
+    id: 68,
+    categoryId: 7,
+    itemName: "Baidyanath (Nagpur) Gokshuradi Guggulu",
+    itemPrice: "₹135",
+    highlights: [
+      "The diuretic and anodyne nature of Gokshuradi Guggulu soothes painful urination and improves kidney functions",
+      "The mild anti-bacterial and anti-microbial properties of Baidyanath Gokshuradi Guggulu treat UTIs (urinary tract infections)",
+    ],
+    desc: {
+      keybenefit: [
+        "Treats gout, osteoarthritis and knee pain",
+        "The diuretic and anodyne nature of Gokshuradi Guggulu soothes painful urination and improves kidney functions",
+        "The mild anti-bacterial and anti-microbial properties of Baidyanath Gokshuradi Guggulu treat UTIs (urinary tract infections)",
+      ],
+      directions: [
+        "Take 1 to 2 tablets with water twice a day or as advised by the physician.",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Keep out of reach of the children",
+        "The product should not be used as a substitute for a varied diet",
+        "This product should be used under medical advice by a physician/certified dietician/nutritionist for children below 3 years of age",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/bh1b6s1osxtc1wcbwiao.jpg",
+  },
+  {
+    id: 69,
+    categoryId: 7,
+    itemName: "Patanjali Divya Renogrit Tablet",
+    itemPrice: "₹240",
+    highlights: [
+      "Supports renal health",
+      "Made using natural herbs",
+      "Prevents kidney disorders",
+    ],
+    desc: {
+      keybenefit: [
+        "The formulation helps to prevent renal damage",
+        "It helps to keep the kidneys healthy",
+        "The tablets help to prevent and manage renal disorders",
+      ],
+      directions: ["Use as directed on the label or by the physician"],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Keep out of reach of the children",
+        "The product should not be used as a substitute for a varied diet",
+        "This product should be used under medical advice by a physician/certified dietician/nutritionist for children below 3 years of age",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/18f454f5-64ae-4614-893b-29f0cf178a53.jpeg",
+  },
+  {
+    id: 70,
+    categoryId: 7,
+    itemName: "Baidyanath Prostaid Tablet",
+    itemPrice: "₹161",
+    highlights: [
+      "Useful in treating enlarged prostate",
+      "Made using natural herbs",
+      "Helpful in clearing out blockages in the urinary system",
+    ],
+    desc: {
+      keybenefit: [
+        "Shilajit assists in reducing inflammation and pain",
+        "Shatavari or asparagus root is a soothing remedy for inflammation caused due to enlarged prostate",
+        "It helps heal the urinary system by clearing out blockages",
+      ],
+      directions: [
+        "Two tablets are to be used every morning and again in the evening. This should be used for up to three months at a time.",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Keep out of reach of the children",
+        "The product should not be used as a substitute for a varied diet",
+        "This product should be used under medical advice by a physician/certified dietician/nutritionist for children below 3 years of age",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/ztpqqvclfqgcjzwuls1t.jpg",
+  },
 ];
