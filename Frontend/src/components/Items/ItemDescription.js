@@ -1,5 +1,9 @@
-import React from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { Button, Container, Dropdown, Grid, Header, Image, Menu, Segment } from "semantic-ui-react";
+import { getSpecificItem } from "../Reducer/itemReducer";
+import { useDispatch, useSelector } from "react-redux";
 const data = {
 	id: 1,
 	categoryId: 1,
@@ -30,35 +34,46 @@ const options = [
 	{ key: 3, text: "3 Box", value: 3 },
 ];
 const ItemDescription = () => {
+	const dispatch = useDispatch();
+	const { items } = useSelector((state) => state.items.data);
+	const { id } = useParams();
+	useEffect(() => {
+		dispatch(getSpecificItem(Number(id)));
+	}, [id]);
+	useEffect(() => {
+		console.log(items);
+	}, [items]);
 	return (
 		<Container>
-			<Grid>
-				<Grid.Column width={5}>
-					<Image src={data.itemImage} />
-					<Button style={{ margin: 0 }}>Add to Cart</Button>
-				</Grid.Column>
-				<Grid.Column width={6}>
-					<Header>{data.itemName}</Header>
-					<ul>
-						{data.desc.keybenefit.map((item, index) => (
-							<li key={index}>{item}</li>
-						))}
-					</ul>
-				</Grid.Column>
+			{items.map((item) => (
+				<Grid>
+					<Grid.Column width={5}>
+						<Image src={item.itemImage} />
+						<Button style={{ margin: 0 }}>Add to Cart</Button>
+					</Grid.Column>
+					<Grid.Column width={6}>
+						<Header>{item.itemName}</Header>
+						<ul>
+							{data.desc.keybenefit.map((item, index) => (
+								<li key={index}>{item}</li>
+							))}
+						</ul>
+					</Grid.Column>
 
-				<Grid.Column width={4}>
-					<Segment size="large">
-						{data.itemPrice}
-						<br />
-						<br />
-						<Menu compact>
-							<Dropdown text="select" options={options} simple item />
-						</Menu>
-						of 50 Test Strips
-						<Button>Add To cart</Button>
-					</Segment>
-				</Grid.Column>
-			</Grid>
+					<Grid.Column width={4}>
+						<Segment size="large">
+							{item.itemPrice}
+							<br />
+							<br />
+							<Menu compact>
+								<Dropdown text="select" options={options} simple item />
+							</Menu>
+							of 50 Test Strips
+							<Button>Add To cart</Button>
+						</Segment>
+					</Grid.Column>
+				</Grid>
+			))}
 		</Container>
 	);
 };

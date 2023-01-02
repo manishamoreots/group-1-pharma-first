@@ -7,8 +7,8 @@ export const itemSlice = createSlice({
 	initialState: initialState,
 	reducers: {
 		getSpecificItem: (state, action) => {
-			const filterItem = categoryItems.filter((item) => item.categoryId !== action.payload.id);
-			console.log(filterItem);
+			const filterItem = categoryItems.filter((item) => item.categoryId === action.payload);
+			state.data = { items: [...filterItem] };
 		},
 	},
 });

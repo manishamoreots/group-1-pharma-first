@@ -1,13 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
 import React, { useEffect } from "react";
-import { Card, Image } from "semantic-ui-react";
+import { Card, Container, Image } from "semantic-ui-react";
 import { getCategory } from "../Reducer/categoryReducer";
 import { useDispatch, useSelector } from "react-redux";
-import { getSpecificItem } from "../Reducer/itemReducer";
 import "./style.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { Link } from "react-router-dom";
 const responsive = {
 	superLargeDesktop: {
 		// the naming can be any, depends on you.
@@ -32,27 +32,23 @@ const Category = () => {
 	const dispatch = useDispatch();
 	useEffect(() => {
 		dispatch(getCategory());
-		console.log(categories);
 	}, []);
 
 	return (
-		<div className="carousel-border">
-			<Carousel responsive={responsive}>
-				{categories.map((category, index) => (
-					<div
-						key={index}
-						className="carousel-card"
-						style={{ cursor: "pointer" }}
-						onClick={() => dispatch(getSpecificItem(category.id))}
-					>
-						<Card size="small">
-							<Image style={{ padding: "15%" }} src={category.categoryImage} wrapped ui={false} />
-							<Card.Description>{category.categoryName}</Card.Description>
-						</Card>
-					</div>
-				))}
-			</Carousel>
-		</div>
+		<Container>
+			<div className="carousel-border">
+				<Carousel responsive={responsive}>
+					{categories.map((category, index) => (
+						<Link to={`/itemDesc/${category.id}`} key={index} className="carousel-card" style={{ cursor: "pointer" }}>
+							<Card size="small">
+								<Image style={{ padding: "15%" }} src={category.categoryImage} wrapped ui={false} />
+								<Card.Description>{category.categoryName}</Card.Description>
+							</Card>
+						</Link>
+					))}
+				</Carousel>
+			</div>
+		</Container>
 	);
 };
 
