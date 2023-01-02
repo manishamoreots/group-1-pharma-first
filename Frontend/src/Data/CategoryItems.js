@@ -1,5 +1,5 @@
 export const categoryItems = [
-  // categoryId1 start from here
+  // categoryId1 start from here {diabetics}
   {
     id: 1,
     categoryId: 1,
@@ -314,7 +314,7 @@ export const categoryItems = [
     itemImage:
       "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/dru5ne9rnikqsgayenyy.png",
   },
-  // categoryId2 start from here
+  // categoryId2 start from here {cardiac}
   {
     id: 11,
     categoryId: 2,
@@ -616,7 +616,7 @@ export const categoryItems = [
       "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/o42s0ximi17m0gfzv13s.jpg",
   },
 
-  // categoryId3 will starts from here
+  // categoryId3 will starts from here {Stomach care}
   {
     id: 21,
     categoryId: 3,
@@ -885,7 +885,7 @@ export const categoryItems = [
     itemImage:
       "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/fifua5s1kcpidqpikgbd.jpg",
   },
-  // categoryId4 will starts from here
+  // categoryId4 will starts from here {Liver Care}
   {
     id: 31,
     categoryId: 4,
@@ -1175,7 +1175,7 @@ export const categoryItems = [
     itemImage:
       "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/dgbwegdi582n5g7pv9mm.jpg",
   },
-  // categoryID:5 starts here
+  // categoryID:5 starts here {Bone Joint muscles}
   {
     id: 41,
     categoryId: 5,
@@ -1463,7 +1463,7 @@ export const categoryItems = [
       "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/a6b00a115352473eb3998c0e7266866a.jpg",
   },
 
-  // categoryId:6 starts here eye
+  // categoryId:6 starts here eye { eye care}
   {
     id: 51,
     categoryId: 6,
@@ -1752,7 +1752,7 @@ export const categoryItems = [
       "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/ychrjptrenqpfjo4dzvj.jpg",
   },
 
-  // categoryID:7 starts here
+  // categoryID:7 starts here {Kidney}
   {
     id: 61,
     categoryId: 7,
@@ -2034,5 +2034,586 @@ export const categoryItems = [
     },
     itemImage:
       "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/ztpqqvclfqgcjzwuls1t.jpg",
+  },
+
+  //categoryID:8 starts here {Pain relief}
+  {
+    id: 71,
+    categoryId: 8,
+    itemName: "Volini Pain Relief Gel",
+    itemPrice: "₹206",
+    highlights: [
+      "It may relieve pain",
+      "It may relieve pain in the joints",
+      "It can work great on sports injuries",
+    ],
+    desc: {
+      keybenefit: [
+        "The spray can offer relief when in pain",
+        "It is effective for pain in the joints, knees, back, shoulders, and neck",
+        "It can work great on sports injuries such as muscle pulls, sprains, and strain",
+      ],
+      directions: [
+        "The Volini pain relief bottle should be shaken well before spraying",
+        "Hold the spray bottle at a 5cm distance from the affected area and spray",
+        "You can use the spray about three to four times daily or as recommened by your physician",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Keep out of reach of the children",
+        "The Volini pain relief spray is meant for external application only",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/635fd23716e84269a9fce803978b4f14.jpg",
+  },
+  {
+    id: 72,
+    categoryId: 8,
+    itemName: "Volini Spray",
+    itemPrice: "₹272",
+    highlights: [
+      "Provides relief in case of muscle pain, sprain, pain in the joints, knee, back, neck and shoulder",
+      "Helps in pain caused due to muscle pulls, sprain, strain and sports injuries",
+      "Microparticles allow deeper penetration and provide quick pain relief",
+    ],
+    desc: {
+      keybenefit: [
+        "The spray can offer relief when in pain",
+        "It is effective for pain in the joints, knees, back, shoulders, and neck",
+        "It can work great on sports injuries such as muscle pulls, sprains, and strain",
+      ],
+      directions: [
+        "The Volini pain relief bottle should be shaken well before spraying",
+        "Hold the spray bottle at a 5cm distance from the affected area and spray",
+        "You can use the spray about three to four times daily or as recommened by your physician",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Keep out of reach of the children",
+        "The Volini pain relief spray is meant for external application only",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/2f1dda5112d048f2baf1b99506b72059.jpg",
+  },
+  {
+    id: 73,
+    categoryId: 8,
+    itemName:
+      "Moov Pain Relief Cream for Back Pain, Joint Pain, Knee Pain, Muscle Pain",
+    itemPrice: "₹68",
+    highlights: [
+      "The mint leaves in Moov pain relief cream gives a cooling effect to the pain and treat the sore muscles and relieve joint aches",
+      "Turpentine oil helps to alleviate tissue discomfort and relax muscles",
+      "Eucalyptus oil in Moov pain relief cream is a great massage lotion for joint pain and provides a relaxing warmth ",
+    ],
+    desc: {
+      keybenefit: [
+        "Moov Pain Relief Cream reduces irritation and swelling around the affected area",
+        "The mint leaves in Moov pain relief cream gives a cooling effect to the pain and treat the sore muscles and relieve joint aches",
+        "Eucalyptus oil in Moov pain relief cream is a great massage lotion for joint pain and provides a relaxing warmth ",
+      ],
+      directions: [
+        "Spread two pulp full of Moov Pain Relief Cream on the affected area to form a thin film",
+        "Massage gently to facilitate the penetration",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Keep out of reach of the children",
+        "The Volini pain relief spray is meant for external application only",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/pzgaxs8vjyhuguiwmv5f.jpg",
+  },
+  {
+    id: 74,
+    categoryId: 8,
+    itemName: "Saridon Headache Relief Tablet",
+    itemPrice: "₹39",
+    highlights: [
+      "Helps to treat headache",
+      "Effective for different headache types of headache spread across, on the sides and back of head",
+      "Provides relief with just one tablet",
+    ],
+    desc: {
+      keybenefit: [
+        "Saridon is a remedy for headaches.",
+        "It is effective for different headache types of headache spread across, on the sides and back of the head.",
+        "Unique triple action formula for Quick Headache Relief",
+      ],
+      directions: [
+        "Take this medicine as recommended by your doctor. Ideally, adults are advised to take one tablet every 4-6 hours but not exceeding 3 tablets in a day. It is not advised for children younger than 12 years of age. ",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Keep out of reach of the children",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/s0dcfx0trz6lf9zczab4.jpg",
+  },
+  {
+    id: 75,
+    categoryId: 8,
+    itemName: "Healthtokri Electric Rechargeable Heating Gel Warm Bag",
+    itemPrice: "₹251",
+    highlights: [
+      "Helps provide relief from various muscular pains",
+      "Retains heat for a long period of time",
+      "Portable and rechargeable",
+    ],
+    desc: {
+      keybenefit: [
+        "Rechargeable heating pad is easy to use",
+        "Requires low electricity consumption",
+        "Helps provide relief from pains and sprains",
+        "Simple to use as it does not require filling of water",
+      ],
+      directions: [
+        "Plug the male pin of the cable into the electric socket and plug in the other end to the female electric socket in the bag",
+        "Remove the plug now and use the hot bag as per your needs",
+        "If the bag has lost the heat after use, then reheat using the same process",
+      ],
+      Safetyinfo: [
+        "Do not use the device when it is plugged into a power source",
+        "Cool down the heating pad after use before storing",
+        "If there is any leakage, it must not be used",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/rnel0jwng6x8y3lmn5kf.png",
+  },
+  {
+    id: 76,
+    categoryId: 8,
+    itemName: "Dr Ortho an Ayurvedic Medicine Oil",
+    itemPrice: "₹236",
+    highlights: [
+      "Provides relief from all kinds of pains and aches",
+      "Unique formulation of 8 potent and natural oils",
+      "Helps relieve muscle soreness and discomfort",
+    ],
+    desc: {
+      keybenefit: [
+        "Helps relieve muscle aches and discomfort",
+        "Provides relief from joint pain and inflammation",
+        "Its lightweight and quick absorption formula provide a calming and soothing effect on the skin",
+        "Improves muscle stiffness and soreness",
+      ],
+      directions: [
+        "Gently massage 5ml to 10ml on the affected area. Repeat it twice a day or as directed by the physician.",
+      ],
+      Safetyinfo: [
+        "Do not exceed the recommended dosage",
+        "Read the label carefully before use",
+        "Store in a cool, dry place away from direct sunlight",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/qjz8l72piinjwwynexks.png",
+  },
+  {
+    id: 77,
+    categoryId: 8,
+    itemName: "Iodex Ultra Gel",
+    itemPrice: "₹124",
+    highlights: [
+      "Penetrates deeply and relieves internal inflammation",
+      "Provides soothing and effective relief from different body pains",
+      "Helps to provide relief in back pain, joint pain, sprains and strains",
+      "Has a pleasant fragrance and has a non-greasy application",
+    ],
+    desc: {
+      keybenefit: [
+        "Iodex UltraGel penetrates skin 7 times deeper and provides effective and long-lasting relief from multiple types of body pain",
+        "It supports better penetration, reduces internal swelling/inflammation and treats pain at its root",
+        "Iodex Ultra gel has a pleasant fragrance and has a non-greasy application",
+        "Beneficial for treating neck and shoulder pain, back pain, muscular pain, joint pain, sprains and osteoarthritis",
+      ],
+      directions: [
+        "Apply 2 to 4 gm gently on the affected area, 3 to 4 times a day and wash your hands thoroughly after use.",
+      ],
+      Safetyinfo: [
+        "Keep away from children",
+        "Read the label carefully before use",
+        "Store in a cool, dry place away from direct sunlight",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/hwouityfgkycdkbbwsiy.jpg",
+  },
+  {
+    id: 78,
+    categoryId: 8,
+    itemName: "Volini Maxx Gel",
+    itemPrice: "₹139",
+    highlights: [
+      "Strong pain relief spray will help to provide relief from pain",
+      "India's first pain relief spray with 2% diclofenac",
+      "It will take care of your back pain and give you instant relief",
+    ],
+    desc: {
+      keybenefit: [
+        "It ensures relief from moderate to severe muscle pain, so you can bounce back instantly",
+        "Diclofenac is a non-steroidal anti-inflammatory drug (NSAID) with analgesic and antipyretic properties",
+        "Menthol and methyl salicylate are known as counterirritants. They work by causing the skin to feel cool and then warm. These feelings on the skin distract you from feeling the aches/pains deeper in your muscles, joints, and tendons",
+      ],
+      directions: [
+        "Apply Volini Maxx Gel on the skin and rub slowly till completely absorbed.",
+      ],
+      Safetyinfo: [
+        "Keep away from children",
+        "Read the label carefully before use",
+        "Store in a cool, dry place away from direct sunlight",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/94abe074ec3e44098d5875c81f70b434.jpg",
+  },
+  {
+    id: 79,
+    categoryId: 8,
+    itemName: "Disprin Regular 325mg Effervescent Tablet",
+    itemPrice: "₹13",
+    highlights: [
+      "Absorbs and dissolves away the pain fast",
+      "Provides relief from headache and migraine",
+      "Helps to provide support in relieving mild to moderate nerve pain (neuralgia)",
+    ],
+    desc: {
+      keybenefit: [
+        "May be used as an anti-inflammatory and analgesic which help to relieve pain and swelling",
+        "It is used to bring down high body temperatures and may prevent recurrence of heart attacks or strokes by thinning the blood",
+        "Relieving aches, pains and fever associated with colds and flu",
+      ],
+      directions: [
+        "You should take it as your doctor advises",
+        "Do not take more or use it for longer than recommended",
+      ],
+      Safetyinfo: [
+        "Keep away from children",
+        "Read the label carefully before use",
+        "Store in a cool, dry place away from direct sunlight",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/yhl9lmgxhj1pfbtnc0ts.jpg",
+  },
+  {
+    id: 80,
+    categoryId: 8,
+    itemName: "Dhootapapeshwar Swamala",
+    itemPrice: "₹1155",
+    highlights: [
+      "Boosts immunity and maintains a fit body",
+      "Relieves joint pain",
+      "Aids in managing respiratory-related concerns",
+    ],
+    desc: {
+      keybenefit: [
+        "Promotes nourishment of important body constituents - saptadhatus from rasa to shukra as well as oja",
+        "It helps keep common infections at bay",
+        "Acts as an excellent revitaliser and immunity booster",
+      ],
+      directions: [
+        "Take 1 to 2 tablespoonfuls morning-evening on an empty stomach or as directed by the ayurvedic doctor.",
+      ],
+      Safetyinfo: [
+        "Keep away from children",
+        "Read the label carefully before use",
+        "Store in a cool, dry place away from direct sunlight",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/nc1hvrzxl4mexlttinrs.png",
+  },
+  //categoryID:9 starts here {Respiratory care}
+
+  {
+    id: 81,
+    categoryId: 9,
+    itemName: "Otrivin Oxy Fast Relief Adult Nasal Spray",
+    itemPrice: "₹85",
+    highlights: [
+      "Helps to provide relief from nasal congestion",
+      "Helps to control excessive nasal excretion",
+      "Facilitates aid in case of swollen blood vessels",
+    ],
+    desc: {
+      keybenefit: [
+        "Helps in unblocking nasal congestion",
+        "Helps in reducing excessive nasal secretion",
+        "Starts action in 25 seconds and provides quick relief",
+      ],
+      directions: [
+        "Sit comfortably with the spray bottle in your hand. Open the bottle and place the nozzle of the nasal spray just inside the blocked nostril. Squeeze the spray pack hard in the centre of the bottle and inhale deeply. Take a deep breath. Repeat for the other nostril and replace the cap after use. Adults and Children aged 12 years or more should spray once into each nostril, upto 3 times a day or, as directed by the physician.",
+      ],
+      Safetyinfo: [
+        "Keep away from children",
+        "Read the label carefully before use",
+        "Store in a cool, dry place away from direct sunlight",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/uaerylojm65fdh0o0dfo.jpg",
+  },
+  {
+    id: 82,
+    categoryId: 9,
+    itemName:
+      "Tata 1mg 3 Ply Surgical Mask with Meltblown Filter and Nose Pin 50 Mask Light Blue",
+    itemPrice: "₹392",
+    highlights: [
+      "Has comfortable elastic ear-bands",
+      "Provides triple-layer protection with melt-blown filter",
+      "Has a Bacterial Filtration Efficiency (BFE) ≥ 98.5%",
+    ],
+    desc: {
+      keybenefit: [
+        "1- Inner layer of soft non-woven fabric: Absorbs droplets from exhaled breath",
+        "2- Middle layer made of innovative Melt Blown fabric: Filters out dust and pollen and highly breathable",
+        "3- Outer Layer of non-woven fabric: Blocks particles",
+        "Provides triple-layer protection with melt-blown filter",
+      ],
+      directions: [
+        "Hold the mask by the ear loops and place a loop around each year",
+        "Put the mask over the nose and mouth by placing the loops comfortably around the ears",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Discard after every use or if it is damaged, torn, or loose",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/2b18a9de0355455681ec4bb004f1b21b.jpg",
+  },
+  {
+    id: 83,
+    categoryId: 9,
+    itemName: "2baconil 21mg Nicotine Transdermal Patch Step 1",
+    itemPrice: "₹825",
+    highlights: [
+      "Provides aid to quit smoking",
+      "Helps to reduce the withdrawal symptoms",
+      "Allows the smoker to focus on the psychological aspects of quitting",
+    ],
+    desc: {
+      keybenefit: [
+        "Nicotine is a stimulant and detoxifying agent",
+        "Reduces withdrawal symptoms, allowing the smoker to focus on the psychological aspects of quitting",
+      ],
+      directions: [
+        "1 patch a day for 4 weeks",
+        "Please refer to the Therapy Schedule for usage instructions",
+      ],
+      Safetyinfo: [
+        "Keep away from children",
+        "Read the label carefully before use",
+        "Store in a cool, dry place away from direct sunlight",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/aa019eea99e44f148597400b045cc144.jpg",
+  },
+  {
+    id: 84,
+    categoryId: 9,
+    itemName: "Dr Morepen PO 14 Pulse Oximeter",
+    itemPrice: "₹1266",
+    highlights: [
+      "Easy to read OLED display",
+      "Measures pulse rate as well",
+      "Easy to use the device for spot checks",
+    ],
+    desc: {
+      keybenefit: [
+        "This device has an easy-to-read OLED display",
+        "It is equipped with different display modes",
+        "Indicates low battery and battery capacity",
+      ],
+      directions: [
+        "Insert your finger and the results will be displayed on the display within 5 seconds.",
+      ],
+      Safetyinfo: [
+        "Keep away from children",
+        "Read the label carefully before use",
+        "Store in a cool, dry place away from direct sunlight",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/o291ovg9uecjswn7wz1b.jpg",
+  },
+  {
+    id: 85,
+    categoryId: 9,
+    itemName: "Vicks Inhaler",
+    itemPrice: "₹56",
+    highlights: [
+      "Economical, compact and effective product",
+      "Gives fast and temporary mobile relief from cold",
+      "Opens up clogged nose due to cold, hay fever and upper respiratory tract allergy",
+    ],
+    desc: {
+      keybenefit: [
+        "Economical, compact and effective product",
+        "Gives fast and temporary mobile relief",
+        "Opens up clogged nose due to cold, hay fever and upper respiratory tract allergy",
+      ],
+      directions: [
+        "Inhale medicated vapors through a nostril while holding the other nostril closed",
+        "Inhale deeply to make breathing free and cool",
+      ],
+      Safetyinfo: [
+        "Keep away from children",
+        "Read the label carefully before use",
+        "Store in a cool, dry place away from direct sunlight",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/l21qw4sgwgrjrwrwgajw.jpg",
+  },
+  {
+    id: 86,
+    categoryId: 9,
+    itemName: "Omron CMS50N Contec Pulse Oximeter",
+    itemPrice: "₹1328",
+    highlights: [
+      "Measures pulse oxygen saturation and pulse rates",
+      "Features an auto rotation system",
+      "Comes with an adjustable alarm",
+    ],
+    desc: {
+      keybenefit: [
+        "It features an auto rotation system and comes with an adjustable alarm",
+        "Has a low battery indicator and brightness settings to adjust the screen brightness",
+        "Shows the recording of the last reading and comes with an automatic on/off technology",
+      ],
+      directions: [
+        "Open the clip and place your finger in the oximeter",
+        "Press the on-off button. Do not shake the finger and stay relaxed during the process",
+      ],
+      Safetyinfo: [
+        "Clean the device using a soft cloth damped with 75% of medical alcohol (make sure the device is powered off)",
+        "Avoid pouring liquids on the device while cleaning and do not allow any liquid into the product",
+        "Keep the operating environment free of dust, vibrations, corrosive or flammable materials and extremes of temperature and humidity",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/dk4bsseilzpnfr953q7e.png",
+  },
+  {
+    id: 87,
+    categoryId: 9,
+    itemName: "Dr Morepen VP 06 Breathe Free Vaporizer",
+    itemPrice: "₹275",
+    highlights: [
+      "Helpful in relieving respiratory problems",
+      "Produces steam vapours quickly to help clear the nasal passages",
+      "Useful in alleviating common cold, bronchitis, sinusitis, asthma etc.",
+    ],
+    desc: {
+      keybenefit: [
+        "It is a steam inhalator and facial sauna that produces steam vapours in seconds",
+        "It is highly effective and easy to use and clean",
+        "It is portable, ideal for home use, and can be conveniently carried during travel as well",
+      ],
+      directions: [
+        "Read the manufacturer's instructions",
+        "Place the vaporizer on a flat surface at a safe distance from human contact",
+        "Inhale the steam through the nose or mouth",
+      ],
+      Safetyinfo: [
+        "Read the label carefully before use",
+        "Store in a cool and dry place away from direct sunlight",
+        "Use tap water only and do not use R.O water",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/hlhlwmjbwpzgzb5s6ijx.jpg",
+  },
+  {
+    id: 88,
+    categoryId: 9,
+    itemName: "Patanjali Divya Swasari Pravahi",
+    itemPrice: "₹80",
+    highlights: [
+      "Helps to treat respiratory problems including asthma",
+      "Improves symptoms of cold and cough",
+      "Provides relief from the attacks of breathlessness",
+    ],
+    desc: {
+      keybenefit: [
+        "Used as  a tonic for all types of respiratory problems",
+        "Treats cold, serious cough, asthma, cough, problems in ribs, and other diseases- Provides relief from the sudden attacks of breathlessness",
+        "Treats the respiratory diseases in a safe and natural way and ensures that the lungs function efficiently",
+      ],
+      directions: [
+        "Consume Patanjali Divya Swasari Pravahi as directed by the physician. Ideally, it is recommended to take 1-2 teaspoonful (5-10ml) twice or thrice a day. Do not take more than the daily recommended dose of this supplement as it may lead to side effects. It is advised to use a measuring spoon or cup to dispense the exact prescribed quantity of this syrup.",
+      ],
+      Safetyinfo: [
+        "Store in a cool and dry place (below 25°C).",
+        "Protect from moisture.",
+        "Keep out of reach of children.",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/tzwco67hdrnqeldtok5p.jpg",
+  },
+  {
+    id: 89,
+    categoryId: 9,
+    itemName: "Cofsils Lozenges Orange",
+    itemPrice: "₹26",
+    highlights: [
+      " Amylmetacresol: Antiseptic used in the treatment of infections of the mouth and throat such as throat infection, throat discomfort, mouth infection and other related problems",
+      "Dichlorobenzyl Alcohol: Used as a mild antiseptic, able to kill bacteria and viruses associated with mouth and throat infections",
+    ],
+    desc: {
+      keybenefit: [
+        " Amylmetacresol: Antiseptic used in the treatment of infections of the mouth and throat such as throat infection, throat discomfort, mouth infection and other related problems",
+        "Dichlorobenzyl Alcohol: Used as a mild antiseptic, able to kill bacteria and viruses associated with mouth and throat infections",
+      ],
+      directions: [
+        "Take one lozenge every three hours or as directed by the physician",
+      ],
+      Safetyinfo: [
+        "Do not exceed the recommended dose",
+        "Read the label carefully before use",
+        "Keep out of the reach and sight of children",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/vku1bgimm9wicwhrhbma.jpg",
+  },
+  {
+    id: 90,
+    categoryId: 9,
+    itemName: "Dabur Honitus Herbal Cough Remedy",
+    itemPrice: "₹197",
+    highlights: [
+      "Acts as an effective herbal remedy for cough",
+      "Helps to relieve sore throat and congestion",
+      "Improves the symptoms of dry cough",
+    ],
+    desc: {
+      keybenefit: [
+        "Honey helps relieve cough and throat irritation",
+        "Tulsi has anti-tussive properties that help in relieving cough and cold symptoms",
+        "Mulethi acts as a sore throat reliever ,Sunthi and banapsha have expectorant properties that help in the expulsion of phlegm, thus allowing you to recover faster",
+      ],
+      directions: [
+        "Children: 1 teaspoon 3-4 times a day",
+        "Adults: 2 teaspoons 3-4 times a day",
+      ],
+      Safetyinfo: [
+        "Do not exceed the recommended dose",
+        "Read the label carefully before use",
+        "Keep out of the reach and sight of children",
+      ],
+    },
+    itemImage:
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/umtjm9jqy8dblfr3cqnm.jpg",
   },
 ];
