@@ -2,9 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ItemDescription from "../Items/ItemDescription";
 import Category from "../Items/Category";
+import Location from "../getLocation/Location";
 const Home = () => {
 	return (
 		<div>
+			<Location />
 			<Link to="/login">Login</Link>
 			<br />
 			<br />
