@@ -1,13 +1,14 @@
 .ui.card>.image {
     background-color: white !important;
 }
-.carousel-border{
-  margin-top:5% !important;
+
+.carousel-border {
+    margin-top: 5% !important;
 }
 
-.ui.card > .content {
-  border-top: none !important;
-  box-shadow: none;
+.ui.card>.content {
+    border-top: none !important;
+    box-shadow: none;
 }
 
 .ui.card {
