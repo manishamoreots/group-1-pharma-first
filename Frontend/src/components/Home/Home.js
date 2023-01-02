@@ -6,7 +6,15 @@ const Home = () => {
 	return (
 		<div>
 			<Link to="/login">Login</Link>
+			<br />
+			<br />
+			<br />
+			<br />
 			<Category />
+			<br />
+			<br />
+			<br />
+			<br />
 			<ItemDescription />
 		</div>
 	);

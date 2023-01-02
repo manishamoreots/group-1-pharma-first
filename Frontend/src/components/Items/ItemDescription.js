@@ -40,8 +40,8 @@ const ItemDescription = () => {
 				<Grid.Column width={6}>
 					<Header>{data.itemName}</Header>
 					<ul>
-						{data.desc.keybenefit.map((item) => (
-							<li>{item}</li>
+						{data.desc.keybenefit.map((item, index) => (
+							<li key={index}>{item}</li>
 						))}
 					</ul>
 				</Grid.Column>
