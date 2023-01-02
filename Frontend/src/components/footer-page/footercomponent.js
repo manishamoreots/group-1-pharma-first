@@ -58,7 +58,14 @@ const FooterComponent = () => {
                 <List link inverted>
                   <List.Item as="a">Social Links</List.Item>
                 </List>
-                <List horizontal inverted divided link size="small" className="social-icons">
+                <List
+                  horizontal
+                  inverted
+                  divided
+                  link
+                  size="small"
+                  className="social-icons"
+                >
                   <Icon name="facebook square" size="big" />
                   <Icon name="instagram" size="big" />
                   <Icon name="twitter square" size="big" />

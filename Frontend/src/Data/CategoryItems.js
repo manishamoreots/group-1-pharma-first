@@ -67,26 +67,26 @@ export const categoryItems = [
   {
     id: 3,
     categoryId: 1,
-    itemName: "PentaSure DM Diabetes Care Powder Creamy Vanilla & Cinnamon",
-    itemPrice: "₹2333",
+    itemName:
+      "Contour Plus One Blood Glucose Monitoring System Glucometer with Contour Plus Blood Glucose Test Strip 10S Free",
+    itemPrice: "₹1195",
     highlights: [
-      "Helps control blood sugar levels",
-      "Formulated as per ADA and WHO guidelines",
-      "Enriched with fibre and omega-3 fatty acid",
-      "Contains high-quality whey protein",
+      "Different light indicators show the results in their respective ranges",
+      "Smartlight feature indicates cases of high or low blood glucose level",
+      "Second chance sampling reduces the need for second time lancing and strip wastage",
+      "Can be connected to an app for detailed report",
     ],
     desc: {
       keybenefit: [
-        "It improves insulin sensitivity",
-        "It contains dietary fibre that helps improve digestion",
-        "Helps maintain a low glycemic index",
-        "Helps prevent diabetic neuropathy",
+        "smartLIGHT Feature: Makes it quick and easy to interpret blood glucose readings using coloured lights",
+        "The different lights and their indications are Amber - above target range, Green - within target range, and Red - below target range",
+        "Second-chance sampling: Prompts the user to reapply blood if the first sample is insufficient to take a reading",
+        "This helps avoid lancing a second time and wasting strips",
       ],
       directions: [
-        "Add 50 grams (4 level scoops) to 200 ml water",
-        "Stir thoroughly and consume immediately",
-        "Stir well and enjoy",
-        "It can also be with milk & cornflakes, porridge or curd",
+        "Insert the test strip with the grey square end facing the meter (this will automatically turn on the meter)",
+        "Immediately add blood to the test strip",
+        "The result is displayed (after marking as fasting, before/after a meal or no note)",
       ],
       info: [
         "Read the label carefully before use",
@@ -95,7 +95,7 @@ export const categoryItems = [
       ],
     },
     itemImage:
-      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/akatbzesklvi4vtyro1g.jpg",
+      "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/mpraei9nq1cjrgsbhrdr.jpg",
   },
   {
     id: 4,
