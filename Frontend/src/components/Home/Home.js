@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
 import { getCategory } from "../Reducer/category";
 import { useDispatch, useSelector } from "react-redux";
-import Test from "../test";
+
 export default function Home() {
   const { categories } = useSelector((state) => state.category.data);
   const dispatch = useDispatch();
@@ -36,7 +36,7 @@ export default function Home() {
           ))}
         </>
       )}
-      <Test title={"hello ji"} />
+  
     </div>
   );
 }
