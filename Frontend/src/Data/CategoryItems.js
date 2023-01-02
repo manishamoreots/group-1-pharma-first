@@ -1464,5 +1464,4 @@ export const categoryItems = [
   },
 
   // categoryId:6 starts here
-  
 ];
