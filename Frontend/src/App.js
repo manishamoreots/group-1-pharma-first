@@ -5,6 +5,7 @@ import Home from "./components/Home/Home";
 import LoginSignUpModal from "./components/Modal/LoginSignUpModal";
 
 import { Routes, Route } from "react-router-dom";
+// import Hello from './components/Hello';
 
 function App() {
 	return (
