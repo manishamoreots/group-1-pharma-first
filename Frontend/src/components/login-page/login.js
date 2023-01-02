@@ -21,9 +21,8 @@ const Login = ({ title }) => {
           <Modal.Description>
             {title == "Login" ? (
               <>
+                <Modal.Header as="h1">{title}</Modal.Header>
                 <div className="page-title">
-                  <Modal.Header as="h1">{title}</Modal.Header>
-
                   <p className="first-para">
                     Get access to your orders, lab tests & doctor consultations
                   </p>
@@ -40,9 +39,6 @@ const Login = ({ title }) => {
                     <div className="login-btn-class">
                       <Button className="login-btn">LOGIN</Button>
                     </div>
-
-                    {/* <Button onClick={() => setOpen(false)}>Cancel</Button>
-                <Button onClick={() => setOpen(false)} positive> Ok  </Button> */}
                   </Modal.Actions>
 
                   <div>
@@ -55,7 +51,8 @@ const Login = ({ title }) => {
               </>
             ) : (
               <>
-                <Modal.Header as="h1" style={{paddingLeft:"1em"}}>{title}</Modal.Header>
+                <Modal.Header as="h1">{title}</Modal.Header>
+
                 <Form className="signup-form">
                   <div
                     style={{

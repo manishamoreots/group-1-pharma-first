@@ -1,6 +1,3 @@
-.ui.modal {
-  width: 55% !important;
-}
 .page-title {
   padding-top: 5%;
 }
@@ -11,7 +8,9 @@
 .input-field {
   margin-top: 25%;
 }
-
+.ui.medium.image{
+  height: auto;
+}
 .login-btn-class {
   margin-top: 15%;
 }
@@ -20,11 +19,17 @@
   background-color: tomato !important;
   color: white !important;
 }
-.signup-form {
-  padding-left: 2em;
-  padding-top: 1em;
-}
 
+.ui.modal>.content>.image+.description {
+  flex: 0 1 auto;
+  min-width: '';
+  width: 320px !important;
+  padding-left: 4em;
+}
+.ui.medium.image {
+  height: auto;
+  
+}
 .signup-firstName {
   width: 45%;
 }
@@ -37,11 +42,6 @@
   margin-top: 5% !important;
   background-color: tomato !important;
   color: white !important;
-}
-.ui.modal > .content > .icon + .description,
-.ui.modal > .content > .image + .description {
-  flex: 0 1 auto;
-  width: 55%;
 }
 
 .second-para {
