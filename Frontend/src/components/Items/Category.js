@@ -39,7 +39,7 @@ const Category = () => {
 			<div className="carousel-border">
 				<Carousel responsive={responsive}>
 					{categories.map((category, index) => (
-						<Link to={`/itemDesc/${category.id}`} key={index} className="carousel-card" style={{ cursor: "pointer" }}>
+						<Link to={`/categoryItem/${category.id}`} key={index} className="carousel-card" style={{ cursor: "pointer" }}>
 							<Card size="small">
 								<Image style={{ padding: "15%" }} src={category.categoryImage} wrapped ui={false} />
 								<Card.Description>{category.categoryName}</Card.Description>

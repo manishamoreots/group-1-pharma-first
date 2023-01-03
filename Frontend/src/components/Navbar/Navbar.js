@@ -14,8 +14,8 @@ export default function Navbar() {
 			<Menu.Item as={Link} exact to="/browse" name="browse" active={activeItem === "browse"} onClick={handleClick}>
 				Browse
 			</Menu.Item>
-			<Menu.Item as={Link} exact to="/search" name="search" active={activeItem === "search"} onClick={handleClick}>
-				Search
+			<Menu.Item as={Link} exact to="/login" name="login" active={activeItem === "login"} onClick={handleClick}>
+				login
 			</Menu.Item>
 			<Menu.Item as={Link} exact to="/my-drinks" name="my-drinks" active={activeItem === "my-drinks"} onClick={handleClick}>
 				My Drinks

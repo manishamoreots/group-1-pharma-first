@@ -31,7 +31,7 @@ const Dashboard = () => {
 	return (
 		<div>
 			{loading ? (
-				<div style={{ display: "flex", justifyContent: "center", marginTop: "10%" }}>
+				<div>
 					<Loader />
 				</div>
 			) : (
