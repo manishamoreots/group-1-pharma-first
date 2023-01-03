@@ -11,22 +11,28 @@ import Navbar from "./components/Navbar/Navbar";
 import Contact from "./components/Contact/Contact";
 // import Hello from './components/Hello';
 function App() {
-	return (
-		<div className="App">
-			<Navbar />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/cart" element={<Cart />} />
-				<Route path="/itemDesc/:id" element={<ItemDescription />} />
-				<Route path="/categoryItem/:id" element={<CategoryItems />} />
-				<Route path="/dashboard" element={<Dashboard />} />
-				<Route path="/contact" element={<Contact />} />
-				<Route path="/login" element={<LoginSignUpModal title="login" btnType="Login" />} />
-				<Route path="/signUp" element={<LoginSignUpModal title="Sign Up" btnType="Sign Up" />} />
-			</Routes>
-			<Footer />
-		</div>
-	);
+  return (
+    <div className="App">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/itemDesc/:id" element={<ItemDescription />} />
+        <Route path="/categoryItem/:id" element={<CategoryItems />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route
+          path="/login"
+          element={<LoginSignUpModal title="login" btnType="Login" />}
+        />
+        <Route
+          path="/signUp"
+          element={<LoginSignUpModal title="Sign Up" btnType="Sign Up" />}
+        />
+      </Routes>
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
