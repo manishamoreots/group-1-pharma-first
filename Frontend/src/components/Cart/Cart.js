@@ -1,12 +1,19 @@
-import React from 'react';
-import { Icon, Label } from 'semantic-ui-react';
+import React from "react";
+import { Icon, Label, Grid, Image, Container } from "semantic-ui-react";
 
 export default function Cart() {
-	return (
-		// <Menu.Item as="a">
-		<>
-			<Label color="red">22</Label>
-			<Icon name="mail" /> Messages
-		</>
-	);
+  return (
+    <Container>
+      <Grid>
+        <Grid.Row>
+          <Grid.Column width={8}>
+            <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
+          </Grid.Column>
+          <Grid.Column width={8}>
+            <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    </Container>
+  );
 }
