@@ -1,25 +1,46 @@
-import React, { useState } from 'react';
-import { Menu } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
-export default function Navbar() {
-	const [activeItem, setActiveItem] = useState('homepage');
-	const handleClick = (e, { name }) => {
-		setActiveItem(name);
-	};
-	return (
-		<Menu className="Navigation">
-			<Menu.Item as={Link} exact to="/" name="homepage" active={activeItem === 'homepage'} onClick={handleClick}>
-				Home
-			</Menu.Item>
-			<Menu.Item as={Link} exact to="/browse" name="browse" active={activeItem === 'browse'} onClick={handleClick}>
-				Browse
-			</Menu.Item>
-			<Menu.Item as={Link} exact to="/search" name="search" active={activeItem === 'search'} onClick={handleClick}>
-				Search
-			</Menu.Item>
-			<Menu.Item as={Link} exact to="/my-drinks" name="my-drinks" active={activeItem === 'my-drinks'} onClick={handleClick}>
-				My Drinks
-			</Menu.Item>
-		</Menu>
-	);
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { Menu, Segment } from "semantic-ui-react";
+
+export default class Navbar extends Component {
+  state = { activeItem: "home" };
+
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
+
+  render() {
+    const { activeItem } = this.state;
+
+    return (
+      <div>
+        <Menu pointing secondary>
+          <Menu.Item
+            name="home"
+            active={activeItem === "home"}
+            onClick={this.handleItemClick}
+          />
+          <Menu.Item
+            name="messages"
+            active={activeItem === "messages"}
+            onClick={this.handleItemClick}
+          />
+          <Menu.Item
+            name="friends"
+            active={activeItem === "friends"}
+            onClick={this.handleItemClick}
+          />
+          <Menu.Menu position="right">
+            <Menu.Item
+              name="logout"
+              active={activeItem === "logout"}
+              onClick={this.handleItemClick}
+            />
+          </Menu.Menu>
+        </Menu>
+
+        <Segment>
+          <img src="/images/wireframe/media-paragraph.png" />
+        </Segment>
+      </div>
+    );
+  }
 }
