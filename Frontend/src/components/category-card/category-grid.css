@@ -1,0 +1,43 @@
+.services-gallery {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-around !important;
+  padding: 5%;
+  width: 100%;
+}
+.ui.card {
+  height: 300px;
+  width: 200px;
+  border: 1px solid salmon !important;
+  justify-content: space-around !important;
+  padding-right: 2% !important;
+}
+.ui.card > .image {
+  margin-left: 25%;
+  margin-top: 3%;
+}
+.cart-item {
+  margin: 4%;
+}
+
+.ui.card > .button,
+.ui.card > .buttons,
+.ui.cards > .card > .button,
+.ui.cards > .card > .buttons {
+  width: 20% !important;
+}
+
+.btn-container {
+  display: flex;
+  margin-left: 15%;
+}
+.ui.rating .icon {
+  color: white !important;
+}
+.cart-bottom {
+  display: flex;
+  margin-left: 15%;
+}
+.add-btn{
+    margin-left: 50%;
+}
