@@ -5,23 +5,23 @@ import Category from "../Items/Category";
 import Location from "../getLocation/Location";
 import MainSlider from "../main-slider/main-slider";
 const Home = () => {
-  return (
-    <div>
-      <Location />
-      <Link to="/login">Login</Link>
-      <br />
-      <br />
-	  <MainSlider />
-      <br />
-      <br />
-      <Category />
-      <br />
-      <br />
-      <br />
-      <br />
-      <ItemDescription />
-    </div>
-  );
+	return (
+		<div>
+			<Location />
+			<Link to="/login">Login</Link>
+			<br />
+			<br />
+			<MainSlider />
+			<br />
+			<br />
+			<Category />
+			<br />
+			<br />
+			<br />
+			<br />
+			<ItemDescription />
+		</div>
+	);
 };
 
 export default Home;
