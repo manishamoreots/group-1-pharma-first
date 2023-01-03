@@ -60,7 +60,7 @@ export default function Cart() {
                         <Grid.Row>
                           <Grid.Column width={11}>
                             <Button>
-                              <Icon name="delete" size="small" />
+                              <Icon name="trash alternate" size="large" />
                               Remove
                             </Button>
                           </Grid.Column>
