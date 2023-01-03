@@ -1,5 +1,5 @@
 .footer-container {
-    background-color: indianred !important;
+    background-color: rgb(120, 157, 163) !important;
 }
 
 .style__copyright {
@@ -11,4 +11,5 @@
 .social-icons {
     animation: back-to-docs 1.5s ease-in-out infinite;
     z-index: 6;
+    cursor: pointer;
 }

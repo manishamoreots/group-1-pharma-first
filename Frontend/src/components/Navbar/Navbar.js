@@ -7,7 +7,7 @@ export default function Navbar() {
 		setActiveItem(name);
 	};
 	return (
-		<Menu className="Navigation">
+		<Menu className="Navigation" style={{ display: "flex", justifyContent: "end", margin: 10 }}>
 			<Menu.Item as={Link} exact to="/" name="homepage" active={activeItem === "homepage"} onClick={handleClick}>
 				Home
 			</Menu.Item>

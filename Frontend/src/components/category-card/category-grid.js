@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Card, Icon, Image } from "semantic-ui-react";
 
 const CategoryGrid = () => {
@@ -14,10 +15,10 @@ const CategoryGrid = () => {
 					<Card.Description>Matthew is a musician living in Nashville.</Card.Description>
 				</Card.Content>
 				<Card.Content extra>
-					<a>
+					<Link>
 						<Icon name="user" />
 						22 Friends
-					</a>
+					</Link>
 				</Card.Content>
 			</Card>
 		</>

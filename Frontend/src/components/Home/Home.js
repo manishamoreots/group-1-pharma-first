@@ -4,20 +4,17 @@ import ItemDescription from "../Items/ItemDescription";
 import Category from "../Items/Category";
 import Location from "../getLocation/Location";
 import MainSlider from "../main-slider/main-slider";
+import Navbar from "../Navbar/Navbar";
 const Home = () => {
 	return (
 		<div>
+			<Navbar />
+
 			<Location />
-			<Link to="/login">Login</Link>
-			<br />
-			<br />
 			<MainSlider />
 			<br />
 			<br />
 			<Category />
-			<br />
-			<br />
-			<br />
 			<br />
 			<ItemDescription />
 		</div>
