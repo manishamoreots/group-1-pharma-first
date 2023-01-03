@@ -8,6 +8,7 @@ import Footer from "./components/Common/Footer";
 import ItemDescription from "./components/Items/ItemDescription";
 import CategoryItems from "./components/Items/CategoryItems";
 import Navbar from "./components/Navbar/Navbar";
+import Contact from "./components/Contact/Contact";
 // import Hello from './components/Hello';
 function App() {
 	return (

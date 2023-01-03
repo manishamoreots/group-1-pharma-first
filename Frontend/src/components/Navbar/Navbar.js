@@ -56,6 +56,17 @@ export default function Navbar() {
         >
           Care Plan
         </Menu.Item>
+        <Menu.Item
+          as={Link}
+          exact
+          to="/contact"
+          name="Contact Us"
+          active={activeItem === "Contact Us"}
+          onClick={handleClick}
+          style={{ alignSelf: "center" }}
+        >
+          Contact Us
+        </Menu.Item>
         <Menu.Item position="right" style={{ alignSelf: "center" }}>
           <LoginSignUpModal title="Sign Up" btnType="Sign Up" />
         </Menu.Item>
