@@ -5,6 +5,7 @@ import { Button, Container, Dropdown, Grid, Header, Image, Menu, Segment } from 
 import { getItemDescription } from "../Reducer/itemReducer";
 import { useDispatch, useSelector } from "react-redux";
 import Loader from "../Loader/Loader";
+import { addToCart } from "../Reducer/cartReducer";
 
 const options = [
 	{ key: 1, text: "1 box", value: 1 },
@@ -16,21 +17,16 @@ const ItemDescription = () => {
 	const { description, loading } = useSelector((state) => state.items.data);
 	const { id } = useParams();
 	useEffect(() => {
-		console.log(loading);
-		setTimeout(() => {
-			dispatch(getItemDescription(Number(id)));
-		}, 1000);
+		dispatch(getItemDescription(Number(id)));
 	}, [id]);
-	useEffect(() => {
-		console.log(description);
-	}, [description]);
+	useEffect(() => {}, [description]);
 	return (
 		<Container>
 			{loading ? (
 				<Loader />
 			) : (
 				<>
-					{description && (
+					{description && description.itemName && (
 						<Grid>
 							<Grid.Column width={5}>
 								<Image src={description.itemImage} />
@@ -54,7 +50,7 @@ const ItemDescription = () => {
 										<Dropdown text="select" options={options} simple item />
 									</Menu>
 									of 50 Test Strips
-									<Button>Add To cart</Button>
+									<Button onClick={() => dispatch(addToCart(description))}>Add To cart</Button>
 								</Segment>
 							</Grid.Column>
 						</Grid>

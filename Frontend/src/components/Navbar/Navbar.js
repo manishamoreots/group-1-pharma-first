@@ -35,7 +35,9 @@ export default function Navbar() {
 				</Link>
 			</Menu.Item>
 			<Menu.Item style={{ alignSelf: "center" }}>
-				<div onClick={onLogout}>logout</div>
+				<div style={{ color: "black", cursor: "pointer" }} onClick={onLogout}>
+					logout
+				</div>
 			</Menu.Item>
 		</>
 	);

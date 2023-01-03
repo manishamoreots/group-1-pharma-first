@@ -11,7 +11,6 @@ export const itemSlice = createSlice({
 			state.data = { ...state.data, items: [...filterItem], loading: false };
 		},
 		getItemDescription: (state, action) => {
-			console.log(action.payload);
 			const filterDescItem = categoryItems.find((item) => item.id === action.payload);
 			state.data = { ...state.data, description: { ...filterDescItem }, loading: false };
 		},
