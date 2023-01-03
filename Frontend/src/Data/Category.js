@@ -16,8 +16,8 @@ export const category = [
 	},
 	{
 		id: 4,
-		categoryName: "Eye Care",
-		categoryImage: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/631e3dca-3d5b-49f8-832b-8341ec4784e7.png",
+		categoryName: "Born Join Muscal Care",
+		categoryImage: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/ba975795-98dc-4cd8-8b55-3c20230d70e3.png",
 	},
 	{
 		id: 5,
@@ -31,7 +31,17 @@ export const category = [
 	},
 	{
 		id: 7,
-		categoryName: "Kidney care",
+		categoryName: "Kidney Care",
 		categoryImage: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/e77d5099-d905-4462-ab9d-b51802e3739b.png",
+	},
+	{
+		id: 8,
+		categoryName: "Respitory Care",
+		categoryImage: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/4a788b46-97f3-460e-afb6-428368f779ee.png",
+	},
+	{
+		id: 9,
+		categoryName: "Eye Care",
+		categoryImage: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/631e3dca-3d5b-49f8-832b-8341ec4784e7.png",
 	},
 ];

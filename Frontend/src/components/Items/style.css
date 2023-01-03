@@ -1,23 +1,19 @@
-.ui.card>.image {
-    background-color: white !important;
+.ui.card > .image {
+  background-color: white !important;
 }
 
 .carousel-border {
-    margin-top: 5% !important;
+  margin-top: 5% !important;
 }
 
-.ui.card>.content {
-    border-top: none !important;
-    box-shadow: none;
+.ui.card > .content {
+  border-top: none !important;
 }
 
 .ui.card {
-    box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 .ui.card:hover {
-    transform: scale(1.2);
-    transition: transform 0.5s 0.2s ease-in-out;
-    /* transition-delay: calc(); */
-    /* box-shadow: 2px salmon !important; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
 }
