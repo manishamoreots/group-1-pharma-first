@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Icon, Image, Menu } from "semantic-ui-react";
+import { Icon, Image, Menu, Label } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import logo from "../image/logo.png";
 import LoginSignUpModal from "../Modal/LoginSignUpModal";
@@ -21,14 +21,14 @@ export default function Navbar() {
 
           onClick={handleClick}
         >
-          <Image src={logo} size={"small"} style={{ margin: 0 }} />
+          <Image src={logo} size={"small"} style={{}} />
         </Menu.Item>
         <Menu.Item
           as={Link}
           exact
           to="/"
-          name="homepage"
-          active={activeItem === "homepage"}
+          name="Home"
+          active={activeItem === "Home"}
           onClick={handleClick}
           style={{ alignSelf: "center" }}
         >
@@ -38,23 +38,23 @@ export default function Navbar() {
           as={Link}
           exact
           to="/browse"
-          name="browse"
-          active={activeItem === "browse"}
+          name="Lab Test"
+          active={activeItem === "Lab Test"}
           onClick={handleClick}
           style={{ alignSelf: "center" }}
         >
-          Browse
+          Lab Test
         </Menu.Item>
         <Menu.Item
           as={Link}
           exact
           to="/search"
-          name="search"
-          active={activeItem === "search"}
+          name="Care Plan"
+          active={activeItem === "Care Plan"}
           onClick={handleClick}
           style={{ alignSelf: "center" }}
         >
-          Search
+          Care Plan
         </Menu.Item>
         <Menu.Item position="right" style={{ alignSelf: "center" }}>
           <LoginSignUpModal title="Sign Up" btnType="Sign Up" />
@@ -62,8 +62,16 @@ export default function Navbar() {
         <Menu.Item style={{ alignSelf: "center" }}>
           <LoginSignUpModal title="login" btnType="Login" />
         </Menu.Item>
-        <Menu.Item as={Link} exact to="/cart" style={{ alignSelf: "center" }}>
-          <Icon name="cart" />
+        <Menu.Item
+          as={Link}
+          exact
+          to="/cart"
+          style={{ alignSelf: "center", marginRight: 30 }}
+        >
+          <Icon name="cart" size="large" />
+          <Label color="teal" floating style={{ top: -5, left: 45 }}>
+            22
+          </Label>
         </Menu.Item>
       </Menu>
     </>
