@@ -8,7 +8,7 @@
 .ui.card {
   height: 300px;
   width: 200px;
-  border: 1px solid salmon !important;
+  /* border: 1px solid salmon !important; */
   justify-content: space-around !important;
   padding-right: 2% !important;
 }
