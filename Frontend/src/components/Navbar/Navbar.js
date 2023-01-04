@@ -77,7 +77,7 @@ export default function Navbar() {
         <Menu.Item
           as={Link}
           exact
-          to="/search"
+          to="/care"
           name="Care Plan"
           active={activeItem === "Care Plan"}
           onClick={handleClick}
