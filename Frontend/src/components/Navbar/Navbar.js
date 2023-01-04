@@ -19,10 +19,10 @@ export default function Navbar() {
 	};
 	const guestUser = (
 		<>
-			<Menu.Item position="right" style={{ alignSelf: "center" }}>
+			<Menu.Item position="right" style={{ alignSelf: "center", cursor: "pointer" }}>
 				<LoginSignUpModal title="Sign Up" btnType="Sign Up" />
 			</Menu.Item>
-			<Menu.Item style={{ alignSelf: "center" }}>
+			<Menu.Item style={{ alignSelf: "center", cursor: "pointer" }}>
 				<LoginSignUpModal title="login" btnType="Login" />
 			</Menu.Item>
 		</>
