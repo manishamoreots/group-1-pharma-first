@@ -1,19 +1,19 @@
-.ui.card > .image {
-  background-color: white !important;
+.ui.card>.image {
+    background-color: white !important;
 }
 
 .carousel-border {
-  margin-top: 5% !important;
+    margin-top: 1% !important;
 }
 
-.ui.card > .content {
-  border-top: none !important;
+.ui.card>.content {
+    border-top: none !important;
 }
 
 .ui.card {
-  box-shadow: none !important;
+    box-shadow: none !important;
 }
 
 .ui.card:hover {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
 }

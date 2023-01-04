@@ -6,20 +6,21 @@ import LoginSignUpModal from "./components/Modal/LoginSignUpModal";
 import { Routes, Route } from "react-router-dom";
 import Footer from "./components/Common/Footer";
 import ItemDescription from "./components/Items/ItemDescription";
-import CategoryGrid from "./components/Category-Card/category-grid";
+import CategoryItems from "./components/Items/CategoryItems";
 import Navbar from "./components/Navbar/Navbar";
+import Contact from "./components/Contact/Contact";
 // import Hello from './components/Hello';
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
-        {/* <CategoryGrid /> */}
-		<Route path="/abc" element={<CategoryGrid />}/>
-		{/* <Navbar /> */}
         <Route path="/itemDesc/:id" element={<ItemDescription />} />
+        <Route path="/categoryItem/:id" element={<CategoryItems />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/contact" element={<Contact />} />
         <Route
           path="/login"
           element={<LoginSignUpModal title="login" btnType="Login" />}

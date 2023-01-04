@@ -1,7 +1,7 @@
 export const categoryItems = [
 	// categoryId1 start from here {diabetics}
 	{
-		id: 1,
+		id: 654,
 		categoryId: 1,
 		itemName: "Virgo Healthcare Protivir Diet- Nutritional Supplement for Diabetic",
 		itemPrice: "₹2333",
@@ -29,7 +29,7 @@ export const categoryItems = [
 			"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/zl35i9inmpsoj2tmga2a.jpg",
 	},
 	{
-		id: 2,
+		id: 542,
 		categoryId: 1,
 		itemName: "PentaSure DM Diabetes Care Powder Creamy Vanilla & Cinnamon",
 		itemPrice: "₹2333",
@@ -62,28 +62,27 @@ export const categoryItems = [
 			"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/akatbzesklvi4vtyro1g.jpg",
 	},
 	{
-		id: 3,
+		id: 453,
 		categoryId: 1,
-		itemName: "PentaSure DM Diabetes Care Powder Creamy Vanilla & Cinnamon",
-		itemPrice: "₹2333",
+		itemName: "Contour Plus One Blood Glucose Monitoring System Glucometer with Contour Plus Blood Glucose Test Strip 10S Free",
+		itemPrice: "₹1195",
 		highlights: [
-			"Helps control blood sugar levels",
-			"Formulated as per ADA and WHO guidelines",
-			"Enriched with fibre and omega-3 fatty acid",
-			"Contains high-quality whey protein",
+			"Different light indicators show the results in their respective ranges",
+			"Smartlight feature indicates cases of high or low blood glucose level",
+			"Second chance sampling reduces the need for second time lancing and strip wastage",
+			"Can be connected to an app for detailed report",
 		],
 		desc: {
 			keybenefit: [
-				"It improves insulin sensitivity",
-				"It contains dietary fibre that helps improve digestion",
-				"Helps maintain a low glycemic index",
-				"Helps prevent diabetic neuropathy",
+				"smartLIGHT Feature: Makes it quick and easy to interpret blood glucose readings using coloured lights",
+				"The different lights and their indications are Amber - above target range, Green - within target range, and Red - below target range",
+				"Second-chance sampling: Prompts the user to reapply blood if the first sample is insufficient to take a reading",
+				"This helps avoid lancing a second time and wasting strips",
 			],
 			directions: [
-				"Add 50 grams (4 level scoops) to 200 ml water",
-				"Stir thoroughly and consume immediately",
-				"Stir well and enjoy",
-				"It can also be with milk & cornflakes, porridge or curd",
+				"Insert the test strip with the grey square end facing the meter (this will automatically turn on the meter)",
+				"Immediately add blood to the test strip",
+				"The result is displayed (after marking as fasting, before/after a meal or no note)",
 			],
 			info: [
 				"Read the label carefully before use",
@@ -92,10 +91,10 @@ export const categoryItems = [
 			],
 		},
 		itemImage:
-			"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/akatbzesklvi4vtyro1g.jpg",
+			"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/mpraei9nq1cjrgsbhrdr.jpg",
 	},
 	{
-		id: 4,
+		id: 6454,
 		categoryId: 1,
 		itemName: "Protinex Diabetes Care Vanilla",
 		itemPrice: "₹585",
@@ -128,7 +127,7 @@ export const categoryItems = [
 			"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/xg9w5mk9wvijr6hky8fx.jpg",
 	},
 	{
-		id: 5,
+		id: 6465,
 		categoryId: 1,
 		itemName: "Dr Morepen Gluco One BG 03 Blood Glucose Test Strip (Only Strips)",
 		itemPrice: "₹607",
@@ -152,7 +151,7 @@ export const categoryItems = [
 			"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/pc0kfczcu5phbkk5sy41.jpg",
 	},
 	{
-		id: 6,
+		id: 66451,
 		categoryId: 1,
 		itemName: "Tata 1mg Ceylon Cinnamon 10:1 Ratio Extract for Blood Sugar Management 200mg Capsule",
 		itemPrice: "₹97",
@@ -183,7 +182,7 @@ export const categoryItems = [
 			"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/eds6ghegqiwdxfbzgeeq.jpg",
 	},
 	{
-		id: 7,
+		id: 68457,
 		categoryId: 1,
 		itemName: "Tata 1mg Diabetes Care Combo Pack for Blood Sugar & Cholestrol Management",
 		itemPrice: "₹652",
@@ -213,7 +212,7 @@ export const categoryItems = [
 			"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/uca5jm0uqfqpjoyydzh0.jpg",
 	},
 	{
-		id: 8,
+		id: 687468,
 		categoryId: 1,
 		itemName: "Sugar Free Green Stevia Pellets",
 		itemPrice: "₹182",
@@ -241,7 +240,7 @@ export const categoryItems = [
 			"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/uca5jm0uqfqpjoyydzh0.jpg",
 	},
 	{
-		id: 9,
+		id: 968745,
 		categoryId: 1,
 		itemName: "Baidyanath Basant Kusumakar Ras (S.C.M.Yu) with Gold, Silver & Pearl Maintains Blood Glucose Level",
 		itemPrice: "₹2359",
@@ -269,7 +268,7 @@ export const categoryItems = [
 			"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/dru5ne9rnikqsgayenyy.png",
 	},
 	{
-		id: 10,
+		id: 1658450,
 		categoryId: 1,
 		itemName: "D-Protin Powder Chocolate",
 		itemPrice: "₹506",
@@ -301,7 +300,7 @@ export const categoryItems = [
 	},
 	// categoryId2 start from here {cardiac}
 	{
-		id: 11,
+		id: 15451,
 		categoryId: 2,
 		itemName: "Tata 1mg CoQ 10 (Coenzyme 10) Capsules for Heart Health",
 		itemPrice: "₹644",
