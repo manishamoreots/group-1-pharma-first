@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
 import { Input, Menu, Button } from "semantic-ui-react";
 import { useDispatch, useSelector } from "react-redux";
@@ -31,7 +32,7 @@ const Location = () => {
 							iconPosition="left"
 							placeholder="Current location "
 							size="large"
-							value={locationInfo.city}
+							value={`${locationInfo.city}  ${locationInfo.principalSubdivision}`}
 						/>
 					</Menu.Item>
 					<Menu.Item style={{ width: "50%" }}>

@@ -19,7 +19,9 @@ const ItemDescription = () => {
 	useEffect(() => {
 		dispatch(getItemDescription(Number(id)));
 	}, [id]);
-	useEffect(() => {}, [description]);
+	useEffect(() => {
+		console.log(description);
+	}, [description]);
 	return (
 		<Container>
 			{loading ? (

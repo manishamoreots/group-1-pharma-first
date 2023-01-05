@@ -7,19 +7,24 @@ export const cartSlice = createSlice({
 		getCartItems: (state, action) => {},
 		addToCart: (state, action) => {
 			const user = JSON.parse(localStorage.getItem("user"));
-			const items = JSON.parse(localStorage.getItem("cartItem"));
-			if (user) {
-				localStorage.setItem(
-					"cartItem",
-					JSON.stringify({ userId: user.userId, cartItems: { items: [action.payload], count: 0 } })
-				);
-			} else {
-				if (items.cartItems.length !== 0) {
-					localStorage.setItem(
-						"cartItem",
-						JSON.stringify({ userId: user.userId, cartItems: [...items.items, action.payload] })
-					);
-				}
+			const cartItems = JSON.parse(localStorage.getItem("cartItem"));
+			const userInfo = {
+				...action.payload,
+				userId: user.userId,
+				count: 1,
+			};
+			if (!cartItems) {
+				localStorage.setItem("cartItem", JSON.stringify({ cartItems: { items: [userInfo] } }));
+			} else if (cartItems.cartItems.items !== 0) {
+				const addedCount = cartItems.cartItems.items.map((item) => {
+					if (item.categoryId === action.payload.categoryId) {
+						return { ...item, count: item.count + 1 };
+					} else {
+						return { ...item, userInfo };
+					}
+				});
+				console.log(addedCount);
+				// localStorage.setItem("cartItem", JSON.stringify({ cartItems: { items: [...addedCount] } }));
 			}
 		},
 	},
