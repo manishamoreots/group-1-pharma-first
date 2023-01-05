@@ -1,188 +1,133 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
-import {
-  Icon,
-  Label,
-  Grid,
-  Image,
-  Container,
-  Feed,
-  Button,
-  Card,
-  Input,
-} from "semantic-ui-react";
-import { useDispatch, useSelector } from "react-redux";
-import { getLocation } from "../Reducer/commonReducer";
-import img from "../image/loader.gif";
-export default function Cart() {
-  const dispatch = useDispatch();
-  const { locationInfo } = useSelector((state) => state.common.data);
-  console.log(locationInfo);
-  useEffect(() => {
-    if (!locationInfo.city) {
-      navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-    }
-  }, []);
-  const successCallback = (position) => {
-    const { latitude, longitude } = position.coords;
-    dispatch(getLocation({ latitude, longitude }));
-  };
-  const errorCallback = (error) => {
-    console.log(error);
-  };
-  return (
-    <Container>
-      <Grid>
-        <Grid.Row>
-          <Grid.Column width={11}>
-            <Card style={{ width: 750 }}>
-              <Card.Content>
-                <Card.Header>Items In Your Cart</Card.Header>
-              </Card.Content>
-              <Card.Content>
-                <Feed>
-                  <Feed.Event>
-                    <Feed.Content>
-                      <Grid>
-                        <Grid.Row>
-                          <Grid.Column width={12}>
-                            <Feed.Summary>Item Name</Feed.Summary>
-                          </Grid.Column>
-                          <Grid.Column width={4}>
-                            <Feed.Summary>Item Price</Feed.Summary>
-                          </Grid.Column>
-                        </Grid.Row>
-                        <Grid.Row>
-                          <Grid.Column width={5}>
-                            <Feed.Date>quantity</Feed.Date>
-                          </Grid.Column>
-                        </Grid.Row>
 
-                        <Grid.Row>
-                          <Grid.Column width={11}>
-                            <Button>
-                              <Icon name="trash alternate" size="large" />
-                              Remove
-                            </Button>
-                          </Grid.Column>
-                          <Grid.Column width={5}>
-                            <Button>
-                              <Icon name="add" size="small" />
-                            </Button>
-                            <Input
-                              disabled
-                              placeholder={"item quantity"}
-                              style={{
-                                width: 40,
-                                color: "black",
-                              }}
-                            />
-                            <Button>
-                              <Icon name="minus" size="small" />
-                            </Button>
-                          </Grid.Column>
-                        </Grid.Row>
-                      </Grid>
-                    </Feed.Content>
-                  </Feed.Event>
-                </Feed>
-              </Card.Content>
-            </Card>
-          </Grid.Column>
-          <Grid.Column width={5}>
-            <Grid.Column>
-              <Grid.Column>
-                <Card>
-                  <Card.Content>
-                    <Card.Header>Add Coupon</Card.Header>
-                  </Card.Content>
-                  <Card.Content>
-                    <Feed>
-                      <Feed.Event>
-                        <Feed.Content>
-                          <Grid>
-                            <Grid.Row>
-                              <Grid.Column width={12}>
-                                <Feed.Summary>
-                                  <Input
-                                    icon="tags"
-                                    iconPosition="left"
-                                    placeholder="Enter Coupon"
-                                    type="text"
-                                  />
-                                </Feed.Summary>
-                              </Grid.Column>
-                            </Grid.Row>
-                          </Grid>
-                        </Feed.Content>
-                      </Feed.Event>
-                    </Feed>
-                  </Card.Content>
-                  <Button>Apply Coupon</Button>
-                </Card>
-              </Grid.Column>
-              <Card>
-                <Card.Content>
-                  <Card.Header>Order Summary</Card.Header>
-                </Card.Content>
-                <Card.Content>
-                  <Feed>
-                    <Feed.Event>
-                      <Feed.Content>
-                        <Grid>
-                          <Grid.Row>
-                            <Grid.Column width={12}>
-                              <Feed.Summary>Total Price(MRP):</Feed.Summary>
-                            </Grid.Column>
-                            <Grid.Column width={4}>
-                              <Feed.Summary>1000</Feed.Summary>
-                            </Grid.Column>
-                          </Grid.Row>
-                          <Grid.Row>
-                            <Grid.Column width={12}>
-                              <Feed.Summary>GST:</Feed.Summary>
-                            </Grid.Column>
-                            <Grid.Column width={4}>
-                              <Feed.Summary>18%</Feed.Summary>
-                            </Grid.Column>
-                          </Grid.Row>
-                          <Grid.Row>
-                            <Grid.Column width={12}>
-                              <Feed.Summary>Coupon Applied:</Feed.Summary>
-                            </Grid.Column>
-                            <Grid.Column width={4}>
-                              <Feed.Summary>18%</Feed.Summary>
-                            </Grid.Column>
-                          </Grid.Row>
-                          <Grid.Row>
-                            <Grid.Column width={12}>
-                              <Feed.Summary>To be paid:</Feed.Summary>
-                            </Grid.Column>
-                            <Grid.Column width={4}>
-                              <Feed.Summary>1180</Feed.Summary>
-                            </Grid.Column>
-                          </Grid.Row>
-                          <Grid.Row>
-                            <Grid.Column width={9}>
-                              Your Delivery Location
-                            </Grid.Column>
-                            <Grid.Column width={7}>
-                              <Feed.Summary>
-                                <Icon name="location arrow" />
-                                {locationInfo.city}
-                              </Feed.Summary>
-                            </Grid.Column>
-                          </Grid.Row>
-                        </Grid>
-                      </Feed.Content>
-                    </Feed.Event>
-                  </Feed>
-                </Card.Content>
-                <Button>CheckOut</Button>
-              </Card>
-            </Grid.Column>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Container>
-  );
+import { Icon, Grid, Container, Feed, Button, Card, Input } from "semantic-ui-react";
+import { useDispatch, useSelector } from "react-redux";
+// import img from "../image/loader.gif";
+import { addToCart, removeFromCart } from "../Reducer/cartReducer";
+import Coupons from "./Coupons";
+import Summary from "./Summery";
+import EmptyCart from "./EmptyCart";
+const user = JSON.parse(localStorage.getItem("user"));
+export default function Cart() {
+	const dispatch = useDispatch();
+	const { cartItem } = useSelector((state) => state.cart.data);
+
+	// console.log(locationInfo);
+	useEffect(() => {
+		// dispatch(getCartItems());
+		console.log(cartItem);
+	}, []);
+
+	return (
+		<Container>
+			{cartItem.length <= 0 ? (
+				<EmptyCart />
+			) : (
+				<>
+					<Grid>
+						<Grid.Row>
+							<Grid.Column width={11}>
+								<Card style={{ width: 750 }}>
+									<Card.Content>
+										<Card.Header>Items In Your Cart</Card.Header>
+									</Card.Content>
+									<Card.Content>
+										<Feed>
+											<Feed.Event>
+												<Feed.Content>
+													<Grid>
+														<Grid.Row>
+															<Grid.Column width={12}>
+																<Feed.Summary>Item Name</Feed.Summary>
+															</Grid.Column>
+															<Grid.Column width={4}>
+																<Feed.Summary>Item Price</Feed.Summary>
+															</Grid.Column>
+														</Grid.Row>
+														<Grid.Row>
+															{user ? (
+																<div
+																	style={{
+																		display: "flex",
+																		justifyContent: "flex-start",
+																	}}
+																>
+																	{cartItem.map((item) => (
+																		<>
+																			<Grid.Column width={5}>
+																				{item.count}
+																				<div>Price:{item.itemPrice}</div>
+																				<Feed.Date>{`${item.itemName.slice(
+																					0,
+																					20
+																				)}...`}</Feed.Date>
+																				<div>
+																					<Grid.Column width={5}>
+																						<Button
+																							onClick={() =>
+																								dispatch(
+																									addToCart(item)
+																								)
+																							}
+																						>
+																							<Icon
+																								name="add"
+																								size="small"
+																							/>
+																						</Button>
+																						<Input
+																							value={item.count}
+																							disabled
+																							placeholder={
+																								"item quantity"
+																							}
+																							style={{
+																								width: 50,
+																								color: "black",
+																							}}
+																						/>
+																						<Button
+																							onClick={() =>
+																								dispatch(
+																									removeFromCart(
+																										item
+																									)
+																								)
+																							}
+																						>
+																							<Icon
+																								name="minus"
+																								size="small"
+																							/>
+																						</Button>
+																					</Grid.Column>
+																				</div>
+																			</Grid.Column>
+																		</>
+																	))}
+																</div>
+															) : null}
+														</Grid.Row>
+
+														<Grid.Row></Grid.Row>
+													</Grid>
+												</Feed.Content>
+											</Feed.Event>
+										</Feed>
+									</Card.Content>
+								</Card>
+							</Grid.Column>
+							<Grid.Column width={5}>
+								<Grid.Column>
+									<Coupons />
+									<Summary />
+								</Grid.Column>
+							</Grid.Column>
+						</Grid.Row>
+					</Grid>
+				</>
+			)}
+		</Container>
+	);
 }

@@ -1,5 +1,4 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-
 import React, { useEffect } from "react";
 import { Card, Container, Image } from "semantic-ui-react";
 import { getCategory } from "../Reducer/categoryReducer";

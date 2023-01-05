@@ -5,7 +5,7 @@ import { getCategoryItem } from "../Reducer/itemReducer";
 import { useDispatch, useSelector } from "react-redux";
 import { Button, Card, Icon, Image, Rating } from "semantic-ui-react";
 import Loader from "../Loader/Loader";
-import "./card.css";
+// import "./card.css";
 
 const CategoryItems = () => {
 	const dispatch = useDispatch();
