@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { Button, Card, Feed, Grid, Icon } from "semantic-ui-react";
 
-const Summary = () => {
+const Summary = ({ items }) => {
+	const { locationInfo } = useSelector((state) => state.common.data);
+	const [total, setTotal] = useState(0);
+	useEffect(() => {
+		const totalPrice = items.reduce(function (prev, cur) {
+			const a = parseInt(prev);
+			return a + parseInt(cur.itemPrice);
+		}, 0);
+		setTotal(totalPrice);
+	}, [items]);
 	return (
 		<Card>
 			<Card.Content>
@@ -17,7 +27,7 @@ const Summary = () => {
 										<Feed.Summary>Total Price(MRP):</Feed.Summary>
 									</Grid.Column>
 									<Grid.Column width={4}>
-										<Feed.Summary>1000</Feed.Summary>
+										<Feed.Summary>{total}</Feed.Summary>
 									</Grid.Column>
 								</Grid.Row>
 								<Grid.Row>
@@ -28,20 +38,20 @@ const Summary = () => {
 										<Feed.Summary>18%</Feed.Summary>
 									</Grid.Column>
 								</Grid.Row>
-								<Grid.Row>
+								{/* <Grid.Row>
 									<Grid.Column width={12}>
 										<Feed.Summary>Coupon Applied:</Feed.Summary>
 									</Grid.Column>
 									<Grid.Column width={4}>
 										<Feed.Summary>18%</Feed.Summary>
 									</Grid.Column>
-								</Grid.Row>
+								</Grid.Row> */}
 								<Grid.Row>
 									<Grid.Column width={12}>
 										<Feed.Summary>To be paid:</Feed.Summary>
 									</Grid.Column>
 									<Grid.Column width={4}>
-										<Feed.Summary>1180</Feed.Summary>
+										<Feed.Summary>{(total * 18) / 100 + total}</Feed.Summary>
 									</Grid.Column>
 								</Grid.Row>
 								<Grid.Row>
@@ -49,7 +59,7 @@ const Summary = () => {
 									<Grid.Column width={7}>
 										<Feed.Summary>
 											<Icon name="location arrow" />
-											{/* {locationInfo.city} */}
+											{locationInfo.city}
 										</Feed.Summary>
 									</Grid.Column>
 								</Grid.Row>
