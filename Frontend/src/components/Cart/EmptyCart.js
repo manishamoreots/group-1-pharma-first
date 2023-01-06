@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Icon, Grid, Container, Feed, Button, Card, Input } from "semantic-ui-react";
+import { Grid, Container, Feed, Card } from "semantic-ui-react";
 const EmptyCart = () => {
 	return (
 		<div>
@@ -26,38 +26,12 @@ const EmptyCart = () => {
 														</Grid.Column>
 													</Grid.Row>
 													<Grid.Row>
-														<h1>Cart Is Empty</h1>
-														{/* {user ? (
-															<div style={{ display: "flex", justifyContent: "flex-start" }}>
-																{cartItem.map((item) => ( */}
 														<>
 															<Grid.Column width={5}>
-																{/* <Feed.Date>{`${item.itemName.slice(0, 20)}...`}</Feed.Date> */}
-																<div>
-																	<Grid.Column width={5}>
-																		<Button>
-																			<Icon name="add" size="small" />
-																		</Button>
-																		<Input
-																			disabled
-																			placeholder={"item quantity"}
-																			style={{
-																				width: 50,
-																				color: "black",
-																			}}
-																		/>
-																		<Button>
-																			<Icon name="minus" size="small" />
-																		</Button>
-																	</Grid.Column>
-																</div>
+																<h1>Cart Is Empty</h1>
 															</Grid.Column>
 														</>
-														{/* ))}
-															</div>
-														) : null} */}
 													</Grid.Row>
-
 													<Grid.Row></Grid.Row>
 												</Grid>
 											</Feed.Content>
@@ -67,10 +41,7 @@ const EmptyCart = () => {
 							</Card>
 						</Grid.Column>
 						<Grid.Column width={5}>
-							<Grid.Column>
-								{/* <Coupons />
-								<Summary /> */}
-							</Grid.Column>
+							<Grid.Column></Grid.Column>
 						</Grid.Column>
 					</Grid.Row>
 				</Grid>
