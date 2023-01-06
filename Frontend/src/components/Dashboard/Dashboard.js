@@ -3,24 +3,8 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Loader from "../Loader/Loader";
 import { Image, Button } from "semantic-ui-react";
-import { Image, Button } from "semantic-ui-react";
 
 const Dashboard = () => {
-  const user = JSON.parse(localStorage.getItem("user"));
-  const [loading, setLoading] = useState(true);
-  let navigate = useNavigate();
-  useEffect(() => {
-    if (user) {
-      console.log(user);
-    } else {
-      navigate("/");
-    }
-  }, [user]);
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-  }, [loading]);
   const user = JSON.parse(localStorage.getItem("user"));
   const [loading, setLoading] = useState(true);
   let navigate = useNavigate();
@@ -72,7 +56,8 @@ const Dashboard = () => {
                 }}
               >
                 <div
-                  style={{ width: "80%",
+                  style={{
+                    width: "80%",
                   }}
                 >
                   <div
