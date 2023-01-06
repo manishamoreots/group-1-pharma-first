@@ -15,7 +15,7 @@ function Care() {
         </Grid.Row>
         <Grid.Row>
           <Grid.Column width={8}>
-            <Item.Group>
+            <Item.Group style={{ marginLeft: 80 }}>
               <Item>
                 <Item.Image
                   size="tiny"
@@ -24,9 +24,9 @@ function Care() {
 
                 <Item.Content>
                   <Item.Header as="a">Save Extra 7%</Item.Header>
-                  <Item.Meta>Description</Item.Meta>
-                  <Item.Description></Item.Description>
-                  <Item.Extra>Additional Details</Item.Extra>
+                  <Item.Meta>
+                    You can save upto 7% extra discount on all orders
+                  </Item.Meta>
                 </Item.Content>
               </Item>
 
@@ -38,15 +38,15 @@ function Care() {
 
                 <Item.Content>
                   <Item.Header as="a">No Shipping Charges</Item.Header>
-                  <Item.Meta>Description</Item.Meta>
-                  <Item.Description></Item.Description>
-                  <Item.Extra>Additional Details</Item.Extra>
+                  <Item.Meta>
+                    You will get free shipping on every order *
+                  </Item.Meta>
                 </Item.Content>
               </Item>
             </Item.Group>
           </Grid.Column>
           <Grid.Column width={8}>
-            <Item.Group>
+            <Item.Group style={{ marginLeft: 180 }}>
               <Item>
                 <Item.Image
                   size="tiny"
@@ -55,9 +55,9 @@ function Care() {
 
                 <Item.Content>
                   <Item.Header as="a">Free Lab Test</Item.Header>
-                  <Item.Meta>Description</Item.Meta>
-                  <Item.Description></Item.Description>
-                  <Item.Extra>Additional Details</Item.Extra>
+                  <Item.Meta>
+                    You will get Free Lab test reports to your Home
+                  </Item.Meta>
                 </Item.Content>
               </Item>
 
@@ -69,9 +69,9 @@ function Care() {
 
                 <Item.Content>
                   <Item.Header as="a">Free E-Consultant</Item.Header>
-                  <Item.Meta>Description</Item.Meta>
-                  <Item.Description></Item.Description>
-                  <Item.Extra>Additional Details</Item.Extra>
+                  <Item.Meta>
+                    You Will get 24*7 E consultant available to help{" "}
+                  </Item.Meta>
                 </Item.Content>
               </Item>
             </Item.Group>
@@ -94,6 +94,7 @@ function Care() {
                   src="https://onemg.gumlet.io/image/upload/v1617169012/marketing/mqwi4hji0xmevi0leqxt.png"
                   size="small"
                   // ui={false}
+                  style={{ marginLeft: 55 }}
                   wrapped
                 />
               </Card.Meta>
@@ -101,7 +102,8 @@ function Care() {
                 <Card.Header>FREE Health Monitoring</Card.Header>
 
                 <Card.Description>
-                  Daniel is a comedian living in Nashville.
+                  You will get 24*7 health monitoring information whenever you
+                  need
                 </Card.Description>
               </Card.Content>
               <Card.Content extra></Card.Content>
@@ -114,14 +116,16 @@ function Care() {
                   src="https://onemg.gumlet.io/image/upload/v1617169094/marketing/rciejxt8uupxvkdoztx1.png"
                   wrapped
                   // ui={false}
+                  style={{ marginLeft: 55 }}
                   size="small"
                 />
               </Card.Meta>
               <Card.Content>
                 <Card.Header>Priority Processing</Card.Header>
-                <Card.Meta>Joined in 2016</Card.Meta>
+
                 <Card.Description>
-                  Daniel is a comedian living in Nashville.
+                  Your order and purchase will be processed faster than normal
+                  users
                 </Card.Description>
               </Card.Content>
               <Card.Content extra></Card.Content>
@@ -131,6 +135,7 @@ function Care() {
             <Card>
               <Card.Meta>
                 <Image
+                  style={{ marginLeft: 55 }}
                   src="https://onemg.gumlet.io/image/upload/v1617169138/marketing/q2xl4gwlyw55awctv1lk.png"
                   wrapped
                   size="small"
@@ -139,12 +144,11 @@ function Care() {
 
               <Card.Content>
                 <Card.Header>Premium Customer Support</Card.Header>
-                <Card.Meta>Joined in 2016</Card.Meta>
+
                 <Card.Description>
-                  Daniel is a comedian living in Nashville.
+                  You will get 24*7 Premium Customer Support and consultation
                 </Card.Description>
               </Card.Content>
-              <Card.Content extra></Card.Content>
             </Card>
           </Grid.Column>
         </Grid.Row>
