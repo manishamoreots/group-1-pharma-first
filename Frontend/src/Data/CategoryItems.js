@@ -5,8 +5,8 @@ export const categoryItems = [
     categoryId: 1,
     itemName:
       "Virgo Healthcare Protivir Diet- Nutritional Supplement for Diabetic",
-    itemPrice: "₹2000",
-    offerPrice: "₹2333",
+    offerPrice: "2333",
+    itemPrice: "2000",
     ratingPoints: "4.5",
     ratingReview: "294 Ratings & 34 Reviews",
     offPercentage: "15% off",
@@ -41,7 +41,8 @@ export const categoryItems = [
     id: 542,
     categoryId: 1,
     itemName: "PentaSure DM Diabetes Care Powder Creamy Vanilla & Cinnamon",
-    itemPrice: "₹2333",
+    itemPrice: "1000",
+    offerPrice: "1500",
     highlights: [
       "Helps control blood sugar levels",
       "Formulated as per ADA and WHO guidelines",
@@ -75,7 +76,8 @@ export const categoryItems = [
     categoryId: 1,
     itemName:
       "Contour Plus One Blood Glucose Monitoring System Glucometer with Contour Plus Blood Glucose Test Strip 10S Free",
-    itemPrice: "₹1195",
+    itemPrice: "999",
+    offerPrice: "1100",
     highlights: [
       "Different light indicators show the results in their respective ranges",
       "Smartlight feature indicates cases of high or low blood glucose level",
@@ -107,7 +109,8 @@ export const categoryItems = [
     id: 6454,
     categoryId: 1,
     itemName: "Protinex Diabetes Care Vanilla",
-    itemPrice: "₹585",
+    itemPrice: "500",
+    offerPrice: "₹580",
     highlights: [
       "Helps maintain blood sugar levels",
       "Meets protein and fibre requirements in patients with diabetes",
@@ -141,7 +144,8 @@ export const categoryItems = [
     categoryId: 1,
     itemName:
       "Dr Morepen Gluco One BG 03 Blood Glucose Test Strip (Only Strips)",
-    itemPrice: "₹607",
+    itemPrice: "555",
+    offerPrice: "₹669",
     highlights: [
       "Reliable and convenient to use with a glucometer",
       "Self-testing method",
@@ -174,7 +178,8 @@ export const categoryItems = [
     categoryId: 1,
     itemName:
       "Tata 1mg Ceylon Cinnamon 10:1 Ratio Extract for Blood Sugar Management 200mg Capsule",
-    itemPrice: "₹97",
+    itemPrice: "999",
+    offerPrice: "1200",
     highlights: [
       "Ceylon cinnamon contains anti-inflammatory, antioxidant and antimicrobial properties",
       "Ceylon cinnamon supports the immune health",
@@ -206,7 +211,8 @@ export const categoryItems = [
     categoryId: 1,
     itemName:
       "Tata 1mg Diabetes Care Combo Pack for Blood Sugar & Cholestrol Management",
-    itemPrice: "₹652",
+    itemPrice: "652",
+    offerPrice:"815",
     highlights: [
       "This combo pack contains 4 items",
       "1mg Ceylon Cinnamon Extract Capsule is formulated with ceylon cinnamon, also known as “true” cinnamon has been prized for its medicinal properties for thousands of years. It can lower blood sugar levels, reduce risk factors for heart diseases and has a plethora of other impressive health benefits.",

@@ -16,7 +16,7 @@ export const category = [
 	},
 	{
 		id: 4,
-		categoryName: "Born Join Muscal Care",
+		categoryName: "Born & Muscal Care",
 		categoryImage: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/ba975795-98dc-4cd8-8b55-3c20230d70e3.png",
 	},
 	{

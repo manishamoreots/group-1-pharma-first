@@ -28,10 +28,13 @@ const EmptyCart = () => {
 													<Grid.Row>
 														<>
 															<Grid.Column width={5}>
-																<h1>Cart Is Empty</h1>
+																<div>
+																	<h1>Cart Is Empty</h1>
+																</div>
 															</Grid.Column>
 														</>
 													</Grid.Row>
+
 													<Grid.Row></Grid.Row>
 												</Grid>
 											</Feed.Content>

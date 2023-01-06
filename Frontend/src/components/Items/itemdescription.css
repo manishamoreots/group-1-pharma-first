@@ -1,0 +1,120 @@
+.top-heading {
+  background-color: #edf9ee;
+  display: flex;
+  color: #212121;
+  font-size: 12px;
+  position: relative;
+  padding: 3%;
+}
+.main-container {
+  margin: 1rem;
+}
+.itemDescription-hero-container {
+  margin-top: 5%;
+}
+.itemDescription-offerprice {
+  text-decoration: line-through;
+  margin: 2%;
+}
+.itemDescription-offerpercent {
+  font-size: 20px;
+  margin: 2%;
+  color: #1aab2a;
+  background-color: rgb(246, 241, 241);
+}
+.itemDescription-dropdown {
+  display: flex;
+  margin-top: 4%;
+  justify-content: "space-between";
+}
+.ui.button {
+  width: 100%;
+  background-color: tomato !important;
+  color: white !important;
+}
+.ui.segment {
+  padding: 0 !important;
+}
+.rating-button {
+  background-color: limegreen !important;
+  border: none;
+  outline: none;
+  padding: 7px;
+  border-radius: 4px;
+  color: #fff;
+  width: 18% !important;
+}
+.ui.large.segment {
+  width: 100%;
+  margin: 2rem;
+}
+
+.img-container {
+  margin: 5%;
+}
+.item-name {
+  color: #434343;
+  font-size: large;
+  font-weight: 400;
+  margin-bottom: 2%;
+  width: 100%;
+}
+.product-highlights-container {
+  margin-top: 10px;
+  margin-bottom: 14px;
+  margin-left: 3%;
+  color: #525252;
+  font-size: 16px;
+}
+.description-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #212121;
+  width: 80%;
+  margin-left: 10%;
+}
+.product-highlights-details {
+  margin-left: 2%;
+  font-size: 15px;
+  padding: 1%;
+}
+.rating-review {
+  display: flex;
+  margin-left: 10%;
+  margin-top: 2%;
+}
+.rating-btn {
+  width: 20%;
+  height: 10% !important;
+  display: flex;
+  background-color: none !important;
+}
+.item-description-container {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 3%;
+  margin-top: 4%;
+  color: "#212121";
+  width: 65%;
+}
+.key-Ingredients-container {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #302f2f;
+  font-size: 16px;
+}
+.key-Ingredients-details {
+  padding-left: 0 !important;
+  padding: 1%;
+  color: #363535;
+}
+.Rating-and-Review {
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 25%;
+  height: 75%;
+  padding: 2%;
+  justify-content: space-evenly;
+}
+.ui.rating .active.icon {
+  color: white !important;
+}

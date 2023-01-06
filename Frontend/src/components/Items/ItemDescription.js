@@ -1,12 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Button, Container, Dropdown, Grid, Header, Image, Menu, Segment, Card, Rating } from "semantic-ui-react";
+import { Button, Container, Dropdown, Grid, Header, Image, Menu, Segment, Card, Rating, Icon } from "semantic-ui-react";
 import { getItemDescription } from "../Reducer/itemReducer";
 import { useDispatch, useSelector } from "react-redux";
 import Loader from "../Loader/Loader";
 import { addToCart } from "../Reducer/cartReducer";
-import "./style.css";
+import "./itemdescription.css";
 
 const options = [
 	{ key: 1, text: "2 Jar", value: 1 },
@@ -20,20 +20,16 @@ const ItemDescription = () => {
 	const { description, loading } = useSelector((state) => state.items.data);
 	const { id } = useParams();
 	useEffect(() => {
-		setTimeout(() => {
-			dispatch(getItemDescription(Number(id)));
-		}, 10);
+		dispatch(getItemDescription(Number(id)));
 	}, [id]);
-	useEffect(() => {
-		console.log(description.desc);
-	}, [description]);
+	useEffect(() => {}, [description]);
 	return (
 		<Container>
 			{loading ? (
 				<Loader />
 			) : (
 				<>
-					{description && description.desc.keybenefit.length > 0 && (
+					{description && description.itemName && (
 						<div className="itemDescription-hero-container">
 							<Grid>
 								<div className="img-container">
@@ -41,6 +37,7 @@ const ItemDescription = () => {
 										<Image src={description.itemImage} />
 									</Grid.Column>
 								</div>
+
 								<Grid.Column
 									width={7}
 									style={{
@@ -52,14 +49,12 @@ const ItemDescription = () => {
 										<Header>{description.itemName}</Header>
 									</div>
 									<div className="rating-review">
-										<div className="rating-btn">
-											<button size="small" className="btn_rating">
-												{description.ratingPoints}
-												<span>
-													<Rating className="ui rating" size="small" />
-												</span>
-											</button>
-										</div>
+										<button className="rating-button">
+											{description.ratingPoints}
+											<span>
+												<Rating className="ui rating" size="big" />
+											</span>
+										</button>
 										<div style={{ marginTop: "2%" }}>
 											<Card.Meta>{description.ratingReview}</Card.Meta>
 										</div>
@@ -84,9 +79,9 @@ const ItemDescription = () => {
 
 										<div className="main-container">
 											<div style={{ display: "flex" }}>
-												<Header as="h3" style={{ fontSize: "25px" }}>
-													{description.itemPrice}
-												</Header>
+												<h4 style={{ fontSize: "25px", display: "flex" }}>
+													<Icon className="rupee sign" /> {description.itemPrice}
+												</h4>
 												<Card.Meta className="itemDescription-offerprice">
 													{description.offerPrice}
 												</Card.Meta>
@@ -113,85 +108,81 @@ const ItemDescription = () => {
 									</Segment>
 								</Grid.Column>
 							</Grid>
-							<Container style={{ display: "flex" }}>
-								<div className="item-description-container">
-									{description.desc.length > 0 && (
-										<>
-											{description.desc.length}
-											<ul>
-												<div className="item-name">
-													<h3>Information about {description.itemName}</h3>
-												</div>
-												<div style={{ width: "98%" }}>
-													<strong>{description.itemName} </strong>
-													{description.itemInfo}
-												</div>
-
-												<div className="key-Ingredients-container">Key Ingredients :</div>
-												{description.desc.keybenefit.map((item, index) => (
-													<div className="key-Ingredients-details">
-														<li key={index}>{item}</li>
-													</div>
-												))}
-											</ul>
-											<ul>
-												<div className="key-Ingredients-container">Directions For Use :</div>
-												{description.desc.directions.map((item, index) => (
-													<div className="key-Ingredients-details">
-														<li key={index}>{item}</li>
-													</div>
-												))}
-											</ul>
-											<ul>
-												<div className="key-Ingredients-container">Safety Information :</div>
-												{description.desc.Safetyinfo.map((item, index) => (
-													<div className="key-Ingredients-details">
-														<li key={index}>{item}</li>
-													</div>
-												))}
-											</ul>
-										</>
-									)}
-								</div>
-
-								<div style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }} className="Rating-and-Review">
-									<h2 style={{ marginBottom: "2%" }}>Rating & Reviews</h2>
-									<Header as="h1" style={{ color: "limegreen" }}>
-										4.5
-										<Rating className="ui rating" size="massive" style={{ color: "limegreen" }} />
-									</Header>
-									<div style={{ marginTop: "2%" }}>
-										<Card.Meta>{description.ratingReview}</Card.Meta>
-									</div>
-									<p>
-										1<Rating className="ui rating" disabled />
-										<input className="input-range" type="range" value={100} />
-										<span>100%</span>
-									</p>
-									<p>
-										2<Rating className="ui rating" disabled />
-										<input type="range" value={80} />
-										<span>80%</span>
-									</p>
-									<p>
-										3<Rating className="ui rating" disabled />
-										<input type="range" value={60} />
-										<span>60%</span>
-									</p>
-									<p>
-										4<Rating className="ui rating" disabled />
-										<input type="range" value={40} />
-										<span>40%</span>
-									</p>
-									<p>
-										5<Rating className="ui rating" disabled />
-										<input type="range" value={20} />
-										<span>20</span>
-									</p>
-								</div>
-							</Container>
 						</div>
 					)}
+					<Container style={{ display: "flex" }}>
+						<div className="item-description-container">
+							<ul>
+								<div className="item-name">
+									<h3>Information about {description.itemName}</h3>
+								</div>
+								<div style={{ width: "98%" }}>
+									<strong>{description.itemName} </strong>
+									{description.itemInfo}
+								</div>
+
+								<div className="key-Ingredients-container">Key Ingredients :</div>
+								{description.desc.keybenefit.map((item, index) => (
+									<div className="key-Ingredients-details">
+										<li key={index}>{item}</li>
+									</div>
+								))}
+							</ul>
+							<ul>
+								<div className="key-Ingredients-container">Directions For Use :</div>
+								{description.desc.directions.map((item, index) => (
+									<div className="key-Ingredients-details">
+										<li key={index}>{item}</li>
+									</div>
+								))}
+							</ul>
+							<ul>
+								<div className="key-Ingredients-container">Safety Information :</div>
+								{description.desc.Safetyinfo &&
+									description.desc.Safetyinfo.map((item, index) => (
+										<div className="key-Ingredients-details">
+											<li key={index}>{item}</li>
+										</div>
+									))}
+							</ul>
+						</div>
+
+						<div style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }} className="Rating-and-Review">
+							<h2 style={{ marginBottom: "2%" }}>Rating & Reviews</h2>
+							<Header as="h1" style={{ color: "limegreen" }}>
+								4.5
+								<Rating className="ui rating" size="massive" />
+							</Header>
+							<div style={{ marginTop: "2%", marginBottom: "4%" }}>
+								<Card.Meta>{description.ratingReview}</Card.Meta>
+							</div>
+							<p>
+								1<Rating className="ui rating" disabled />
+								<input type="range" value={100} />
+								<span>35%</span>
+							</p>
+							<p>
+								2<Rating className="ui rating" disabled />
+								<input type="range" color="cyan" />
+								<span>45%</span>
+							</p>
+							<p>
+								3<Rating className="ui rating" disabled />
+								<input type="range" />
+								<span>50%</span>
+							</p>
+							<p>
+								4<Rating className="ui rating" disabled />
+								<input type="range" />
+								<span>75%</span>
+							</p>
+							<p>
+								5<Rating className="ui rating" disabled />
+								<input type="range" />
+								<span>100%</span>
+							</p>
+						</div>
+					</Container>
 				</>
 			)}
 		</Container>

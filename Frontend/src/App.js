@@ -10,6 +10,7 @@ import CategoryItems from "./components/Items/CategoryItems";
 import Navbar from "./components/Navbar/Navbar";
 import Contact from "./components/Contact/Contact";
 import Care from "./components/Care-plan/Care";
+import LabTest from "./components/Lab-test/lab-test";
 // import Hello from './components/Hello';
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/care" element={<Care />} />
+        <Route path="/lab" element={<LabTest/>} />
         <Route
           path="/login"
           element={<LoginSignUpModal title="login" btnType="Login" />}
