@@ -69,7 +69,7 @@ const Dashboard = () => {
                       borderRadius: "10px",
                     }}
                   >
-                    <div style={{ alignContent: "flex-start" }}>
+                    <div >
                       Full Name: {user?.name}
                     </div>
                     <hr />
