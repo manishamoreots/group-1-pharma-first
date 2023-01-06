@@ -12,9 +12,7 @@ export const commonSlice = createSlice({
 	name: "location",
 	initialState,
 	extraReducers: (builder) => {
-		builder.addCase(getLocation.pending, (state) => {
-			// state.data.loading = true;
-		});
+		builder.addCase(getLocation.pending, (state) => {});
 		builder.addCase(getLocation.fulfilled, (state, action) => {
 			state.data = { locationInfo: { ...action.payload } };
 		});

@@ -109,6 +109,7 @@ const ItemDescription = () => {
 															swal({ text: "Please login" });
 														}
 														dispatch(addToCart(description));
+														swal({ text: "Item Added" });
 													}}
 													width="100%"
 													style={{ marginTop: "5%" }}

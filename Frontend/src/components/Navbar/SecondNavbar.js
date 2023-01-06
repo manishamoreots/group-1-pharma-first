@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Input, Menu } from "semantic-ui-react";
-import Location from "../getLocation/Location";
 import { useSelector } from "react-redux";
+import MapModel from "../Modal/MapModel";
 
 const SecondNavbar = () => {
 	const { locationInfo } = useSelector((state) => state.common.data);
@@ -9,8 +9,8 @@ const SecondNavbar = () => {
 		<div>
 			<Menu secondary style={{ justifyContent: "space-evenly" }}>
 				<Menu.Menu position="left">
-					<Menu.Item style={{ width: "25%" }}>
-						<Location />
+					<Menu.Item style={{ width: "26%" }}>
+						<MapModel />
 						<Input
 							type="text"
 							icon="map marker alternate"

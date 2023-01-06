@@ -9,18 +9,14 @@ import swal from "sweetalert";
 import "./categoryitem.css";
 import { addToCart } from "../Reducer/cartReducer";
 
-const CategoryItems = ({ view }) => {
+const CategoryItems = () => {
 	const dispatch = useDispatch();
 	const { items, loading } = useSelector((state) => state.items.data);
 	const { isUser } = useSelector((state) => state.cart.data);
 	const { id } = useParams();
 	useEffect(() => {
 		setTimeout(() => {
-			if (view) {
-				dispatch(getCategoryItem(view));
-			} else {
-				dispatch(getCategoryItem(Number(id)));
-			}
+			dispatch(getCategoryItem(Number(id)));
 		}, 1000);
 	}, [id]);
 
