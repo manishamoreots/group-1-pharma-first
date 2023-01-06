@@ -72,8 +72,7 @@ const Dashboard = () => {
                 }}
               >
                 <div
-                  style={{
-                    width: "80%",
+                  style={{ width: "80%",
                   }}
                 >
                   <div
