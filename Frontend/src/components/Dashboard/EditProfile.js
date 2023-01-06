@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Loader from "../Loader/Loader";
-import { Image, Button, Card, Breadcrumb } from "semantic-ui-react";
+import { Image, Button, Card, Breadcrumb, Input } from "semantic-ui-react";
 
-const Dashboard = () => {
+const Editprofile = () => {
   const user = JSON.parse(localStorage.getItem("user"));
   const [loading, setLoading] = useState(true);
   let navigate = useNavigate();
@@ -34,43 +34,13 @@ const Dashboard = () => {
               Home
             </Breadcrumb.Section>
             <Breadcrumb.Divider>/</Breadcrumb.Divider>
-            <Breadcrumb.Section link href="/editprofile">
-              EditProfile
+            <Breadcrumb.Section link href="/Dashboard">
+              Personal Information
             </Breadcrumb.Section>
             <Breadcrumb.Divider>/</Breadcrumb.Divider>
-            <Breadcrumb.Section active>Personal Information</Breadcrumb.Section>
+            <Breadcrumb.Section active>EditProfile</Breadcrumb.Section>
           </Breadcrumb>
           <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-            <div
-              style={{
-                // backgroundColor: "red",
-                width: "25%",
-                height: "75vh",
-                borderRadius: "20px",
-                marginTop: 20,
-                marginLeft: 30,
-                justifyContent: "center",
-              }}
-            >
-              <div>
-                <Image
-                  src="https://react.semantic-ui.com/images/wireframe/square-image.png"
-                  avatar
-                  centered
-                  size="small"
-                  style={{ marginLeft: 75 }}
-                />
-              </div>
-              <div>
-                <h3 style={{ textAlignLast: "center", padding: 20 }}>
-                  {user?.name}
-                </h3>
-              </div>
-              <div>
-                <Button>Delete My Account</Button>
-              </div>
-            </div>
-
             <div
               style={{
                 width: "75%",
@@ -87,11 +57,11 @@ const Dashboard = () => {
                 <div style={{ width: "80%" }}>
                   <div
                     style={{
-                      border: "1px solid black",
+                      //   border: "1px solid black",
                       width: "80%",
                       alignSelf: "center",
                       justifyContent: "flex-start",
-                      height: "56.9vh",
+                      height: "100vh",
                       borderRadius: "10px",
                     }}
                   >
@@ -104,7 +74,9 @@ const Dashboard = () => {
                       }}
                     >
                       <div>Full Name : </div>
-                      <div style={{ marginLeft: 20 }}>{user?.name}</div>
+                      <div style={{ marginLeft: 20 }}>
+                        <Input value={user?.name} />
+                      </div>
                     </div>
                     <hr />
                     <div
@@ -116,7 +88,9 @@ const Dashboard = () => {
                       }}
                     >
                       <div>Email Id : </div>
-                      <div style={{ marginLeft: 20 }}>{user?.email}</div>
+                      <div style={{ marginLeft: 20 }}>
+                        <Input value={user?.email} />
+                      </div>
                     </div>
                     <hr />
                     <div
@@ -128,7 +102,9 @@ const Dashboard = () => {
                       }}
                     >
                       <div>Mobile No : </div>
-                      <div style={{ marginLeft: 20 }}>{user?.mobile}</div>
+                      <div style={{ marginLeft: 20 }}>
+                        <Input value={user?.mobile} />
+                      </div>
                     </div>
                     <hr />
                     <div
@@ -140,7 +116,9 @@ const Dashboard = () => {
                       }}
                     >
                       <div>Country : </div>
-                      <div style={{ marginLeft: 20 }}>{user?.Country}</div>
+                      <div style={{ marginLeft: 20 }}>
+                        <Input value={user?.country} />
+                      </div>
                     </div>
                     <hr />
                     <div
@@ -152,9 +130,15 @@ const Dashboard = () => {
                       }}
                     >
                       <div>Address : </div>
-                      <div style={{ marginLeft: 20 }}>{user?.address}</div>
+                      <div style={{ marginLeft: 20 }}>
+                        {" "}
+                        <Input value={user?.address} />
+                      </div>
                     </div>
-                    {/* <hr /> */}
+
+                    <div>
+                      <Button>Edit Details</Button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -165,4 +149,4 @@ const Dashboard = () => {
     </div>
   );
 };
-export default Dashboard;
+export default Editprofile;
