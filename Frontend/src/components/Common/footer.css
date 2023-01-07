@@ -1,15 +1,15 @@
 .footer-container {
-   background-color: mediumseagreen !important;
+  background-color: mediumseagreen !important;
 }
 
 .style__copyright {
-    color: #f2f8fb;
-    opacity: 0.6;
-    margin: 12px;
+  color: #f2f8fb;
+  opacity: 0.6;
+  margin: 12px;
 }
 
-.social-icons {
-    animation: back-to-docs 1.5s ease-in-out infinite;
-    z-index: 6;
-    cursor: pointer;
+
+
+i.circular.icon:hover {
+  background-color: crimson;
 }

@@ -49,7 +49,6 @@ const ItemDescription = () => {
                     <Image src={description.itemImage} />
                   </Grid.Column>
                 </div>
-
                 <Grid.Column
                   width={7}
                   style={{

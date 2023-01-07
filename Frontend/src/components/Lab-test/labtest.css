@@ -1,0 +1,43 @@
+.main-heading {
+  margin-top: 5%;
+  font-weight: 700;
+  color: #212121;
+  font-size: 24px;
+  font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.column-heading {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 16px;
+  justify-content: space-evenly;
+  font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.sub-heading {
+  font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #212121;
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+
+.carousel-conatiner {
+  margin-top: 3%;
+}
+.carousel.carousel-slider .control-arrow {
+  visibility: hidden;
+}
+
+.carousel .carousel-status {
+  visibility: hidden;
+}
+.grid-container {
+  margin-right: 20%;
+  margin-left: 5%;
+  border: 1px solid rgb(190, 184, 184);
+  border-radius: 5px;
+}
+
+.two .column .row {
+  margin-top: 5%;
+  border-top: none !important;
+}
