@@ -11,7 +11,7 @@ export const authSlice = createSlice({
 			let email = action.payload.email.trim();
 			const data = current(state.data.users).find((user) => user.email === email);
 			if (data) {
-				state.data = { ...current(state.data), errors: { msg: "User Already Exists!!" } };
+				state.data = { ...current(state.data), errors: { message: "User Already Exists!!" } };
 			} else {
 				state.data = { users: [...state.data.users, action.payload], errors: {}, isAuthenticated: false, loading: true };
 			}

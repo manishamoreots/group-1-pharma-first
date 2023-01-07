@@ -1,31 +1,42 @@
 import { createSlice, current } from "@reduxjs/toolkit";
-let cartItems = JSON.parse(localStorage.getItem("cartItem"));
-const initialState = { data: { cartItem: [...cartItems] } };
+const initialState = { data: { cartItem: [], isUser: false } };
 
 export const cartSlice = createSlice({
 	name: "item",
 	initialState: initialState,
 	reducers: {
+		getCartItems: (state, action) => {
+			let cartItems = JSON.parse(localStorage.getItem("cartItem"));
+			if (cartItems) {
+				state.data = { ...state.data, cartItem: [...cartItems] };
+			}
+			// else
+			// {}
+		},
 		addToCart: (state, action) => {
 			const allItems = state.data.cartItem;
 			const user = JSON.parse(localStorage.getItem("user"));
-			const userInfo = {
-				...action.payload,
-				userId: user.userId,
-				count: 1,
-			};
-			if (!allItems) {
-				let data = [userInfo];
-				localStorage.setItem("cartItem", JSON.stringify(data));
-			} else if (allItems !== 0) {
-				const itemIndex = allItems.findIndex((item) => item.id === action.payload.id);
-				if (itemIndex > -1) {
-					allItems[itemIndex].count += 1;
-					localStorage.setItem("cartItem", JSON.stringify(allItems));
-				} else {
-					allItems.push(userInfo);
-					localStorage.setItem("cartItem", JSON.stringify(allItems));
+			if (user) {
+				const userInfo = {
+					...action.payload,
+					userId: user.userId,
+					count: 1,
+				};
+				if (!allItems) {
+					let data = [userInfo];
+					localStorage.setItem("cartItem", JSON.stringify(data));
+				} else if (allItems !== 0) {
+					const itemIndex = allItems.findIndex((item) => item.id === action.payload.id);
+					if (itemIndex > -1) {
+						allItems[itemIndex].count += 1;
+						localStorage.setItem("cartItem", JSON.stringify(allItems));
+					} else {
+						allItems.push(userInfo);
+						localStorage.setItem("cartItem", JSON.stringify(allItems));
+					}
 				}
+			} else {
+				state.data = { ...state.data.cartItem, isUser: true };
 			}
 		},
 		removeFromCart: (state, action) => {
