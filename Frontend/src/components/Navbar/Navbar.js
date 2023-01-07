@@ -9,51 +9,56 @@ export default function Navbar() {
 	const user = JSON.parse(localStorage.getItem("user"));
 	const [activeItem, setActiveItem] = useState("homepage");
 	const { cartItem } = useSelector((state) => state.cart.data);
-
 	let navigate = useNavigate();
 	const dispatch = useDispatch();
 	const handleClick = (e, { name }) => {
 		setActiveItem(name);
 	};
+
 	const onLogout = () => {
 		dispatch(logout());
 		navigate("/");
 	};
+	const style = {
+		alignSelf: "center",
+		cursor: "pointer",
+	};
 
 	const guestUser = (
 		<>
-			<Menu.Item position="right" style={{ alignSelf: "center" }}>
+			<Menu.Item position="right" style={style}>
 				<LoginSignUpModal title="Sign Up" btnType="Sign Up" />
 			</Menu.Item>
-			<Menu.Item style={{ alignSelf: "center" }}>
-				<LoginSignUpModal title="login" btnType="Login" />
+			<Menu.Item style={style}>
+				<LoginSignUpModal title="Login" btnType="Login" />
 			</Menu.Item>
 		</>
 	);
 	const authUser = (
 		<>
-			<Menu.Item position="right" style={{ alignSelf: "center" }}>
-				<Link to="/dashboard" style={{ color: "black" }}>
+			<Menu.Item position="right" style={style} name="dashboard" active={activeItem === "dashboard"} onClick={handleClick}>
+				<Link to="/dashboard" style={{ color: "black", cursor: "pointer" }}>
 					Dashboard
 				</Link>
 			</Menu.Item>
-			<Menu.Item style={{ alignSelf: "center" }}>
-				<div onClick={onLogout}>logout</div>
+			<Menu.Item style={style}>
+				<div onClick={onLogout}>Logout</div>
 			</Menu.Item>
 		</>
 	);
+
 	return (
 		<>
 			<Menu position="left" className="Navigation" pointing secondary>
-				<Menu.Item position="left" as={Link} exact to="/" name="homepage" onClick={handleClick}>
-					<Image src={logo} size={"small"} style={{}} />
+				<Menu.Item position="left" as={Link} exact to="/">
+					<Image src={logo} size={"small"} />
 				</Menu.Item>
 				<Menu.Item
 					as={Link}
 					exact
 					to="/"
-					name="Home"
-					active={activeItem === "Home"}
+					name="homepage"
+					active={activeItem === "homepage"}
 					onClick={handleClick}
 					style={{ alignSelf: "center" }}
 				>
@@ -90,13 +95,21 @@ export default function Navbar() {
 					onClick={handleClick}
 					style={{ alignSelf: "center" }}
 				>
-					Contact us
+					Contact Us
 				</Menu.Item>
 				{user ? authUser : guestUser}
-				<Menu.Item as={Link} exact to="/cart" style={{ alignSelf: "center", marginRight: 30 }}>
+				<Menu.Item
+					as={Link}
+					exact
+					to="/cart"
+					name="cart"
+					active={activeItem === "cart"}
+					onClick={handleClick}
+					style={{ alignSelf: "center", marginRight: 30 }}
+				>
 					<Icon name="cart" size="large" />
 					<Label color="teal" floating style={{ top: -5, left: 45 }}>
-						{user ? cartItem.length : 0}
+						{user && cartItem ? cartItem.length : 0}
 					</Label>
 				</Menu.Item>
 			</Menu>

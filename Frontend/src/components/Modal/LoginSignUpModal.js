@@ -5,7 +5,6 @@ import { Login, Register } from "../Reducer/authReducer";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
-
 const LoginSignUpModal = ({ title, btnType }) => {
 	let navigate = useNavigate();
 	const dispatch = useDispatch();
@@ -26,7 +25,9 @@ const LoginSignUpModal = ({ title, btnType }) => {
 		if (!errors.message) {
 			setTimeout(() => {
 				setOpen(false);
+				navigate("/");
 			}, 1000);
+		} else {
 		}
 	}, [errors]);
 
@@ -57,7 +58,7 @@ const LoginSignUpModal = ({ title, btnType }) => {
 				/>
 				<Modal.Description>
 					<Form onSubmit={submit}>
-						{title === "login" ? (
+						{title === "Login" ? (
 							<>
 								{errors.msg ? (
 									<Label basic color="red" pointing="below">
@@ -90,9 +91,9 @@ const LoginSignUpModal = ({ title, btnType }) => {
 							</>
 						) : (
 							<>
-								{errors.msg ? (
+								{errors.message ? (
 									<Label basic color="red" pointing="below">
-										{errors.msg}
+										{errors.message}
 									</Label>
 								) : null}
 								<Form.Input name="name" label="Name" type="text" required placeholder="Full Name" />
@@ -102,7 +103,7 @@ const LoginSignUpModal = ({ title, btnType }) => {
 									type="email"
 									required
 									placeholder="Email"
-									error={errors.msg ? true : false}
+									error={errors.message ? true : false}
 								/>
 								<Form.Input name="mobile" label="Mobile" type="Number" required placeholder="Mobile" />
 								<Form.Input

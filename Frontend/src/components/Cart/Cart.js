@@ -6,7 +6,6 @@ import { addToCart, getCartItems, removeFromCart } from "../Reducer/cartReducer"
 import Coupons from "./Coupons";
 import Summary from "./Summery";
 import EmptyCart from "./EmptyCart";
-const user = JSON.parse(localStorage.getItem("user"));
 export default function Cart() {
 	const dispatch = useDispatch();
 	const { cartItem } = useSelector((state) => state.cart.data);
@@ -41,68 +40,45 @@ export default function Cart() {
 															</Grid.Column>
 														</Grid.Row>
 														<Grid.Row>
-															{user ? (
-																<div
-																	style={{
-																		display: "flex",
-																		justifyContent: "flex-start",
-																	}}
-																>
-																	{cartItem.map((item) => (
-																		<>
+															{cartItem.map((item) => (
+																<>
+																	<Grid.Column width={5}>
+																		{item.count}
+																		<div>Price:{item.itemPrice}</div>
+																		<Feed.Date>{`${item.itemName.slice(
+																			0,
+																			20
+																		)}...`}</Feed.Date>
+																		<div>
 																			<Grid.Column width={5}>
-																				{item.count}
-																				<div>Price:{item.itemPrice}</div>
-																				<Feed.Date>{`${item.itemName.slice(
-																					0,
-																					20
-																				)}...`}</Feed.Date>
-																				<div>
-																					<Grid.Column width={5}>
-																						<Button
-																							onClick={() =>
-																								dispatch(
-																									addToCart(item)
-																								)
-																							}
-																						>
-																							<Icon
-																								name="add"
-																								size="small"
-																							/>
-																						</Button>
-																						<Input
-																							value={item.count}
-																							disabled
-																							placeholder={
-																								"item quantity"
-																							}
-																							style={{
-																								width: 50,
-																								color: "black",
-																							}}
-																						/>
-																						<Button
-																							onClick={() =>
-																								dispatch(
-																									removeFromCart(
-																										item
-																									)
-																								)
-																							}
-																						>
-																							<Icon
-																								name="minus"
-																								size="small"
-																							/>
-																						</Button>
-																					</Grid.Column>
-																				</div>
+																				<Button
+																					onClick={() =>
+																						dispatch(addToCart(item))
+																					}
+																				>
+																					<Icon name="add" size="small" />
+																				</Button>
+																				<Input
+																					value={item.count}
+																					disabled
+																					placeholder={"item quantity"}
+																					style={{
+																						width: 50,
+																						color: "black",
+																					}}
+																				/>
+																				<Button
+																					onClick={() =>
+																						dispatch(removeFromCart(item))
+																					}
+																				>
+																					<Icon name="minus" size="small" />
+																				</Button>
 																			</Grid.Column>
-																		</>
-																	))}
-																</div>
-															) : null}
+																		</div>
+																	</Grid.Column>
+																</>
+															))}
 														</Grid.Row>
 														<Grid.Row></Grid.Row>
 													</Grid>

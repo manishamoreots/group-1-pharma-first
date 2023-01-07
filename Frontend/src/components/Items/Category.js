@@ -74,7 +74,7 @@ const Category = ({ itemId }) => {
 						<Carousel responsive={responsive}>
 							{categories.map((category, index) => (
 								<Link
-									to={`/categoryItem/${category.id}`}
+									to={`/categoryItem/${category.categoryName}/${category.id}`}
 									key={index}
 									className="carousel-card"
 									style={{ cursor: "pointer" }}

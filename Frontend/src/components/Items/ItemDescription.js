@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Button, Container, Dropdown, Grid, Header, Image, Menu, Segment, Card, Rating, Icon } from "semantic-ui-react";
 import { getItemDescription } from "../Reducer/itemReducer";
@@ -18,16 +18,20 @@ const options = [
 ];
 const ItemDescription = () => {
 	const dispatch = useDispatch();
-	const { description, loading } = useSelector((state) => state.items.data);
-	const { isUser } = useSelector((state) => state.cart.data);
+	const [loader, setLoader] = useState(true);
+	const { description } = useSelector((state) => state.items.data);
+	const { isAuthenticated } = useSelector((state) => state.auth.data);
 	const { id } = useParams();
 	useEffect(() => {
 		dispatch(getItemDescription(Number(id)));
+		setTimeout(() => {
+			setLoader(false);
+		}, 1000);
 	}, [id]);
 	return (
 		<Container>
 			<>
-				{loading ? (
+				{loader ? (
 					<Loader />
 				) : (
 					<>
@@ -105,11 +109,12 @@ const ItemDescription = () => {
 
 												<Button
 													onClick={() => {
-														if (isUser) {
+														if (!isAuthenticated) {
 															swal({ text: "Please login" });
+														} else {
+															dispatch(addToCart(description));
+															swal({ text: "Item Added" });
 														}
-														dispatch(addToCart(description));
-														swal({ text: "Item Added" });
 													}}
 													width="100%"
 													style={{ marginTop: "5%" }}

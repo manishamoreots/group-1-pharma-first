@@ -24,7 +24,6 @@ const MapModel = () => {
 		});
 	}, []);
 	if (isLoaded) {
-		console.log(locationInfo);
 		return (
 			<>
 				<Modal
