@@ -1,7 +1,7 @@
 import React from "react";
 import "./secondnavbar.css";
 import { Button, Input, Menu } from "semantic-ui-react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import MapModel from "../Modal/MapModel";
 
@@ -32,9 +32,9 @@ const SecondNavbar = () => {
 						/>
 					</Menu.Item>
 
-					<Menu.Item style={{}}>
+					<Menu.Item>
 						<span style={{ width: "300px" }}>QUICK BUY! Get 25% off on medicines *</span>
-						<Button size="large" style={{ background: "tomato", color: "white", width: "75%" }}>
+						<Button as={Link} to="/care" size="large" style={{ background: "tomato", color: "white", width: "75%" }}>
 							Quick order
 						</Button>
 					</Menu.Item>

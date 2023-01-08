@@ -4,11 +4,14 @@ import { useNavigate } from "react-router-dom";
 import Loader from "../Loader/Loader";
 import { Image, Button, Breadcrumb, Container } from "semantic-ui-react";
 import userLogo from "../image/userlogo.png";
-import { user } from "../LocalStorage";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import EditProfile from "./EditProfile";
+import { logout } from "../Reducer/authReducer";
+import swal from "sweetalert";
 
 const Dashboard = () => {
+	const user = JSON.parse(localStorage.getItem("user"));
+	const dispatch = useDispatch();
 	const [loading, setLoading] = useState(true);
 	const { locationInfo } = useSelector((state) => state.common.data);
 	const [editView, setEditView] = useState(false);
@@ -25,6 +28,26 @@ const Dashboard = () => {
 			setLoading(false);
 		}, 1000);
 	}, [loading]);
+
+	const accountDelete = () => {
+		swal({
+			title: "Are you sure?",
+			text: "Once deleted, you will not be able to recover this Account",
+			icon: "warning",
+			buttons: true,
+			dangerMode: true,
+		}).then((willDelete) => {
+			if (willDelete) {
+				swal("Your Account Deleted Successfully", {
+					icon: "success",
+				});
+				dispatch(logout());
+				navigate("/");
+			} else {
+				swal("Your Account is safe!");
+			}
+		});
+	};
 
 	return (
 		<div>
@@ -76,7 +99,7 @@ const Dashboard = () => {
 								</h3>
 							</div>
 							<div>
-								<Button>Delete My Account</Button>
+								<Button onClick={accountDelete}>Delete My Account</Button>
 							</div>
 						</div>
 						{editView ? (
