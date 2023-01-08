@@ -1,6 +1,7 @@
 import React from "react";
 import "./secondnavbar.css";
 import { Button, Input, Menu } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import MapModel from "../Modal/MapModel";
 

@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import {
   Button,
@@ -29,28 +29,32 @@ const options = [
   { key: 5, text: "6 Jar", value: 5 },
 ];
 const ItemDescription = () => {
-  const dispatch = useDispatch();
-  const { description, loading } = useSelector((state) => state.items.data);
-  const { isUser } = useSelector((state) => state.cart.data);
-  const { id } = useParams();
-  useEffect(() => {
-    dispatch(getItemDescription(Number(id)));
-  }, [id]);
-  return (
-    <Container>
-      <>
-        {loading ? (
-          <Loader />
-        ) : (
-          <>
-            {description && description.itemName && (
-              <div className="itemDescription-hero-container">
-                <Grid>
-                  <div className="img-container">
-                    <Grid.Column width={5}>
-                      <Image src={description.itemImage} />
-                    </Grid.Column>
-                  </div>
+	const dispatch = useDispatch();
+	const [loader, setLoader] = useState(true);
+	const { description } = useSelector((state) => state.items.data);
+	const { isAuthenticated } = useSelector((state) => state.auth.data);
+	const { id } = useParams();
+	useEffect(() => {
+		dispatch(getItemDescription(Number(id)));
+		setTimeout(() => {
+			setLoader(false);
+		}, 1000);
+	}, [id]);
+	return (
+		<Container>
+			<>
+				{loader ? (
+					<Loader />
+				) : (
+					<>
+						{description && description.itemName && (
+							<div className="itemDescription-hero-container">
+								<Grid>
+									<div className="img-container">
+										<Grid.Column width={5}>
+											<Image src={description.itemImage} />
+										</Grid.Column>
+									</div>
 
                   <Grid.Column
                     width={7}
@@ -128,33 +132,34 @@ const ItemDescription = () => {
                           </span>
                         </div>
 
-                        <Button
-                          onClick={() => {
-                            if (isUser) {
-                              swal({ text: "Please login" });
-                            }
-                            dispatch(addToCart(description));
-                            swal({ text: "Item Added" });
-                          }}
-                          width="100%"
-                          style={{ marginTop: "5%" }}
-                        >
-                          Add To cart
-                        </Button>
-                      </div>
-                    </Segment>
-                  </Grid.Column>
-                </Grid>
-                <Container style={{ display: "flex" }}>
-                  <div className="item-description-container">
-                    <ul>
-                      <div className="item-name">
-                        <h3>Information about {description.itemName}</h3>
-                      </div>
-                      <div style={{ width: "98%" }}>
-                        <strong>{description.itemName} </strong>
-                        {description.itemInfo}
-                      </div>
+												<Button
+													onClick={() => {
+														if (!isAuthenticated) {
+															swal({ text: "Please login" });
+														} else {
+															dispatch(addToCart(description));
+															swal({ text: "Item Added" });
+														}
+													}}
+													width="100%"
+													style={{ marginTop: "5%" }}
+												>
+													Add To cart
+												</Button>
+											</div>
+										</Segment>
+									</Grid.Column>
+								</Grid>
+								<Container style={{ display: "flex" }}>
+									<div className="item-description-container">
+										<ul>
+											<div className="item-name">
+												<h3>Information about {description.itemName}</h3>
+											</div>
+											<div style={{ width: "98%" }}>
+												<strong>{description.itemName} </strong>
+												{description.itemInfo}
+											</div>
 
                       <div className="key-Ingredients-container">
                         Key Ingredients :

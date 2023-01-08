@@ -8,7 +8,6 @@ import {
   Button,
   Card,
   Input,
-  Item,
 } from "semantic-ui-react";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -31,7 +30,7 @@ export default function Cart() {
       {cartItem && cartItem.length <= 0 ? (
         <EmptyCart />
       ) : (
-        <Container>
+        <>
           <Grid>
             <Grid.Row>
               <Grid.Column width={11}>
@@ -109,7 +108,7 @@ export default function Cart() {
               </Grid.Column>
             </Grid.Row>
           </Grid>
-        </Container>
+        </>
       )}
     </Container>
   );

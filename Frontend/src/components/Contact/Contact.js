@@ -10,6 +10,8 @@ import {
   Grid,
 } from "semantic-ui-react";
 import img from "../image/contact.webp";
+import { useSelector } from "react-redux";
+import MapModel from "../Modal/MapModel";
 const genderOptions = [
   { key: "m", text: "Male", value: "male" },
   { key: "f", text: "Female", value: "female" },
@@ -17,12 +19,13 @@ const genderOptions = [
 ];
 
 const Contact = () => (
+  // const { locationInfo } = useSelector((state) => state.common.data);      
   <Container>
     <h2 style={{ marginBottom: 40 }}>Contact Us</h2>
     <Grid>
       <Grid.Row>
         <Grid.Column width={8}>
-          <Image src={img} size="large" />
+        <MapModel />
         </Grid.Column>
         <Grid.Column width={8}>
           <Form>

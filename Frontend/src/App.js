@@ -11,8 +11,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Contact from "./components/Contact/Contact";
 import Care from "./components/Care-plan/Care";
 import LabTest from "./components/Lab-test/lab-test";
-
-// import Hello from './components/Hello';
+import EditProfile from "./components/Dashboard/EditProfile";
 function App() {
   return (
     <div className="App">
@@ -21,11 +20,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/itemDesc/:id" element={<ItemDescription />} />
-        <Route path="/categoryItem/:id" element={<CategoryItems />} />
+        <Route path="/categoryItem/:Cname/:id" element={<CategoryItems />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/care" element={<Care />} />
-        <Route path="/lab" element={<LabTest/>} />
+        <Route path="/lab" element={<LabTest />} />
+        <Route path="/editProfile" element={<EditProfile />} />
         <Route
           path="/login"
           element={<LoginSignUpModal title="login" btnType="Login" />}
