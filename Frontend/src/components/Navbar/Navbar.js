@@ -5,6 +5,7 @@ import logo from "../image/logo.png";
 import LoginSignUpModal from "../Modal/LoginSignUpModal";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../Reducer/authReducer";
+import userLogo from "../image/userlogo.png";
 export default function Navbar() {
 	const user = JSON.parse(localStorage.getItem("user"));
 	const [activeItem, setActiveItem] = useState("homepage");
@@ -12,10 +13,6 @@ export default function Navbar() {
 	const searchParams = useLocation();
 	let navigate = useNavigate();
 	const dispatch = useDispatch();
-	// const handleClick = (e, { name }) => {
-	// 	setActiveItem(name);
-	// };
-
 	const onLogout = () => {
 		dispatch(logout());
 		navigate("/");
@@ -45,6 +42,8 @@ export default function Navbar() {
 	const authUser = (
 		<>
 			<Menu.Item position="right" style={style} name="dashboard" active={activeItem === "dashboard"}>
+				<Image src={user ? (user.picture ? user.picture : userLogo) : userLogo} avatar />
+
 				<Link to="/dashboard" style={{ color: "black", cursor: "pointer" }}>
 					Dashboard
 				</Link>

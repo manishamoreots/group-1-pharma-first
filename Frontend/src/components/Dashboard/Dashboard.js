@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Loader from "../Loader/Loader";
 import { Image, Button, Breadcrumb, Container } from "semantic-ui-react";
+import userLogo from "../image/userlogo.png";
 
 const Dashboard = () => {
 	const user = JSON.parse(localStorage.getItem("user"));
@@ -55,11 +56,7 @@ const Dashboard = () => {
 						>
 							<div>
 								<Image
-									src={
-										user
-											? user.picture
-											: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx9tjaExsY-srL4VsHNE_OKGVCJ-eIFNBktw&usqp=CAU"
-									}
+									src={user ? (user.picture ? user.picture : userLogo) : userLogo}
 									avatar
 									centered
 									size="small"
