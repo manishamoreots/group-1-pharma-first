@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Grid, Container, Feed, Card } from "semantic-ui-react";
+import { Grid, Container, Feed, Card, Button } from "semantic-ui-react";
 const EmptyCart = () => {
   return (
     <div>
