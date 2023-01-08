@@ -23,13 +23,7 @@
 .carousel-conatiner {
   margin-top: 3%;
 }
-.carousel.carousel-slider .control-arrow {
-  visibility: hidden;
-}
 
-.carousel .carousel-status {
-  visibility: hidden;
-}
 .grid-container {
   margin-right: 20%;
   margin-left: 5%;
@@ -40,4 +34,75 @@
 .two .column .row {
   margin-top: 5%;
   border-top: none !important;
+}
+
+.home,
+.lab {
+  color: rgb(74, 73, 73);
+}
+.span-class {
+  margin-left: 2%;
+  color: rgb(74, 73, 73);
+}
+
+.ul-class ul li {
+  margin: 2%;
+  width: 150px;
+}
+.ui[class*="vertically divided"].grid > .row:before {
+  box-shadow: none !important;
+}
+.feedback-container {
+  padding-top: 0.5%;
+  padding-bottom: 5%;
+  height: 300px;
+  background-color: #fbfbfb;
+  
+}
+
+.feedback-container .feedback {
+  height: 150px;
+  margin-top: 3%;
+  margin-left: 8%;
+  padding-left: 5%;
+  padding-right: 10%;
+  font-weight: 300;
+  width: 90%;
+  font-size: 17px;
+  align-items: center;
+  font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #757575;
+  justify-content: center;
+}
+
+.feedback-container .carousel.carousel-slider .control-arrow {
+  top: 0;
+  color: rgb(221, 43, 43) !important;
+  font-size: 26px;
+  bottom: 0;
+  margin-top: 0;
+  padding: 5px;
+  visibility: visible;
+}
+.feedback-container .carousel .control-arrow,
+.carousel.carousel-slider .control-arrow {
+  transition: all 0.25s ease-in;
+  opacity: 0.9;
+  z-index: 2;
+  top: 20px;
+  background: #fbfbfb !important;
+  border: 0;
+  font-size: 32px;
+  cursor: pointer;
+  border-radius: 50% !important;
+  height: 80px;
+  width: 80px;
+}
+
+.feedback-container .carousel .control-prev.control-arrow:before {
+  border-right: 8px solid tomato;
+}
+.feedback-container .carousel .control-next.control-arrow:before {
+  border-left: 8px solid tomato;
+  height: 15px;
 }

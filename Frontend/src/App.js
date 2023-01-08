@@ -11,6 +11,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Contact from "./components/Contact/Contact";
 import Care from "./components/Care-plan/Care";
 import LabTest from "./components/Lab-test/lab-test";
+
 // import Hello from './components/Hello';
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           element={<LoginSignUpModal title="Sign Up" btnType="Sign Up" />}
         />
       </Routes>
+     
       <Footer />
     </div>
   );

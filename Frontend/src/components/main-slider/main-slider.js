@@ -35,7 +35,7 @@ const MainSlider = () => {
 
   return (
     <>
-      <Carousel showThumbs={false} autoPlay={true} infiniteLoop invented={2000}>
+      <Carousel showThumbs={false} autoPlay={true} infiniteLoop interval={2000} showIndicators={false}>
         {items.map((item) => {
           return (
             <>

@@ -43,7 +43,7 @@ const Category = ({ itemId }) => {
 			{itemId ? (
 				<>
 					<Container>
-						<h1>Our Some Products </h1>
+						<span style={{fontSize:"18px",color:"#212121"}}>Our Some Products </span>
 						<div className="carousel-border">
 							<Carousel responsive={responsive}>
 								{items.map((item, index) => (
@@ -55,9 +55,9 @@ const Category = ({ itemId }) => {
 									>
 										<div className="category-card">
 											<Card size="tiny">
-												<Image style={{ padding: "15%" }} src={item.itemImage} wrapped ui={false} />
+												<Image style={{ padding: "15%" }} src={item.categoryImg} wrapped ui={false} />
 												<div className="carousel-card-name">
-													<Card.Description>{`${item.itemName.slice(0, 20)}...`}</Card.Description>
+													<Card.Description>{`${item.categoryImgName.slice(0, 20)}...`}</Card.Description>
 												</div>
 											</Card>
 										</div>
@@ -69,7 +69,7 @@ const Category = ({ itemId }) => {
 				</>
 			) : (
 				<Container>
-					<h1>Shop By Category</h1>
+					<span style={{fontSize:"18px",color:"#212121"}}>Shop By Category</span>
 					<div className="carousel-border">
 						<Carousel responsive={responsive}>
 							{categories.map((category, index) => (

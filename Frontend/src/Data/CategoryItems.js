@@ -36,13 +36,18 @@ export const categoryItems = [
     },
     itemImage:
       "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/zl35i9inmpsoj2tmga2a.jpg",
+      categoryImg:"https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/p8cjjuj9qbdrikxet8s6.png",
+      categoryImgName:"Bourn Vita",
   },
   {
     id: 542,
     categoryId: 1,
     itemName: "PentaSure DM Diabetes Care Powder Creamy Vanilla & Cinnamon",
-    itemPrice: "1000",
     offerPrice: "1500",
+    itemPrice: "1000",
+    ratingPoints: "4.3",
+    ratingReview: "265 Ratings & 94 Reviews",
+    offPercentage: "5% off",
     highlights: [
       "Helps control blood sugar levels",
       "Formulated as per ADA and WHO guidelines",
@@ -70,14 +75,19 @@ export const categoryItems = [
     },
     itemImage:
       "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/akatbzesklvi4vtyro1g.jpg",
+      categoryImg:"https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/eq1ot7mqxqr4jkd73kf1.png",
+      categoryImgName:"Omega & Fish Oil",
   },
   {
     id: 453,
     categoryId: 1,
     itemName:
       "Contour Plus One Blood Glucose Monitoring System Glucometer with Contour Plus Blood Glucose Test Strip 10S Free",
-    itemPrice: "999",
-    offerPrice: "1100",
+      offerPrice: "999",
+      itemPrice: "777",
+      ratingPoints: "3.8",
+      ratingReview: "189 Ratings & 76 Reviews",
+      offPercentage: "10% off",
     highlights: [
       "Different light indicators show the results in their respective ranges",
       "Smartlight feature indicates cases of high or low blood glucose level",
@@ -104,6 +114,8 @@ export const categoryItems = [
     },
     itemImage:
       "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/mpraei9nq1cjrgsbhrdr.jpg",
+      categoryImg:"https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/ogtn4geufd0vbvn6ft3k.png",
+      categoryImgName:"Weight & Drinks",
   },
   {
     id: 6454,
@@ -138,6 +150,8 @@ export const categoryItems = [
     },
     itemImage:
       "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/xg9w5mk9wvijr6hky8fx.jpg",
+      categoryImg:"https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/ligqeno0mnmr2v3ejkda.png",
+      categoryImgName:"Health Food",
   },
   {
     id: 6465,
@@ -172,6 +186,8 @@ export const categoryItems = [
     },
     itemImage:
       "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/pc0kfczcu5phbkk5sy41.jpg",
+      categoryImg:"https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/pae8ardj2unddupp36la.png",
+      categoryImgName:"Vitamins",
   },
   {
     id: 66451,
@@ -205,6 +221,8 @@ export const categoryItems = [
     },
     itemImage:
       "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/eds6ghegqiwdxfbzgeeq.jpg",
+      categoryImg:"https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/b855u2cmitwjv5wfjr1q.png",
+      categoryImgName:"Protein Supplements",
   },
   {
     id: 68457,
@@ -237,6 +255,8 @@ export const categoryItems = [
     },
     itemImage:
       "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/uca5jm0uqfqpjoyydzh0.jpg",
+    categoryImg:"https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/hyz3alaomnsvodlfr6yn.png",
+    categoryImgName:"Homeopathy",
   },
   {
     id: 687468,
@@ -265,7 +285,10 @@ export const categoryItems = [
     },
     itemImage:
       "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/uca5jm0uqfqpjoyydzh0.jpg",
+      categoryImg:"https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/cv1so1bd03epqno2z3to.png",
+      categoryImgName:"Chia , Flax",
   },
+      
   {
     id: 968745,
     categoryId: 1,
@@ -294,6 +317,10 @@ export const categoryItems = [
     },
     itemImage:
       "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/dru5ne9rnikqsgayenyy.png",
+      categoryImg:"https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/ea44f383-a965-4c76-8410-2b09521b06b8.webp",
+      categoryImgName:"Aller Aid",
+      
+      
   },
   {
     id: 1658450,
@@ -325,6 +352,9 @@ export const categoryItems = [
     },
     itemImage:
       "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/dru5ne9rnikqsgayenyy.png",
+      categoryImg:"https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/quxjulqgldr5mwacoadc.png",
+      categoryImgName:"Born Vita",
+      
   },
   // categoryId2 start from here {cardiac}
   {

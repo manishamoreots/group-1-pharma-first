@@ -66,11 +66,27 @@ export default function Footer() {
                 size="small"
                 className="social-icons"
               >
-                <Icon name="facebook f" size="big" circular />
-                <Icon name="instagram" size="big" circular />
-                <Icon name="twitter" size="big" circular />
-                <Icon name="linkedin" size="big" circular />
-                <Icon name="youtube" size="big" circular />
+                <Icon
+                  className="facebook "
+                  name="facebook f"
+                  size="big"
+                  circular
+                />
+                <Icon
+                  className="instagram"
+                  name="instagram"
+                  size="big"
+                  circular
+                />
+                <Icon className="twitter" name="twitter" size="big" circular />
+
+                <Icon className="youtube" name="youtube" size="big" circular />
+                <Icon
+                  className="linkedin"
+                  name="linkedin"
+                  size="big"
+                  circular
+                />
               </List>
             </Grid.Column>
           </Grid>

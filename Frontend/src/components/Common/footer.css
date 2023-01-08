@@ -1,5 +1,5 @@
 .footer-container {
-  background-color: mediumseagreen !important;
+  background-color: lightseagreen !important;
 }
 
 .style__copyright {
@@ -8,8 +8,32 @@
   margin: 12px;
 }
 
+.facebook:hover {
+  background-color: #007bff;
+  cursor: pointer;
+  transform: scale(1.2);
+  
+}
+.twitter:hover {
+  background-color: #0056b3;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.instagram:hover {
+  background-color: #e4405f;
+  cursor: pointer;
+  transform: rotate(50deg);
+  
+}
+.linkedin:hover {
+  background-color: #0077b5;
+  transform: scale(1.2);
 
-
-i.circular.icon:hover {
-  background-color: crimson;
+  cursor: pointer;
+}
+.youtube:hover {
+  background-color: red;
+  transform: rotate(50deg);
+ 
+  cursor: pointer;
 }

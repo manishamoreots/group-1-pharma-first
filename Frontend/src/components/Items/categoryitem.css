@@ -1,7 +1,8 @@
 .cart-gallery {
   display: grid;
+  width: 100%;
   grid-template-columns: auto auto auto;
-  margin: 5%;
+  justify-content: space-around;
 }
 
 .cart-gallery .ui.card {
@@ -9,6 +10,9 @@
   align-items: center;
   justify-content: center;
   border: 1px solid salmon;
+}
+li {
+  margin: 0% !important;
 }
 
 .rating-btn {
