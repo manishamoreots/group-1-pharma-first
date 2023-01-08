@@ -55,6 +55,7 @@ const ItemDescription = () => {
                       <Image src={description.itemImage} />
                     </Grid.Column>
                   </div>
+
                   <Grid.Column
                     width={7}
                     style={{
@@ -74,6 +75,7 @@ const ItemDescription = () => {
                       </button>
                       <div style={{ marginTop: "2%" }}>
                         <Card.Meta>
+                          {" "}
                           {Math.floor(Math.random() * 500) + 94} Rating &{" "}
                           {Math.floor(Math.random() * 500) + 93} Reviews
                         </Card.Meta>
@@ -101,7 +103,9 @@ const ItemDescription = () => {
                           size="20%"
                         />
                         <p style={{ marginLeft: "4%" }}>
-                          647 people bought this recently
+                          {" "}
+                          {Math.floor(Math.random() * 500) + 3} people bought
+                          this recently
                         </p>
                       </div>
 
@@ -140,11 +144,11 @@ const ItemDescription = () => {
 
                         <Button
                           onClick={() => {
-                            if (!isAuthenticated) {
-                              swal({ text: "Please login" });
-                            } else {
+                            if (isAuthenticated) {
                               dispatch(addToCart(description));
                               swal({ text: "Item Added" });
+                            } else {
+                              swal({ text: "Please login" });
                             }
                           }}
                           width="100%"

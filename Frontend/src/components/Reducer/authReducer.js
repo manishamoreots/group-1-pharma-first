@@ -27,6 +27,10 @@ export const authSlice = createSlice({
 				state.data = { ...state.data, isAuthenticated: false, errors: { msg: "Email or password incorrect" }, loading: false };
 			}
 		},
+		SignWithGoogle: (state, action) => {
+			localStorage.setItem("user", JSON.stringify(action.payload));
+			state.data = { ...state.data, isAuthenticated: true, loading: true };
+		},
 		logout: (state, action) => {
 			state.data = { ...state.data, isAuthenticated: false };
 			localStorage.removeItem("user");
@@ -34,4 +38,4 @@ export const authSlice = createSlice({
 	},
 });
 
-export const { Register, Login, logout } = authSlice.actions;
+export const { Register, Login, logout, SignWithGoogle } = authSlice.actions;
