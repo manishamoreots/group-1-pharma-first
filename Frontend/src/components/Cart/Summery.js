@@ -12,6 +12,7 @@ const Summary = ({ items }) => {
 		}, 0);
 		setTotal(totalPrice);
 	}, [items]);
+	const countTotal = items.map((c) => c.count);
 	return (
 		<Card>
 			<Card.Content>
@@ -27,7 +28,7 @@ const Summary = ({ items }) => {
 										<Feed.Summary>Total Price(MRP):</Feed.Summary>
 									</Grid.Column>
 									<Grid.Column width={4}>
-										<Feed.Summary>{total}</Feed.Summary>
+										<Feed.Summary>{total * countTotal}</Feed.Summary>
 									</Grid.Column>
 								</Grid.Row>
 								<Grid.Row>
@@ -51,7 +52,7 @@ const Summary = ({ items }) => {
 										<Feed.Summary>To be paid:</Feed.Summary>
 									</Grid.Column>
 									<Grid.Column width={4}>
-										<Feed.Summary>{(total * 18) / 100 + total}</Feed.Summary>
+										<Feed.Summary>{((total * 18) / 100 + total).toFixed(0) * countTotal}</Feed.Summary>
 									</Grid.Column>
 								</Grid.Row>
 								<Grid.Row>
