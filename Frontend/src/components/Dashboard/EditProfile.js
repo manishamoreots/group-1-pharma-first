@@ -12,7 +12,7 @@ import {
   Container,
 } from "semantic-ui-react";
 
-const Editprofile = () => {
+const EditProfile = () => {
   const user = JSON.parse(localStorage.getItem("user"));
   const [loading, setLoading] = useState(true);
   let navigate = useNavigate();
@@ -192,4 +192,4 @@ const Editprofile = () => {
     </div>
   );
 };
-export default Editprofile;
+export default EditProfile;
