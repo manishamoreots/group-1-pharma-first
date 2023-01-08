@@ -29,33 +29,32 @@ const options = [
   { key: 5, text: "6 Jar", value: 5 },
 ];
 const ItemDescription = () => {
-	const dispatch = useDispatch();
-	const [loader, setLoader] = useState(true);
-	const { description } = useSelector((state) => state.items.data);
-	const { isAuthenticated } = useSelector((state) => state.auth.data);
-	const { id } = useParams();
-	useEffect(() => {
-		dispatch(getItemDescription(Number(id)));
-		setTimeout(() => {
-			setLoader(false);
-		}, 1000);
-	}, [id]);
-	return (
-		<Container>
-			<>
-				{loader ? (
-					<Loader />
-				) : (
-					<>
-						{description && description.itemName && (
-							<div className="itemDescription-hero-container">
-								<Grid>
-									<div className="img-container">
-										<Grid.Column width={5}>
-											<Image src={description.itemImage} />
-										</Grid.Column>
-									</div>
-
+  const dispatch = useDispatch();
+  const [loader, setLoader] = useState(true);
+  const { description } = useSelector((state) => state.items.data);
+  const { isAuthenticated } = useSelector((state) => state.auth.data);
+  const { id } = useParams();
+  useEffect(() => {
+    dispatch(getItemDescription(Number(id)));
+    setTimeout(() => {
+      setLoader(false);
+    }, 1000);
+  }, [id]);
+  return (
+    <Container>
+      <>
+        {loader ? (
+          <Loader />
+        ) : (
+          <>
+            {description && description.itemName && (
+              <div className="itemDescription-hero-container">
+                <Grid>
+                  <div className="img-container">
+                    <Grid.Column width={5}>
+                      <Image src={description.itemImage} />
+                    </Grid.Column>
+                  </div>
                   <Grid.Column
                     width={7}
                     style={{
@@ -68,13 +67,16 @@ const ItemDescription = () => {
                     </div>
                     <div className="rating-review">
                       <button className="rating-button">
-                        {description.ratingPoints}
+                        {Math.floor(Math.random() * 4) + 1.3}
                         <span>
                           <Rating className="ui rating" size="big" />
                         </span>
                       </button>
                       <div style={{ marginTop: "2%" }}>
-                        <Card.Meta>{description.ratingReview}</Card.Meta>
+                        <Card.Meta>
+                          {Math.floor(Math.random() * 500) + 94} Rating &{" "}
+                          {Math.floor(Math.random() * 500) + 93} Reviews
+                        </Card.Meta>
                       </div>
                     </div>
 
@@ -110,10 +112,14 @@ const ItemDescription = () => {
                             {description.itemPrice}
                           </h4>
                           <Card.Meta className="itemDescription-offerprice">
-                            {description.offerPrice}
+                            {`${
+                              Math.floor(
+                                Math.random() * description.itemPrice
+                              ) - 5
+                            }`}
                           </Card.Meta>
                           <Card.Meta className="itemDescription-offerpercent">
-                            {description.offPercentage}
+                            {`${Math.floor(Math.random() * 4) + 5} % off`}
                           </Card.Meta>
                         </div>
 
@@ -132,34 +138,34 @@ const ItemDescription = () => {
                           </span>
                         </div>
 
-												<Button
-													onClick={() => {
-														if (!isAuthenticated) {
-															swal({ text: "Please login" });
-														} else {
-															dispatch(addToCart(description));
-															swal({ text: "Item Added" });
-														}
-													}}
-													width="100%"
-													style={{ marginTop: "5%" }}
-												>
-													Add To cart
-												</Button>
-											</div>
-										</Segment>
-									</Grid.Column>
-								</Grid>
-								<Container style={{ display: "flex" }}>
-									<div className="item-description-container">
-										<ul>
-											<div className="item-name">
-												<h3>Information about {description.itemName}</h3>
-											</div>
-											<div style={{ width: "98%" }}>
-												<strong>{description.itemName} </strong>
-												{description.itemInfo}
-											</div>
+                        <Button
+                          onClick={() => {
+                            if (!isAuthenticated) {
+                              swal({ text: "Please login" });
+                            } else {
+                              dispatch(addToCart(description));
+                              swal({ text: "Item Added" });
+                            }
+                          }}
+                          width="100%"
+                          style={{ marginTop: "5%" }}
+                        >
+                          Add To cart
+                        </Button>
+                      </div>
+                    </Segment>
+                  </Grid.Column>
+                </Grid>
+                <Container style={{ display: "flex" }}>
+                  <div className="item-description-container">
+                    <ul>
+                      <div className="item-name">
+                        <h3>Information about {description.itemName}</h3>
+                      </div>
+                      <div style={{ width: "98%" }}>
+                        <strong>{description.itemName} </strong>
+                        {description.itemInfo}
+                      </div>
 
                       <div className="key-Ingredients-container">
                         Key Ingredients :
@@ -199,7 +205,7 @@ const ItemDescription = () => {
                   >
                     <h2 style={{ marginBottom: "2%" }}>Rating & Reviews</h2>
                     <Header as="h1" style={{ color: "limegreen" }}>
-                      4.5
+                      {Math.floor(Math.random() * 4) + 4.3}
                       <Rating className="ui rating" size="massive" />
                     </Header>
                     <div style={{ marginTop: "2%", marginBottom: "4%" }}>
