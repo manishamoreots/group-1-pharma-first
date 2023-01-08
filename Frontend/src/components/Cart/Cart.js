@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Icon, Grid, Container, Button, Card, Item } from "semantic-ui-react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, getCartItems, removeFromCart } from "../Reducer/cartReducer";
@@ -9,6 +9,7 @@ import EmptyCart from "./EmptyCart";
 export default function Cart() {
 	const dispatch = useDispatch();
 	const { cartItem } = useSelector((state) => state.cart.data);
+	const [coupons, setCoupons] = useState(false);
 	useEffect(() => {
 		dispatch(getCartItems());
 	}, []);
@@ -31,11 +32,8 @@ export default function Cart() {
 												<Item.Group divided>
 													<Item
 														style={{
-															//   border: "1px solid black",
 															paddingLeft: 20,
 															paddingRight: 20,
-
-															//   margin: 20,
 														}}
 													>
 														<Item.Image
@@ -44,16 +42,11 @@ export default function Cart() {
 															style={{
 																paddingTop: 30,
 																paddingBottom: 20,
-
-																//   margin: 20,
 															}}
 														/>
 														<Item.Content
 															style={{
 																paddingTop: 50,
-																// paddingBottom: 10,
-
-																//   margin: 20,
 															}}
 														>
 															<Item.Header as="a">
@@ -63,8 +56,6 @@ export default function Cart() {
 																<div>Price : {item.itemPrice}</div>
 															</Item.Meta>
 															<Item.Description>
-																{/* {paragraph} */}
-
 																<Item.Extra>
 																	<Button.Group floated="right">
 																		<Button
@@ -91,7 +82,6 @@ export default function Cart() {
 																			<Icon name="minus" size="small" />
 																		</Button>
 																	</Button.Group>
-																	{/* <Label>Limited</Label> */}
 																</Item.Extra>
 															</Item.Description>
 														</Item.Content>
@@ -104,8 +94,8 @@ export default function Cart() {
 							</Grid.Column>
 							<Grid.Column width={5}>
 								<Grid.Column>
-									<Coupons />
-									<Summary items={cartItem} />
+									<Coupons setIsTrue={(value) => setCoupons(value)} />
+									<Summary coupons={coupons} items={cartItem} />
 								</Grid.Column>
 							</Grid.Column>
 						</Grid.Row>
