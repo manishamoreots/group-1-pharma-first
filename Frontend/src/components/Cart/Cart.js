@@ -37,67 +37,75 @@ export default function Cart() {
               <Grid.Column width={11}>
                 <Card style={{ width: 750 }}>
                   <Card.Content>
-                    <Card.Header>Items In Your Cart</Card.Header>
+                    <Card.Header style={{ textAlign: "center" }}>
+                      Items In Your Cart
+                    </Card.Header>
                   </Card.Content>
                   <Card.Content>
-                    <Feed>
-                      <Feed.Event>
-                        <Feed.Content>
-                          <Grid>
-                            <Grid.Row>
-                              <Grid.Column width={12}>
-                                <Feed.Summary>Item Name</Feed.Summary>
-                              </Grid.Column>
-                              <Grid.Column width={4}>
-                                <Feed.Summary>Item Price</Feed.Summary>
-                              </Grid.Column>
-                            </Grid.Row>
-                            <Grid.Row>
-                              {cartItem.map((item) => (
-                                <>
-                                  <Grid.Column width={5}>
-                                    {item.count}
-                                    <div>Price:{item.itemPrice}</div>
-                                    <Feed.Date>{`${item.itemName.slice(
-                                      0,
-                                      20
-                                    )}...`}</Feed.Date>
-                                    <div>
-                                      <Grid.Column width={5}>
-                                        <Button
-                                          onClick={() =>
-                                            dispatch(addToCart(item))
-                                          }
-                                        >
-                                          <Icon name="add" size="small" />
-                                        </Button>
-                                        <Input
-                                          value={item.count}
-                                          disabled
-                                          placeholder={"item quantity"}
-                                          style={{
-                                            width: 50,
-                                            color: "black",
-                                          }}
-                                        />
-                                        <Button
-                                          onClick={() =>
-                                            dispatch(removeFromCart(item))
-                                          }
-                                        >
-                                          <Icon name="minus" size="small" />
-                                        </Button>
-                                      </Grid.Column>
-                                    </div>
-                                  </Grid.Column>
-                                </>
-                              ))}
-                            </Grid.Row>
-                            <Grid.Row></Grid.Row>
-                          </Grid>
-                        </Feed.Content>
-                      </Feed.Event>
-                    </Feed>
+                    {cartItem.map((item) => (
+                      <>
+                        <Item.Group divided>
+                          <Item
+                            style={{
+                              border: "1px solid black",
+                              paddingLeft: 20,
+                              paddingRight: 20,
+
+                              //   margin: 20,
+                            }}
+                          >
+                            <Item.Image
+                              src={item.itemImage}
+                              size="tiny"
+                              style={{
+                                paddingTop: 30,
+                                paddingBottom: 20,
+
+                                //   margin: 20,
+                              }}
+                            />
+                            <Item.Content
+                              style={{
+                                paddingTop: 50,
+                                paddingBottom: 10,
+
+                                //   margin: 20,
+                              }}
+                            >
+                              <Item.Header as="a">
+                                {`${item.itemName}...`}
+                              </Item.Header>
+                              <Item.Meta>
+                                <div>Price:{item.itemPrice}</div>
+                              </Item.Meta>
+                              <Item.Description>
+                                {/* {paragraph} */}
+                                Item Count: {item.count}
+                                <Item.Extra>
+                                  <Button.Group floated="right">
+                                    <Button
+                                      onClick={() => dispatch(addToCart(item))}
+                                      style={{ width: 50 }}
+                                    >
+                                      <Icon name="add" size="small" />
+                                    </Button>
+                                    <Button
+                                      onClick={() =>
+                                        dispatch(removeFromCart(item))
+                                      }
+                                      style={{ width: 50, marginLeft: 20 }}
+                                    >
+                                      <Icon name="minus" size="small" />
+                                    </Button>
+                                  </Button.Group>
+                                  {/* <Label>Limited</Label> */}
+                                </Item.Extra>
+                              </Item.Description>
+                            </Item.Content>
+                          </Item>
+                        </Item.Group>
+                      </>
+                    ))}
                   </Card.Content>
                 </Card>
               </Grid.Column>
