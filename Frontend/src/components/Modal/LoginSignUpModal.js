@@ -5,6 +5,7 @@ import { Login, Register } from "../Reducer/authReducer";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
+import SignByGoogle from "./SignByGoogle";
 const LoginSignUpModal = ({ title, btnType }) => {
 	let navigate = useNavigate();
 	const dispatch = useDispatch();
@@ -88,6 +89,8 @@ const LoginSignUpModal = ({ title, btnType }) => {
 								<Button loading={loading} positive>
 									{btnType}
 								</Button>
+								<br />
+								<SignByGoogle />
 							</>
 						) : (
 							<>
@@ -123,6 +126,7 @@ const LoginSignUpModal = ({ title, btnType }) => {
 								<Button positive disabled={condition} loading={loading}>
 									{btnType}
 								</Button>
+								<SignByGoogle />
 							</>
 						)}
 					</Form>

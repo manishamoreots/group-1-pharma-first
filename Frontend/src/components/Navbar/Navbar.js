@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Icon, Image, Menu, Label } from "semantic-ui-react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../image/logo.png";
 import LoginSignUpModal from "../Modal/LoginSignUpModal";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,16 +9,24 @@ export default function Navbar() {
 	const user = JSON.parse(localStorage.getItem("user"));
 	const [activeItem, setActiveItem] = useState("homepage");
 	const { cartItem } = useSelector((state) => state.cart.data);
+	const searchParams = useLocation();
 	let navigate = useNavigate();
 	const dispatch = useDispatch();
-	const handleClick = (e, { name }) => {
-		setActiveItem(name);
-	};
+	// const handleClick = (e, { name }) => {
+	// 	setActiveItem(name);
+	// };
 
 	const onLogout = () => {
 		dispatch(logout());
 		navigate("/");
 	};
+	useEffect(() => {
+		if (searchParams.pathname === "/") {
+			setActiveItem("homepage");
+		} else {
+			setActiveItem(searchParams.pathname.slice(1));
+		}
+	}, [searchParams]);
 	const style = {
 		alignSelf: "center",
 		cursor: "pointer",
@@ -36,7 +44,7 @@ export default function Navbar() {
 	);
 	const authUser = (
 		<>
-			<Menu.Item position="right" style={style} name="dashboard" active={activeItem === "dashboard"} onClick={handleClick}>
+			<Menu.Item position="right" style={style} name="dashboard" active={activeItem === "dashboard"}>
 				<Link to="/dashboard" style={{ color: "black", cursor: "pointer" }}>
 					Dashboard
 				</Link>
@@ -53,46 +61,21 @@ export default function Navbar() {
 				<Menu.Item position="left" as={Link} exact to="/">
 					<Image src={logo} size={"small"} />
 				</Menu.Item>
-				<Menu.Item
-					as={Link}
-					exact
-					to="/"
-					name="homepage"
-					active={activeItem === "homepage"}
-					onClick={handleClick}
-					style={{ alignSelf: "center" }}
-				>
+				<Menu.Item as={Link} exact to="/" name="homepage" active={activeItem === "homepage"} style={{ alignSelf: "center" }}>
 					Home
 				</Menu.Item>
-				<Menu.Item
-					as={Link}
-					exact
-					to="/lab"
-					name="Lab Test"
-					active={activeItem === "Lab Test"}
-					onClick={handleClick}
-					style={{ alignSelf: "center" }}
-				>
+				<Menu.Item as={Link} exact to="/lab" name="lab" active={activeItem === "lab"} style={{ alignSelf: "center" }}>
 					Lab Test
 				</Menu.Item>
-				<Menu.Item
-					as={Link}
-					exact
-					to="/care"
-					name="Care Plan"
-					active={activeItem === "Care Plan"}
-					onClick={handleClick}
-					style={{ alignSelf: "center" }}
-				>
+				<Menu.Item as={Link} exact to="/care" name="care" active={activeItem === "care"} style={{ alignSelf: "center" }}>
 					Care Plan
 				</Menu.Item>
 				<Menu.Item
 					as={Link}
 					exact
 					to="/contact"
-					name="Contact us"
-					active={activeItem === "Contact us"}
-					onClick={handleClick}
+					name="contact"
+					active={activeItem === "contact"}
 					style={{ alignSelf: "center" }}
 				>
 					Contact Us
@@ -104,7 +87,6 @@ export default function Navbar() {
 					to="/cart"
 					name="cart"
 					active={activeItem === "cart"}
-					onClick={handleClick}
 					style={{ alignSelf: "center", marginRight: 30 }}
 				>
 					<Icon name="cart" size="large" />
