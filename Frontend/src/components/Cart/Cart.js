@@ -47,7 +47,7 @@ export default function Cart() {
                         <Item.Group divided>
                           <Item
                             style={{
-                              border: "1px solid black",
+                              //   border: "1px solid black",
                               paddingLeft: 20,
                               paddingRight: 20,
 
@@ -67,20 +67,20 @@ export default function Cart() {
                             <Item.Content
                               style={{
                                 paddingTop: 50,
-                                paddingBottom: 10,
+                                // paddingBottom: 10,
 
                                 //   margin: 20,
                               }}
                             >
                               <Item.Header as="a">
-                                {`${item.itemName}...`}
+                                {`${item.itemName.slice(0, 49)}...`}
                               </Item.Header>
                               <Item.Meta>
-                                <div>Price:{item.itemPrice}</div>
+                                <div>Price : {item.itemPrice}</div>
                               </Item.Meta>
                               <Item.Description>
                                 {/* {paragraph} */}
-                                Item Count: {item.count}
+
                                 <Item.Extra>
                                   <Button.Group floated="right">
                                     <Button
@@ -90,10 +90,19 @@ export default function Cart() {
                                       <Icon name="add" size="small" />
                                     </Button>
                                     <Button
+                                      disabled
+                                      style={{
+                                        width: 50,
+                                        color: "black",
+                                      }}
+                                    >
+                                      {item.count}
+                                    </Button>
+                                    <Button
                                       onClick={() =>
                                         dispatch(removeFromCart(item))
                                       }
-                                      style={{ width: 50, marginLeft: 20 }}
+                                      style={{ width: 50 }}
                                     >
                                       <Icon name="minus" size="small" />
                                     </Button>
