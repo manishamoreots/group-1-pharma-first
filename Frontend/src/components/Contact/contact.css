@@ -1,0 +1,12 @@
+.contact-us .ui.grid > .row {
+  justify-content: space-around !important;
+}
+
+.contact-us .firstname-lastname .ui.form .field .ui.input,
+.ui.form .fields .field .ui.input,
+.ui.form .wide.field .ui.input {
+  width: 231px !important;
+}
+
+.contact-us .ui.form .field>.selection.dropdown {
+    width: 231px;}

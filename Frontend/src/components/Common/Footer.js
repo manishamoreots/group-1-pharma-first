@@ -18,7 +18,7 @@ export default function Footer() {
       <Segment
         inverted
         vertical
-        style={{ margin: "2em 0em 0em", padding: "2em 0em" }}
+        style={{ margin: "5em 0em 0em", padding: "2em 0em" }}
         className="footer-container"
       >
         <Container textAlign="center">
