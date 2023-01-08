@@ -1,6 +1,4 @@
-.header-container:hover {
-  color: "tomato" !important;
-}
-.ui.secondary.menu .header.item:hover {
-  color: "tomato" !important;
+.ui.secondary.pointing.menu  .item:hover{
+background-color: teal !important;
+color: white !important;
 }
