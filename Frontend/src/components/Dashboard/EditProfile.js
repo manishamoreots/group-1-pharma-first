@@ -2,7 +2,15 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Loader from "../Loader/Loader";
-import { Image, Button, Card, Breadcrumb, Input } from "semantic-ui-react";
+import {
+  Image,
+  Button,
+  Card,
+  Breadcrumb,
+  Input,
+  Icon,
+  Container,
+} from "semantic-ui-react";
 
 const Editprofile = () => {
   const user = JSON.parse(localStorage.getItem("user"));
@@ -28,7 +36,7 @@ const Editprofile = () => {
           <Loader />
         </div>
       ) : (
-        <>
+        <Container>
           <Breadcrumb>
             <Breadcrumb.Section link href="/">
               Home
@@ -40,7 +48,14 @@ const Editprofile = () => {
             <Breadcrumb.Divider>/</Breadcrumb.Divider>
             <Breadcrumb.Section active>EditProfile</Breadcrumb.Section>
           </Breadcrumb>
-          <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+          <hr />
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-evenly",
+              marginTop: 50,
+            }}
+          >
             <div
               style={{
                 width: "75%",
@@ -67,76 +82,104 @@ const Editprofile = () => {
                   >
                     <div
                       style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        marginLeft: 10,
                         padding: 20,
                       }}
                     >
-                      <div>Full Name : </div>
-                      <div style={{ marginLeft: 20 }}>
-                        <Input value={user?.name} />
+                      <div>
+                        <Input
+                          iconPosition="left"
+                          placeholder={user?.name}
+                          style={{ width: "65vh" }}
+                          size="large"
+                        >
+                          <Icon name="user" />
+                          <input />
+                        </Input>
                       </div>
                     </div>
                     <hr />
                     <div
                       style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        marginLeft: 10,
                         padding: 20,
                       }}
                     >
-                      <div>Email Id : </div>
-                      <div style={{ marginLeft: 20 }}>
-                        <Input value={user?.email} />
+                      <div>
+                        <Input
+                          iconPosition="left"
+                          placeholder={user?.email}
+                          style={{ width: "65vh" }}
+                          size="large"
+                        >
+                          <Icon name="at" />
+                          <input />
+                        </Input>
                       </div>
                     </div>
                     <hr />
                     <div
                       style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        marginLeft: 10,
                         padding: 20,
                       }}
                     >
-                      <div>Mobile No : </div>
-                      <div style={{ marginLeft: 20 }}>
-                        <Input value={user?.mobile} />
+                      <div>
+                        <Input
+                          iconPosition="left"
+                          placeholder={user?.mobile}
+                          style={{ width: "65vh" }}
+                          size="large"
+                        >
+                          <Icon name="phone" />
+                          <input />
+                        </Input>
                       </div>
                     </div>
                     <hr />
                     <div
                       style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        marginLeft: 10,
                         padding: 20,
                       }}
                     >
-                      <div>Country : </div>
-                      <div style={{ marginLeft: 20 }}>
-                        <Input value={user?.country} />
+                      <div>
+                        <Input
+                          iconPosition="left"
+                          style={{ width: "65vh" }}
+                          size="large"
+                          placeholder={
+                            user?.country
+                              ? user?.country
+                              : "Please Enter your Country"
+                          }
+                        >
+                          <Icon name="globe" />
+                          <input />
+                        </Input>
                       </div>
                     </div>
                     <hr />
                     <div
                       style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        marginLeft: 10,
                         padding: 20,
                       }}
                     >
-                      <div>Address : </div>
-                      <div style={{ marginLeft: 20 }}>
-                        {" "}
-                        <Input value={user?.address} />
+                      <div>
+                        <Input
+                          iconPosition="left"
+                          style={{ width: "65vh", multiline: true }}
+                          size="large"
+                          placeholder={
+                            user?.address
+                              ? user?.address
+                              : "Please Enter Your Address"
+                          }
+                        >
+                          <Icon name="location arrow" />
+                          <input />
+                        </Input>
                       </div>
                     </div>
+                    <hr />
 
-                    <div>
+                    <div style={{ padding: 20 }}>
                       <Button>Edit Details</Button>
                     </div>
                   </div>
@@ -144,7 +187,7 @@ const Editprofile = () => {
               </div>
             </div>
           </div>
-        </>
+        </Container>
       )}
     </div>
   );

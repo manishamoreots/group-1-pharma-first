@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Loader from "../Loader/Loader";
-import { Image, Button, Card, Breadcrumb } from "semantic-ui-react";
+import { Image, Button, Card, Breadcrumb, Container } from "semantic-ui-react";
 
 const Dashboard = () => {
   const user = JSON.parse(localStorage.getItem("user"));
@@ -28,7 +28,7 @@ const Dashboard = () => {
           <Loader />
         </div>
       ) : (
-        <>
+        <Container>
           <Breadcrumb>
             <Breadcrumb.Section link href="/">
               Home
@@ -40,6 +40,7 @@ const Dashboard = () => {
             <Breadcrumb.Divider>/</Breadcrumb.Divider>
             <Breadcrumb.Section active>Personal Information</Breadcrumb.Section>
           </Breadcrumb>
+          <hr />
           <div style={{ display: "flex", justifyContent: "space-evenly" }}>
             <div
               style={{
@@ -47,8 +48,8 @@ const Dashboard = () => {
                 width: "25%",
                 height: "75vh",
                 borderRadius: "20px",
-                marginTop: 20,
-                marginLeft: 30,
+                marginTop: 30,
+                // marginLeft: 30,
                 justifyContent: "center",
               }}
             >
@@ -58,11 +59,17 @@ const Dashboard = () => {
                   avatar
                   centered
                   size="small"
-                  style={{ marginLeft: 75 }}
+                  style={{ marginLeft: 69 }}
                 />
               </div>
               <div>
-                <h3 style={{ textAlignLast: "center", padding: 20 }}>
+                <h3
+                  style={{
+                    textAlignLast: "center",
+                    padding: 20,
+                    marginLeft: 12,
+                  }}
+                >
                   {user?.name}
                 </h3>
               </div>
@@ -75,6 +82,7 @@ const Dashboard = () => {
               style={{
                 width: "75%",
                 justifyContent: "space-evenly",
+                marginTop: 40,
               }}
             >
               <div
@@ -160,7 +168,7 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-        </>
+        </Container>
       )}
     </div>
   );
