@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { categoryItems } from "../../Data/CategoryItems";
-// import { category } from '../../Data/Category';
 const initialState = { data: { items: [], description: {}, loading: true } };
 export const itemSlice = createSlice({
 	name: "item",

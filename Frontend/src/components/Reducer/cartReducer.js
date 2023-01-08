@@ -1,5 +1,5 @@
 import { createSlice, current } from "@reduxjs/toolkit";
-const user = JSON.parse(localStorage.getItem("user"));
+import { cartItems, user } from "../LocalStorage";
 const initialState = { data: { cartItem: [] } };
 
 export const cartSlice = createSlice({
@@ -7,7 +7,6 @@ export const cartSlice = createSlice({
 	initialState: initialState,
 	reducers: {
 		getCartItems: (state, action) => {
-			let cartItems = JSON.parse(localStorage.getItem("cartItem"));
 			if (user && cartItems) {
 				state.data = { ...state.data, cartItem: [...cartItems] };
 			} else {
@@ -16,7 +15,6 @@ export const cartSlice = createSlice({
 		},
 		addToCart: (state, action) => {
 			const allItems = state.data.cartItem;
-			const user = JSON.parse(localStorage.getItem("user"));
 			if (user) {
 				const userInfo = {
 					...action.payload,

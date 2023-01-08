@@ -1,3 +1,14 @@
 {
-	"cSpell.words": ["categoryitem", "keybenefit", "Safetyinfo", "swal", "sweetalert", "userlogo", "uuidv"]
+	"cSpell.words": [
+		"categoryitem",
+		"itemdescription",
+		"keybenefit",
+		"offerpercent",
+		"offerprice",
+		"Safetyinfo",
+		"swal",
+		"sweetalert",
+		"userlogo",
+		"uuidv"
+	]
 }
