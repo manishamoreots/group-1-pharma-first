@@ -11,7 +11,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Contact from "./components/Contact/Contact";
 import Care from "./components/Care-plan/Care";
 import LabTest from "./components/Lab-test/lab-test";
-import Scroll from "./components/Common/scroll";
+
 function App() {
 	return (
 		<div className="App">
@@ -30,7 +30,7 @@ function App() {
 				<Route path="/signUp" element={<LoginSignUpModal title="Sign Up" btnType="Sign Up" />} />
 			
 			</Routes>
-			<Scroll />
+			
 			<Footer />
 		</div>
 	);

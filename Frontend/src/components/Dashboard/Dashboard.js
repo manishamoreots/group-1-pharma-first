@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Loader from "../Loader/Loader";
-import { Image, Button, Breadcrumb, Container, Icon } from "semantic-ui-react";
+import { Image, Breadcrumb, Container, Icon } from "semantic-ui-react";
 import userLogo from "../image/userlogo.png";
 import { useDispatch, useSelector } from "react-redux";
 import EditProfile from "./EditProfile";
@@ -62,41 +62,30 @@ const Dashboard = () => {
           </Breadcrumb.Section>
         </Breadcrumb>
 
-        <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-          <div
-            style={{
-              width: "25%",
-              height: "50vh",
-              borderRadius: "20px",
-              marginTop: 30,
-              justifyContent: "center",
-            }}
-          >
-            <div>
-              <Image
-                src={user ? (user.picture ? user.picture : userLogo) : userLogo}
-                avatar
-                centered
-                size="small"
-                style={{ marginLeft: 69 }}
-              />
-            </div>
-            <div>
-              <h3
-                style={{
-                  textAlignLast: "center",
-                  padding: 20,
-                  marginLeft: 12,
-                }}
-              >
-                {user?.name}
-              </h3>
-            </div>
-            <div>
-              <Button onClick={accountDelete}>
-                <Icon name="user delete" /> Delete My Account
-              </Button>
-            </div>
+        <div style={{ display: "flex" }}>
+          <div style={{ width: "300px" }}>
+            <Image
+              src={user ? (user.picture ? user.picture : userLogo) : userLogo}
+              avatar
+              centered
+              size="small"
+              style={{ marginLeft: 70, marginTop: 50 }}
+            />
+            <h3 style={{ marginLeft: 85 }}>{user?.name}</h3>
+            <button
+              style={{
+                marginLeft: "14%",
+                width: "200px",
+                backgroundColor: "tomato",
+                color: "white ",
+                height: "35px",
+                border: "none",
+                borderRadius: ".28571429rem",
+              }}
+              onClick={accountDelete}
+            >
+              <Icon name="user delete" /> Delete My Account
+            </button>
           </div>
           {editView ? (
             <EditProfile EditView={setEditView} />
