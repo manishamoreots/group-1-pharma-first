@@ -32,10 +32,10 @@ export default function Navbar() {
 
   const guestUser = (
     <>
-      <Menu.Item position="right" style={style}>
+      <Menu.Item position="right" className="signup" style={style}>
         <LoginSignUpModal title="Sign Up" btnType="Sign Up" />
       </Menu.Item>
-      <Menu.Item style={style}>
+      <Menu.Item style={style} className="login">
         <LoginSignUpModal title="Login" btnType="Login" />
       </Menu.Item>
     </>
@@ -57,8 +57,8 @@ export default function Navbar() {
           Dashboard
         </Link>
       </Menu.Item>
-      <Menu.Item style={style}>
-        <div onClick={onLogout}>Logout</div>
+      <Menu.Item style={style} className="Logout">
+        <div onClick={onLogout} >Logout</div>
       </Menu.Item>
     </>
   );
@@ -74,6 +74,7 @@ export default function Navbar() {
           exact
           to="/"
           name="homepage"
+          className="Home"
           active={activeItem === "homepage"}
           style={{ alignSelf: "center" }}
         >
@@ -84,6 +85,7 @@ export default function Navbar() {
           exact
           to="/lab"
           name="lab"
+          className="Labtest"
           active={activeItem === "lab"}
           style={{ alignSelf: "center" }}
         >
@@ -94,6 +96,7 @@ export default function Navbar() {
           exact
           to="/care"
           name="care"
+          className="Care"
           active={activeItem === "care"}
           style={{ alignSelf: "center" }}
         >
@@ -103,6 +106,7 @@ export default function Navbar() {
           as={Link}
           exact
           to="/contact"
+          className="Contact"
           name="contact"
           active={activeItem === "contact"}
           style={{ alignSelf: "center" }}
