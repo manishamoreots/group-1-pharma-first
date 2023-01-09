@@ -4,6 +4,7 @@ import { Button, Input, Menu } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import MapModel from "../Modal/MapModel";
+import SearchItem from "../Search/SearchItem";
 
 const SecondNavbar = () => {
 	const { locationInfo } = useSelector((state) => state.common.data);
@@ -24,12 +25,13 @@ const SecondNavbar = () => {
 						/>
 					</Menu.Item>
 					<Menu.Item>
-						<Input
+						<SearchItem />
+						{/* <Input
 							style={{ width: "300px" }}
 							icon="search"
 							placeholder="Search for Medicine and Health Product..."
 							size="large"
-						/>
+						/> */}
 					</Menu.Item>
 
 					<Menu.Item>

@@ -14,7 +14,10 @@ const Summary = ({ items, coupons }) => {
 		setTotal(totalPrice);
 	}, [items]);
 
-	const countTotal = items.map((c) => c.count);
+	const countTotal = items.reduce((prev, cur) => {
+		const a = parseInt(prev);
+		return a + parseInt(cur.count);
+	}, 0);
 	return (
 		<Card>
 			<Card.Content>
@@ -47,7 +50,7 @@ const Summary = ({ items, coupons }) => {
 											<Feed.Summary style={{ color: "green" }}>Coupon Applied:</Feed.Summary>
 										</Grid.Column>
 										<Grid.Column width={4}>
-											<Feed.Summary style={{ color: "green" }}>- 499 </Feed.Summary>
+											<Feed.Summary style={{ color: "green" }}>26% </Feed.Summary>
 										</Grid.Column>
 									</Grid.Row>
 								) : null}
@@ -58,7 +61,8 @@ const Summary = ({ items, coupons }) => {
 									<Grid.Column width={4}>
 										<Feed.Summary>
 											{coupons
-												? ((total * 18) / 100 + total).toFixed(0) * countTotal - 499
+												? ((total * 18) / 100 + total).toFixed(0) * countTotal -
+												  ((total * 26) / 100).toFixed(0)
 												: ((total * 18) / 100 + total).toFixed(0) * countTotal}
 										</Feed.Summary>
 									</Grid.Column>
