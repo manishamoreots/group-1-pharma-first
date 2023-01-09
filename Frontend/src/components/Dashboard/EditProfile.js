@@ -1,12 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { Button, Input, Icon, Container } from "semantic-ui-react";
-import { user } from "../LocalStorage";
 import { useDispatch } from "react-redux";
 import { EditUser } from "../Reducer/authReducer";
 import swal from "sweetalert";
 
 const EditProfile = ({ EditView }) => {
+	const user = JSON.parse(localStorage.getItem("user"));
 	const [userDetails, setUserDetails] = useState({
 		name: "",
 		email: "",

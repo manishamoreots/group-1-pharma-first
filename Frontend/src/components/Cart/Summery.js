@@ -1,8 +1,11 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Button, Card, Feed, Grid, Icon } from "semantic-ui-react";
+import { getLocation } from "../Reducer/commonReducer";
 
 const Summary = ({ items, coupons }) => {
+	const dispatch = useDispatch();
 	const { locationInfo } = useSelector((state) => state.common.data);
 	const [total, setTotal] = useState(0);
 	useEffect(() => {
@@ -11,6 +14,10 @@ const Summary = ({ items, coupons }) => {
 			return a + parseInt(cur.itemPrice);
 		}, 0);
 		setTotal(totalPrice);
+		navigator.geolocation.getCurrentPosition((position) => {
+			const { latitude, longitude } = position.coords;
+			dispatch(getLocation({ latitude, longitude }));
+		});
 	}, [items]);
 
 	const countTotal = items.map((c) => c.count);

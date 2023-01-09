@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import EditProfile from "./EditProfile";
 import { logout } from "../Reducer/authReducer";
 import swal from "sweetalert";
+import { getLocation } from "../Reducer/commonReducer";
 
 const Dashboard = () => {
 	const user = JSON.parse(localStorage.getItem("user"));
@@ -27,6 +28,10 @@ const Dashboard = () => {
 		setTimeout(() => {
 			setLoading(false);
 		}, 1000);
+		navigator.geolocation.getCurrentPosition((position) => {
+			const { latitude, longitude } = position.coords;
+			dispatch(getLocation({ latitude, longitude }));
+		});
 	}, [loading]);
 
 	const accountDelete = () => {
