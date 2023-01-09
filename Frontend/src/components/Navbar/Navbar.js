@@ -131,6 +131,7 @@ export default function Navbar() {
 					exact
 					to="/cart"
 					name="cart"
+         className="Cart"
 					active={activeItem === "cart"}
 					style={{ alignSelf: "center", marginRight: 30 }}
 				>
