@@ -21,7 +21,7 @@ export default function Footer() {
         style={{ margin: "5em 0em 0em", padding: "2em 0em" }}
         className="footer-container"
       >
-        <Container textAlign="center">
+        <Container>
           <Grid divided inverted stackable>
             <Grid.Column width={3}>
               <Header inverted as="h4" content="Know Us" />
@@ -53,7 +53,7 @@ export default function Footer() {
                 <List.Item as="a">Care Plan</List.Item>
               </List>
             </Grid.Column>
-            <Grid.Column width={7}>
+            <Grid.Column width={7} textAlign="center">
               <Header inverted as="h4" content="Connect" />
               <List link inverted>
                 <List.Item as="a">Social Links</List.Item>

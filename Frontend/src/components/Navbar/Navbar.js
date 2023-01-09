@@ -42,30 +42,38 @@ export default function Navbar() {
 		cursor: "pointer",
 	};
 
-	const guestUser = (
-		<>
-			<Menu.Item position="right" className="signup" style={style}>
-				<LoginSignUpModal title="Sign Up" btnType="Sign Up" />
-			</Menu.Item>
-			<Menu.Item className="login" style={style}>
-				<LoginSignUpModal title="Login" btnType="Login" />
-			</Menu.Item>
-		</>
-	);
-	const authUser = (
-		<>
-			<Menu.Item position="right" style={style} name="dashboard" active={activeItem === "dashboard"}>
-				<Image src={user ? (user.picture ? user.picture : userLogo) : userLogo} avatar />
+  const guestUser = (
+    <>
+      <Menu.Item position="right" className="signup" style={style}>
+        <LoginSignUpModal title="Sign Up" btnType="Sign Up" />
+      </Menu.Item>
+      <Menu.Item className="login" style={style}>
+        <LoginSignUpModal title="Login" btnType="Login" />
+      </Menu.Item>
+    </>
+  );
+  const authUser = (
+    <>
+      <Menu.Item
+        position="right"
+        style={style}
+        name="dashboard"
+        active={activeItem === "dashboard"}
+      >
+        <Image
+          src={user ? (user.picture ? user.picture : userLogo) : userLogo}
+          avatar
+        />
 
-				<Link to="/dashboard" style={{ color: "black", cursor: "pointer" }}>
-					Dashboard
-				</Link>
-			</Menu.Item>
-			<Menu.Item style={style}>
-				<div onClick={onLogout}>Logout</div>
-			</Menu.Item>
-		</>
-	);
+        <Link to="/dashboard" style={{ color: "black", cursor: "pointer" }}>
+          Dashboard
+        </Link>
+      </Menu.Item>
+      <Menu.Item style={style}>
+        <div onClick={onLogout}>Logout</div>
+      </Menu.Item>
+    </>
+  );
 
 	return (
 		<>
@@ -123,6 +131,7 @@ export default function Navbar() {
 					exact
 					to="/cart"
 					name="cart"
+         className="Cart"
 					active={activeItem === "cart"}
 					style={{ alignSelf: "center", marginRight: 30 }}
 				>
