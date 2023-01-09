@@ -8,7 +8,7 @@ import Loader from "../Loader/Loader";
 import { addToCart } from "../Reducer/cartReducer";
 import swal from "sweetalert";
 import "./itemdescription.css";
-const user = JSON.parse(localStorage.getItem("user"));
+
 const options = [
 	{ key: 1, text: "2 Jar", value: 1 },
 	{ key: 2, text: "3 Jar", value: 2 },
@@ -21,6 +21,7 @@ const ItemDescription = () => {
 	const [loader, setLoader] = useState(true);
 	const { description } = useSelector((state) => state.items.data);
 	const { id } = useParams();
+	const user = JSON.parse(localStorage.getItem("user"));
 	useEffect(() => {
 		dispatch(getItemDescription(Number(id)));
 		setTimeout(() => {
