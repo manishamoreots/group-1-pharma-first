@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../Reducer/authReducer";
 import userLogo from "../image/userlogo.png";
 import { getCartItems } from "../Reducer/cartReducer";
+import { getLocation } from "../Reducer/commonReducer";
 export default function Navbar() {
 	const user = JSON.parse(localStorage.getItem("user"));
 	const [activeItem, setActiveItem] = useState("homepage");
@@ -26,6 +27,10 @@ export default function Navbar() {
 		dispatch(getCartItems(cartItems));
 	}, []);
 	useEffect(() => {
+		navigator.geolocation.getCurrentPosition((position) => {
+			const { latitude, longitude } = position.coords;
+			dispatch(getLocation({ latitude, longitude }));
+		});
 		if (searchParams.pathname === "/") {
 			setActiveItem("homepage");
 		} else {
@@ -68,20 +73,44 @@ export default function Navbar() {
 				<Menu.Item position="left" as={Link} exact to="/">
 					<Image src={logo} size={"small"} />
 				</Menu.Item>
-				<Menu.Item as={Link} className="Home" exact to="/" name="homepage" active={activeItem === "homepage"} style={{ alignSelf: "center" }}>
+				<Menu.Item
+					as={Link}
+					className="Home"
+					exact
+					to="/"
+					name="homepage"
+					active={activeItem === "homepage"}
+					style={{ alignSelf: "center" }}
+				>
 					Home
 				</Menu.Item>
-				<Menu.Item as={Link} className="Labtest" exact to="/lab" name="lab" active={activeItem === "lab"} style={{ alignSelf: "center" }}>
+				<Menu.Item
+					as={Link}
+					className="Labtest"
+					exact
+					to="/lab"
+					name="lab"
+					active={activeItem === "lab"}
+					style={{ alignSelf: "center" }}
+				>
 					Lab Test
 				</Menu.Item>
-				<Menu.Item as={Link} className="Care" exact to="/care" name="care" active={activeItem === "care"} style={{ alignSelf: "center" }}>
+				<Menu.Item
+					as={Link}
+					className="Care"
+					exact
+					to="/care"
+					name="care"
+					active={activeItem === "care"}
+					style={{ alignSelf: "center" }}
+				>
 					Care Plan
 				</Menu.Item>
 				<Menu.Item
 					as={Link}
 					exact
 					to="/contact"
-          className="Contact"
+					className="Contact"
 					name="contact"
 					active={activeItem === "contact"}
 					style={{ alignSelf: "center" }}

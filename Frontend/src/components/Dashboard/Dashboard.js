@@ -2,13 +2,12 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Loader from "../Loader/Loader";
-import { Image, Button, Breadcrumb, Container } from "semantic-ui-react";
+import { Image, Button, Breadcrumb, Container, Icon } from "semantic-ui-react";
 import userLogo from "../image/userlogo.png";
 import { useDispatch, useSelector } from "react-redux";
 import EditProfile from "./EditProfile";
 import { logout } from "../Reducer/authReducer";
 import swal from "sweetalert";
-import { getLocation } from "../Reducer/commonReducer";
 
 const Dashboard = () => {
 	const user = JSON.parse(localStorage.getItem("user"));
@@ -28,10 +27,6 @@ const Dashboard = () => {
 		setTimeout(() => {
 			setLoading(false);
 		}, 1000);
-		navigator.geolocation.getCurrentPosition((position) => {
-			const { latitude, longitude } = position.coords;
-			dispatch(getLocation({ latitude, longitude }));
-		});
 	}, [loading]);
 
 	const accountDelete = () => {
@@ -64,11 +59,11 @@ const Dashboard = () => {
 				<Container>
 					<Breadcrumb style={{ borderBottom: "1px solid #777" }}>
 						<Breadcrumb.Section active={!editView} onClick={() => setEditView(false)}>
-							Personal Information
+							<Icon name="user" /> Personal Information
 						</Breadcrumb.Section>
 						<Breadcrumb.Divider>/</Breadcrumb.Divider>
 						<Breadcrumb.Section active={editView} onClick={() => setEditView(true)}>
-							EditProfile
+							<Icon name="edit" /> EditProfile
 						</Breadcrumb.Section>
 					</Breadcrumb>
 
@@ -103,7 +98,9 @@ const Dashboard = () => {
 								</h3>
 							</div>
 							<div>
-								<Button onClick={accountDelete}>Delete My Account</Button>
+								<Button onClick={accountDelete}>
+									<Icon name="user delete" /> Delete My Account
+								</Button>
 							</div>
 						</div>
 						{editView ? (

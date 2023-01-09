@@ -3,6 +3,8 @@ import { Form, Input, TextArea, Button, Select, Container, Grid } from "semantic
 import "./contact.css";
 import MapModel from "../Modal/MapModel";
 import Loader from "../Loader/Loader";
+import swal from "sweetalert";
+import { useNavigate } from "react-router-dom";
 const genderOptions = [
 	{ key: "m", text: "Male", value: "male" },
 	{ key: "f", text: "Female", value: "female" },
@@ -11,11 +13,16 @@ const genderOptions = [
 
 const Contact = () => {
 	const [loading, setLoading] = useState(true);
+	let navigate = useNavigate();
 	useEffect(() => {
 		setTimeout(() => {
 			setLoading(false);
 		}, 700);
 	}, [loading]);
+	const sendMessage = () => {
+		swal({ text: "Message Send to Admin", icon: "success" });
+		navigate("/");
+	};
 	return (
 		<>
 			{loading ? (
@@ -37,12 +44,14 @@ const Contact = () => {
 												control={Input}
 												label="First name"
 												placeholder="First name"
+												required
 											/>
 											<Form.Field
 												id="form-input-control-last-name"
 												control={Input}
 												label="Last name"
 												placeholder="Last name"
+												required
 											/>
 										</Form.Group>
 										<Form.Group widths="equals" className="firstname-lastname">
@@ -57,19 +66,22 @@ const Contact = () => {
 												placeholder="Gender"
 												search
 												searchInput={{ id: "form-select-control-gender" }}
+												required
 											/>
 										</Form.Group>
 										<Form.Field
 											id="form-input-control-error-email"
 											control={Input}
 											label="Email"
-											placeholder="arun@otssolutions.com"
+											placeholder="...@otssolutions.com"
+											required
 										/>
 										<Form.Field
 											id="form-textarea-control-opinion"
 											control={TextArea}
 											label="Message"
 											placeholder="Type Your Message here"
+											required
 										/>
 
 										<Form.Field
@@ -77,6 +89,7 @@ const Contact = () => {
 											control={Button}
 											content="Send Message"
 											secondary
+											onClick={sendMessage}
 										/>
 									</Form>
 								</Grid.Column>

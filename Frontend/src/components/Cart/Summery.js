@@ -1,11 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Button, Card, Feed, Grid, Icon } from "semantic-ui-react";
-import { getLocation } from "../Reducer/commonReducer";
 
 const Summary = ({ items, coupons }) => {
-	const dispatch = useDispatch();
 	const { locationInfo } = useSelector((state) => state.common.data);
 	const [total, setTotal] = useState(0);
 	useEffect(() => {
@@ -14,10 +12,6 @@ const Summary = ({ items, coupons }) => {
 			return a + parseInt(cur.itemPrice);
 		}, 0);
 		setTotal(totalPrice);
-		navigator.geolocation.getCurrentPosition((position) => {
-			const { latitude, longitude } = position.coords;
-			dispatch(getLocation({ latitude, longitude }));
-		});
 	}, [items]);
 
 	const countTotal = items.map((c) => c.count);
@@ -50,10 +44,10 @@ const Summary = ({ items, coupons }) => {
 								{coupons ? (
 									<Grid.Row>
 										<Grid.Column width={12}>
-											<Feed.Summary>Coupon Applied:</Feed.Summary>
+											<Feed.Summary style={{ color: "green" }}>Coupon Applied:</Feed.Summary>
 										</Grid.Column>
 										<Grid.Column width={4}>
-											<Feed.Summary>- 499 </Feed.Summary>
+											<Feed.Summary style={{ color: "green" }}>- 499 </Feed.Summary>
 										</Grid.Column>
 									</Grid.Row>
 								) : null}
