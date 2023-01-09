@@ -129,7 +129,7 @@ export default function Navbar() {
           active={activeItem === "cart"}
           style={{ alignSelf: "center", marginRight: 30 }}
         >
-          <Icon name="cart" size="large" />
+          <Icon name="cart" color="black" size="large" />
           <Label
             floating
             style={{ top: -5, left: 45, backgroundColor: "tomato" }}
