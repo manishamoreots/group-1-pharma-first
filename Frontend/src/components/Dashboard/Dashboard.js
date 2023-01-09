@@ -73,44 +73,22 @@ const Dashboard = () => {
             </Breadcrumb.Section>
           </Breadcrumb>
 
-          <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-            <div
-              style={{
-                width: "25%",
-                height: "50vh",
-                borderRadius: "20px",
-                marginTop: 30,
-                justifyContent: "center",
-              }}
-            >
-              <div>
-                <Image
-                  src={
-                    user ? (user.picture ? user.picture : userLogo) : userLogo
-                  }
-                  avatar
-                  centered
-                  size="small"
-                  style={{ marginLeft: 69 }}
-                />
-              </div>
-              <div>
-                <h3
-                  style={{
-                    textAlignLast: "center",
-                    padding: 20,
-                    marginLeft: 12,
-                  }}
-                >
-                  {user?.name}
-                </h3>
-              </div>
-              <div>
-                <Button onClick={accountDelete}>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <div style={{ marginTop: "3%" }}>
+              <Image
+                src={user ? (user.picture ? user.picture : userLogo) : userLogo}
+                avatar
+                centered
+                size="small"
+              />
+              <h3 style={{ marginLeft: "6px" }}>{user?.name}</h3>
+              <div style={{ marginLeft: "-2px" }}>
+                <Button onClick={accountDelete} style={{ width: "200px" }}>
                   <Icon name="user delete" /> Delete My Account
                 </Button>
               </div>
             </div>
+
             {editView ? (
               <EditProfile EditView={setEditView} />
             ) : (
@@ -181,7 +159,6 @@ const Dashboard = () => {
                           display: "flex",
                           borderBottom: "1.5px solid teal",
                           marginBottom: "2%",
-						  
                         }}
                       >
                         <h4 style={{ fontFamily: "cursive" }}>Mobile No : </h4>
