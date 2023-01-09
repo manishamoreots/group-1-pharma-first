@@ -12,7 +12,6 @@ import swal from "sweetalert";
 const Dashboard = () => {
   const user = JSON.parse(localStorage.getItem("user"));
   const dispatch = useDispatch();
-  const [loading, setLoading] = useState(true);
   const { locationInfo } = useSelector((state) => state.common.data);
   const [editView, setEditView] = useState(false);
   let navigate = useNavigate();
@@ -23,11 +22,6 @@ const Dashboard = () => {
       navigate("/");
     }
   }, [user]);
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-  }, [loading]);
 
   const accountDelete = () => {
     swal({
@@ -51,177 +45,191 @@ const Dashboard = () => {
 
   return (
     <div>
-      {loading ? (
-        <div>
-          <Loader />
-        </div>
-      ) : (
-        <Container>
-          <Breadcrumb style={{ borderBottom: "1px solid #777" }}>
-            <Breadcrumb.Section
-              active={!editView}
-              onClick={() => setEditView(false)}
-            >
-              <Icon name="user" /> Personal Information
-            </Breadcrumb.Section>
-            <Breadcrumb.Divider>/</Breadcrumb.Divider>
-            <Breadcrumb.Section
-              active={editView}
-              onClick={() => setEditView(true)}
-            >
-              <Icon name="edit" /> EditProfile
-            </Breadcrumb.Section>
-          </Breadcrumb>
+      <Container>
+        <Breadcrumb style={{ borderBottom: "1px solid #777" }}>
+          <Breadcrumb.Section
+            active={!editView}
+            onClick={() => setEditView(false)}
+          >
+            <Icon name="user" /> Personal Information
+          </Breadcrumb.Section>
+          <Breadcrumb.Divider>/</Breadcrumb.Divider>
+          <Breadcrumb.Section
+            active={editView}
+            onClick={() => setEditView(true)}
+          >
+            <Icon name="edit" /> EditProfile
+          </Breadcrumb.Section>
+        </Breadcrumb>
 
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <div style={{ marginTop: "3%" }}>
+        <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+          <div
+            style={{
+              width: "25%",
+              height: "50vh",
+              borderRadius: "20px",
+              marginTop: 30,
+              justifyContent: "center",
+            }}
+          >
+            <div>
               <Image
                 src={user ? (user.picture ? user.picture : userLogo) : userLogo}
                 avatar
                 centered
                 size="small"
+                style={{ marginLeft: 69 }}
               />
-              <h3 style={{ marginLeft: "6px" }}>{user?.name}</h3>
-              <div style={{ marginLeft: "-2px" }}>
-                <Button onClick={accountDelete} style={{ width: "200px" }}>
-                  <Icon name="user delete" /> Delete My Account
-                </Button>
-              </div>
             </div>
-
-            {editView ? (
-              <EditProfile EditView={setEditView} />
-            ) : (
-              <div
+            <div>
+              <h3
                 style={{
-                  width: "75%",
-                  justifyContent: "space-evenly",
-                  marginTop: 40,
+                  textAlignLast: "center",
+                  padding: 20,
+                  marginLeft: 12,
                 }}
               >
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-evenly",
-                    flexDirection: "row",
-                  }}
-                >
-                  <div style={{ width: "80%" }}>
+                {user?.name}
+              </h3>
+            </div>
+            <div>
+              <Button onClick={accountDelete}>
+                <Icon name="user delete" /> Delete My Account
+              </Button>
+            </div>
+          </div>
+          {editView ? (
+            <EditProfile EditView={setEditView} />
+          ) : (
+            <div
+              style={{
+                width: "75%",
+                justifyContent: "space-evenly",
+                marginTop: 40,
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-evenly",
+                  flexDirection: "row",
+                }}
+              >
+                <div style={{ width: "80%" }}>
+                  <div
+                    style={{
+                      boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+                      width: "80%",
+                      height: "300px",
+                      padding: "5%",
+                      borderRadius: "5px",
+                    }}
+                  >
                     <div
                       style={{
-                        boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
-                        width: "80%",
-                        height: "300px",
-                        padding: "5%",
-                        borderRadius: "5px",
+                        display: "flex",
+                        borderBottom: "1.5px solid teal",
+                        marginBottom: "2%",
                       }}
                     >
-                      <div
+                      <h4 style={{ fontFamily: "cursive" }}>Full Name : </h4>
+                      <p
                         style={{
-                          display: "flex",
-                          borderBottom: "1.5px solid teal",
-                          marginBottom: "2%",
+                          marginLeft: "20px",
+                          fontSize: "15px",
+                          fontFamily: "cursive",
                         }}
                       >
-                        <h4 style={{ fontFamily: "cursive" }}>Full Name : </h4>
-                        <p
-                          style={{
-                            marginLeft: "20px",
-                            fontSize: "15px",
-                            fontFamily: "cursive",
-                          }}
-                        >
-                          {user?.name}
-                        </p>
-                      </div>
+                        {user?.name}
+                      </p>
+                    </div>
 
-                      <div
+                    <div
+                      style={{
+                        display: "flex",
+                        borderBottom: "1.5px solid teal",
+                        marginBottom: "2%",
+                      }}
+                    >
+                      <h4 style={{ fontFamily: "cursive" }}>Email Id : </h4>
+                      <p
                         style={{
-                          display: "flex",
-                          borderBottom: "1.5px solid teal",
-                          marginBottom: "2%",
+                          marginLeft: "32px",
+                          fontSize: "15px",
+                          fontFamily: "cursive",
                         }}
                       >
-                        <h4 style={{ fontFamily: "cursive" }}>Email Id : </h4>
-                        <p
-                          style={{
-                            marginLeft: "32px",
-                            fontSize: "15px",
-                            fontFamily: "cursive",
-                          }}
-                        >
-                          {user?.email}
-                        </p>
-                      </div>
+                        {user?.email}
+                      </p>
+                    </div>
 
-                      <div
+                    <div
+                      style={{
+                        display: "flex",
+                        borderBottom: "1.5px solid teal",
+                        marginBottom: "2%",
+                      }}
+                    >
+                      <h4 style={{ fontFamily: "cursive" }}>Mobile No : </h4>
+                      <p
                         style={{
-                          display: "flex",
-                          borderBottom: "1.5px solid teal",
-                          marginBottom: "2%",
+                          marginLeft: "18px",
+                          fontSize: "15px",
+                          fontFamily: "cursive",
                         }}
                       >
-                        <h4 style={{ fontFamily: "cursive" }}>Mobile No : </h4>
-                        <p
-                          style={{
-                            marginLeft: "18px",
-                            fontSize: "15px",
-                            fontFamily: "cursive",
-                          }}
-                        >
-                          {user.mobile ? user.mobile : "Please Update"}
-                        </p>
-                      </div>
+                        {user.mobile ? user.mobile : "Please Update"}
+                      </p>
+                    </div>
 
-                      <div
+                    <div
+                      style={{
+                        display: "flex",
+                        borderBottom: "1.5px solid teal",
+                        marginBottom: "2%",
+                      }}
+                    >
+                      <h4 style={{ fontFamily: "cursive" }}>Country : </h4>
+                      <p
                         style={{
-                          display: "flex",
-                          borderBottom: "1.5px solid teal",
-                          marginBottom: "2%",
+                          marginLeft: "30px",
+                          fontSize: "15px",
+                          fontFamily: "cursive",
                         }}
                       >
-                        <h4 style={{ fontFamily: "cursive" }}>Country : </h4>
-                        <p
-                          style={{
-                            marginLeft: "30px",
-                            fontSize: "15px",
-                            fontFamily: "cursive",
-                          }}
-                        >
-                          {locationInfo.countryName
-                            ? locationInfo.countryName
-                            : "Please Enable Location"}
-                        </p>
-                      </div>
+                        {locationInfo.countryName
+                          ? locationInfo.countryName
+                          : "Please Enable Location"}
+                      </p>
+                    </div>
 
-                      <div
+                    <div
+                      style={{
+                        display: "flex",
+                        borderBottom: "1.5px solid teal",
+                      }}
+                    >
+                      <h4 style={{ fontFamily: "cursive" }}>Address : </h4>
+                      <p
                         style={{
-                          display: "flex",
-                          borderBottom: "1.5px solid teal",
+                          marginLeft: "30px",
+                          fontSize: "15px",
+                          fontFamily: "cursive",
                         }}
                       >
-                        <h4 style={{ fontFamily: "cursive" }}>Address : </h4>
-                        <p
-                          style={{
-                            marginLeft: "30px",
-                            fontSize: "15px",
-                            fontFamily: "cursive",
-                          }}
-                        >
-                          {locationInfo.city
-                            ? `${locationInfo.city}  ${locationInfo.principalSubdivision}`
-                            : "Please Enable Location"}
-                        </p>
-                      </div>
+                        {locationInfo.city
+                          ? `${locationInfo.city}  ${locationInfo.principalSubdivision}`
+                          : "Please Enable Location"}
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-            )}
-          </div>
-        </Container>
-      )}
+            </div>
+          )}
+        </div>
+      </Container>
     </div>
   );
 };
-export default Dashboard;
+export default Loader(Dashboard);

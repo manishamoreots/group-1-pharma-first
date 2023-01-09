@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./labtest.css";
 import { Icon, Grid, Container } from "semantic-ui-react";
 import { Carousel } from "react-responsive-carousel";
@@ -37,186 +37,175 @@ function LabTest() {
 			customerName: "Pradip",
 		},
 	];
-	const [loading, setLoading] = useState(true);
-	useEffect(() => {
-		setTimeout(() => {
-			setLoading(false);
-		}, 700);
-	}, [loading]);
+
 	return (
 		<>
-			{loading ? (
-				<Loader />
-			) : (
-				<>
-					<Container>
-						<Grid divided="vertically">
-							<Grid.Row columns={2}>
-								<Grid.Column>
-									<div className="carousel-conatiner">
-										<Carousel showThumbs={false} autoPlay={true} infiniteLoop showArrows={false}>
-											{items.map((item) => {
-												return (
-													<>
-														<img src={item.Images} alt="slider" height={"200px"} />
-													</>
-												);
-											})}
-										</Carousel>
-									</div>
-								</Grid.Column>
-								<Grid.Column>
-									<div className="main-heading">Lab Test From The Comfort Of Your Home</div>
-									<div class="sub-heading" style={{ alignItems: "center" }}>
-										<span>50,00,000+ lab tests booked | 20,00,000+ satisfied customers</span>
-									</div>
-									<div style={{ alignItems: "center", marginTop: "4%" }}>
-										<Grid divided="vertically">
-											<Grid.Row columns={5}>
-												<Grid.Column>
-													<div style={{ borderRight: "1px solid #d8d8d8" }}>
-														{" "}
-														<img
-															style={{ height: "50px", width: "50px" }}
-															src="https://onemg.gumlet.io/Safe_38x38_labs_oe5ieq.png?format=auto"
-															alt="Hygienic"
-														/>
-														<div className="column-heading">
-															<span>100% Safe & Hygienic</span>
-														</div>
-													</div>
-												</Grid.Column>
-												<Grid.Column>
-													<div style={{ borderRight: "1px solid #d8d8d8" }}>
-														{" "}
-														<img
-															style={{ height: "50px", width: "50px" }}
-															src="https://onemg.gumlet.io/new_color_images/Lab_delivery_2x.png?format=auto"
-															alt="home sample"
-														/>
-														<div className="column-heading">
-															<span>Home Sample Pick Up</span>
-														</div>
-													</div>
-												</Grid.Column>
-												<Grid.Column>
-													<div style={{ borderRight: "1px solid #d8d8d8" }}>
-														{" "}
-														<img
-															style={{ height: "50px", width: "50px" }}
-															src="https://onemg.gumlet.io/new_color_images/Lab_online_report_2x.png?format=auto"
-															alt="view report"
-														/>
-														<div className="column-heading">
-															<span>View Reports Online</span>
-														</div>
-													</div>
-												</Grid.Column>
-												<Grid.Column>
-													<div style={{ borderRight: "1px solid #d8d8d8" }}>
-														{" "}
-														<img
-															style={{ height: "50px", width: "50px" }}
-															src="https://onemg.gumlet.io/new_color_images/Lab_doctor_2x.png?format=auto"
-															alt="doctor consultation"
-														/>
-														<div className="column-heading">
-															<span>Free Doctor Consultation</span>
-														</div>
-													</div>
-												</Grid.Column>
-												<Grid.Column>
-													<div>
-														{" "}
-														<img
-															style={{ height: "50px", width: "50px" }}
-															src="https://onemg.gumlet.io/new_color_images/Lab_offer_2x.png?format=auto"
-															alt="Best Prices"
-														/>
-														<div className="column-heading">
-															<span>Best Prices Guaranteed</span>
-														</div>
-													</div>
-												</Grid.Column>
-											</Grid.Row>
-										</Grid>
-									</div>
-								</Grid.Column>
-							</Grid.Row>
-						</Grid>
-						<Grid divided="vertically">
-							<span className="main-heading" style={{ marginTop: "2%" }}>
-								Popular lab tests & profiles
-							</span>
-							<Grid.Row columns={2}>
-								<Grid.Column>
-									<div class style={{ display: "flex", marginTop: "2%" }}>
-										<Icon className="home" size="big" />
-										<p style={{ width: "75%", marginTop: "5px" }}>
-											<h4 class="span-class">HEALTH TEST AT YOUR HOME</h4>
-										</p>
-									</div>
-									<div style={{ display: "flex", marginLeft: "2%" }}>
-										<ul>
-											<li>Complete Blood Count</li>
-											<li>Diabetes Screening</li>
-											<li>COVID-RTPCR</li>
-										</ul>
-										<div style={{ marginLeft: "10%" }}>
-											<ul>
-												<li>Thyroid profile Total</li>
-												<li>Liver Function Test</li>
-												<li>Lipid Profile</li>
-											</ul>
-										</div>
-									</div>
-								</Grid.Column>
-								<Grid.Column>
-									<div class style={{ display: "flex", marginLeft: "2%", marginTop: "2%" }}>
-										<Icon className="lab" size="big" />
-										<p style={{ width: "75%", marginTop: "5px" }}>
-											<h4 class="span-class">VISIT A LAB NEAR YOU</h4>
-										</p>
-									</div>
-									<div style={{ display: "flex", marginLeft: "5%" }}>
-										<ul className="ul-class">
-											<li>USG Whole Abdomen</li>
-											<li>X - Ray Chest PA View</li>
-											<li>CT Scan (Head)</li>
-										</ul>
-										<div style={{ marginLeft: "10%" }}>
-											<ul>
-												<li>Electrocardiography</li>
-												<li>MRI Brain</li>
-												<li>MRI Cervical Spine</li>
-											</ul>
-										</div>
-									</div>
-								</Grid.Column>
-							</Grid.Row>
-						</Grid>
-					</Container>
-					<div className="feedback-container">
-						<Container>
-							<div className="main-heading">Our Happy Customers</div>
-							<Carousel showThumbs={false} autoPlay={true} infiniteLoop>
-								{items.map((item) => {
-									return (
-										<>
-											<div className="feedback">
-												{item.quote}
-												<p style={{ marginTop: "2%", color: "black" }}>~{item.customerName}</p>
+			<Container>
+				<Grid divided="vertically">
+					<Grid.Row columns={2}>
+						<Grid.Column>
+							<div className="carousel-conatiner">
+								<Carousel showThumbs={false} autoPlay={true} infiniteLoop showArrows={false}>
+									{items.map((item) => {
+										return (
+											<>
+												<img src={item.Images} alt="slider" height={"200px"} />
+											</>
+										);
+									})}
+								</Carousel>
+							</div>
+						</Grid.Column>
+						<Grid.Column>
+							<div className="main-heading">Lab Test From The Comfort Of Your Home</div>
+							<div class="sub-heading" style={{ alignItems: "center" }}>
+								<span>50,00,000+ lab tests booked | 20,00,000+ satisfied customers</span>
+							</div>
+							<div style={{ alignItems: "center", marginTop: "4%" }}>
+								<Grid divided="vertically">
+									<Grid.Row columns={5}>
+										<Grid.Column>
+											<div style={{ borderRight: "1px solid #d8d8d8" }}>
+												{" "}
+												<img
+													style={{ height: "50px", width: "50px" }}
+													src="https://onemg.gumlet.io/Safe_38x38_labs_oe5ieq.png?format=auto"
+													alt="Hygienic"
+												/>
+												<div className="column-heading">
+													<span>100% Safe & Hygienic</span>
+												</div>
 											</div>
-										</>
-									);
-								})}
-							</Carousel>
-						</Container>
-					</div>
-				</>
-			)}
+										</Grid.Column>
+										<Grid.Column>
+											<div style={{ borderRight: "1px solid #d8d8d8" }}>
+												{" "}
+												<img
+													style={{ height: "50px", width: "50px" }}
+													src="https://onemg.gumlet.io/new_color_images/Lab_delivery_2x.png?format=auto"
+													alt="home sample"
+												/>
+												<div className="column-heading">
+													<span>Home Sample Pick Up</span>
+												</div>
+											</div>
+										</Grid.Column>
+										<Grid.Column>
+											<div style={{ borderRight: "1px solid #d8d8d8" }}>
+												{" "}
+												<img
+													style={{ height: "50px", width: "50px" }}
+													src="https://onemg.gumlet.io/new_color_images/Lab_online_report_2x.png?format=auto"
+													alt="view report"
+												/>
+												<div className="column-heading">
+													<span>View Reports Online</span>
+												</div>
+											</div>
+										</Grid.Column>
+										<Grid.Column>
+											<div style={{ borderRight: "1px solid #d8d8d8" }}>
+												{" "}
+												<img
+													style={{ height: "50px", width: "50px" }}
+													src="https://onemg.gumlet.io/new_color_images/Lab_doctor_2x.png?format=auto"
+													alt="doctor consultation"
+												/>
+												<div className="column-heading">
+													<span>Free Doctor Consultation</span>
+												</div>
+											</div>
+										</Grid.Column>
+										<Grid.Column>
+											<div>
+												{" "}
+												<img
+													style={{ height: "50px", width: "50px" }}
+													src="https://onemg.gumlet.io/new_color_images/Lab_offer_2x.png?format=auto"
+													alt="Best Prices"
+												/>
+												<div className="column-heading">
+													<span>Best Prices Guaranteed</span>
+												</div>
+											</div>
+										</Grid.Column>
+									</Grid.Row>
+								</Grid>
+							</div>
+						</Grid.Column>
+					</Grid.Row>
+				</Grid>
+				<Grid divided="vertically">
+					<span className="main-heading" style={{ marginTop: "2%" }}>
+						Popular lab tests & profiles
+					</span>
+					<Grid.Row columns={2}>
+						<Grid.Column>
+							<div class style={{ display: "flex", marginTop: "2%" }}>
+								<Icon className="home" size="big" />
+								<p style={{ width: "75%", marginTop: "5px" }}>
+									<h4 class="span-class">HEALTH TEST AT YOUR HOME</h4>
+								</p>
+							</div>
+							<div style={{ display: "flex", marginLeft: "2%" }}>
+								<ul>
+									<li>Complete Blood Count</li>
+									<li>Diabetes Screening</li>
+									<li>COVID-RTPCR</li>
+								</ul>
+								<div style={{ marginLeft: "10%" }}>
+									<ul>
+										<li>Thyroid profile Total</li>
+										<li>Liver Function Test</li>
+										<li>Lipid Profile</li>
+									</ul>
+								</div>
+							</div>
+						</Grid.Column>
+						<Grid.Column>
+							<div class style={{ display: "flex", marginLeft: "2%", marginTop: "2%" }}>
+								<Icon className="lab" size="big" />
+								<p style={{ width: "75%", marginTop: "5px" }}>
+									<h4 class="span-class">VISIT A LAB NEAR YOU</h4>
+								</p>
+							</div>
+							<div style={{ display: "flex", marginLeft: "5%" }}>
+								<ul className="ul-class">
+									<li>USG Whole Abdomen</li>
+									<li>X - Ray Chest PA View</li>
+									<li>CT Scan (Head)</li>
+								</ul>
+								<div style={{ marginLeft: "10%" }}>
+									<ul>
+										<li>Electrocardiography</li>
+										<li>MRI Brain</li>
+										<li>MRI Cervical Spine</li>
+									</ul>
+								</div>
+							</div>
+						</Grid.Column>
+					</Grid.Row>
+				</Grid>
+			</Container>
+			<div className="feedback-container">
+				<Container>
+					<div className="main-heading">Our Happy Customers</div>
+					<Carousel showThumbs={false} autoPlay={true} infiniteLoop>
+						{items.map((item) => {
+							return (
+								<>
+									<div className="feedback">
+										{item.quote}
+										<p style={{ marginTop: "2%", color: "black" }}>~{item.customerName}</p>
+									</div>
+								</>
+							);
+						})}
+					</Carousel>
+				</Container>
+			</div>
 		</>
 	);
 }
 
-export default LabTest;
+export default Loader(LabTest);
