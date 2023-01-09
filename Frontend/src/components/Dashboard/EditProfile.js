@@ -1,9 +1,39 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Input, Icon, Container } from "semantic-ui-react";
 import { user } from "../LocalStorage";
+import { useDispatch } from "react-redux";
+import { EditUser } from "../Reducer/authReducer";
+import swal from "sweetalert";
 
-const EditProfile = () => {
+const EditProfile = ({ EditView }) => {
+	const [userDetails, setUserDetails] = useState({
+		name: "",
+		email: "",
+		mobile: "",
+	});
+	const dispatch = useDispatch();
+	useEffect(() => {
+		setUserDetails(user);
+	}, []);
+	const change = (e) => {
+		const { name, value } = e.target;
+		setUserDetails((prevState) => ({
+			...prevState,
+			[name]: value,
+		}));
+	};
+	const update = () => {
+		dispatch(EditUser(userDetails));
+		swal({ text: "User Updated" });
+		EditView(false);
+		setUserDetails({
+			name: "",
+			email: "",
+			mobile: "",
+		});
+	};
+
 	return (
 		<Container>
 			<div
@@ -26,27 +56,32 @@ const EditProfile = () => {
 									width: "80%",
 									alignSelf: "center",
 									justifyContent: "flex-start",
-									height: "100vh",
+									height: "50vh",
 									borderRadius: "10px",
 								}}
 							>
-								<Input iconPosition="left" placeholder={user?.name} style={{ width: "65vh" }} size="large">
+								<Input iconPosition="left" placeholder={userDetails?.name} style={{ width: "65vh" }} size="large">
 									<Icon name="user" />
-									<input />
+									<input name="name" value={userDetails?.name} onChange={change} />
 								</Input>
 
-								<Input iconPosition="left" placeholder={user?.email} style={{ width: "65vh" }} size="large">
+								<Input iconPosition="left" placeholder={userDetails?.email} style={{ width: "65vh" }} size="large">
 									<Icon name="at" />
-									<input />
+									<input name="email" disabled value={userDetails?.email} onChange={change} />
 								</Input>
 
-								<Input iconPosition="left" placeholder={user?.mobile} style={{ width: "65vh" }} size="large">
+								<Input
+									iconPosition="left"
+									placeholder={userDetails.mobile ? userDetails.mobile : "Please Update"}
+									style={{ width: "65vh" }}
+									size="large"
+								>
 									<Icon name="phone" />
-									<input />
+									<input name="mobile" value={userDetails.mobile} onChange={change} />
 								</Input>
 
 								<div>
-									<Button>Edit Details</Button>
+									<Button onClick={update}>Edit Details</Button>
 								</div>
 							</div>
 						</div>

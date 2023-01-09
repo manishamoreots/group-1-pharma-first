@@ -31,6 +31,10 @@ export const authSlice = createSlice({
 			localStorage.setItem("user", JSON.stringify(action.payload));
 			state.data = { ...state.data, isAuthenticated: true, loading: true };
 		},
+		EditUser: (state, action) => {
+			localStorage.setItem("user", JSON.stringify(action.payload));
+			// state.data = { ...state.data, isAuthenticated: true, loading: true };
+		},
 		logout: (state, action) => {
 			state.data = { ...state.data, isAuthenticated: false };
 			localStorage.removeItem("user");
@@ -38,4 +42,4 @@ export const authSlice = createSlice({
 	},
 });
 
-export const { Register, Login, logout, SignWithGoogle } = authSlice.actions;
+export const { Register, Login, logout, SignWithGoogle, EditUser } = authSlice.actions;
