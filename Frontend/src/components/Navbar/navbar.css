@@ -1,4 +1,12 @@
-.ui.secondary.pointing.menu  .item:hover{
-background-color: teal !important;
-color: white !important;
+.Home:hover,
+.Labtest:hover,
+.Contact:hover,
+.Care:hover,
+.Logout:hover,
+.login:hover,
+.signup:hover {
+  color: crimson !important;
+}
+.ui.secondary.pointing.menu .active.item {
+  color: crimson !important;
 }

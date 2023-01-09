@@ -39,10 +39,10 @@ export default function Navbar() {
 
 	const guestUser = (
 		<>
-			<Menu.Item position="right" style={style}>
+			<Menu.Item position="right" className="signup" style={style}>
 				<LoginSignUpModal title="Sign Up" btnType="Sign Up" />
 			</Menu.Item>
-			<Menu.Item style={style}>
+			<Menu.Item className="login" style={style}>
 				<LoginSignUpModal title="Login" btnType="Login" />
 			</Menu.Item>
 		</>
@@ -68,19 +68,20 @@ export default function Navbar() {
 				<Menu.Item position="left" as={Link} exact to="/">
 					<Image src={logo} size={"small"} />
 				</Menu.Item>
-				<Menu.Item as={Link} exact to="/" name="homepage" active={activeItem === "homepage"} style={{ alignSelf: "center" }}>
+				<Menu.Item as={Link} className="Home" exact to="/" name="homepage" active={activeItem === "homepage"} style={{ alignSelf: "center" }}>
 					Home
 				</Menu.Item>
-				<Menu.Item as={Link} exact to="/lab" name="lab" active={activeItem === "lab"} style={{ alignSelf: "center" }}>
+				<Menu.Item as={Link} className="Labtest" exact to="/lab" name="lab" active={activeItem === "lab"} style={{ alignSelf: "center" }}>
 					Lab Test
 				</Menu.Item>
-				<Menu.Item as={Link} exact to="/care" name="care" active={activeItem === "care"} style={{ alignSelf: "center" }}>
+				<Menu.Item as={Link} className="Care" exact to="/care" name="care" active={activeItem === "care"} style={{ alignSelf: "center" }}>
 					Care Plan
 				</Menu.Item>
 				<Menu.Item
 					as={Link}
 					exact
 					to="/contact"
+          className="Contact"
 					name="contact"
 					active={activeItem === "contact"}
 					style={{ alignSelf: "center" }}
