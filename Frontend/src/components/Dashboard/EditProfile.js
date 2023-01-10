@@ -4,6 +4,7 @@ import { Button, Input, Icon, Container } from "semantic-ui-react";
 import { useDispatch } from "react-redux";
 import { EditUser } from "../Reducer/authReducer";
 import swal from "sweetalert";
+import "./editprofile.css";
 
 const EditProfile = ({ EditView }) => {
 	const user = JSON.parse(localStorage.getItem("user"));
