@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../Reducer/authReducer";
 import userLogo from "../image/userlogo.png";
 import { getCartItems } from "../Reducer/cartReducer";
-import { getLocation } from "../Reducer/commonReducer";
+
 export default function Navbar() {
 	const user = JSON.parse(localStorage.getItem("user"));
 	const [activeItem, setActiveItem] = useState("homepage");
@@ -27,10 +27,6 @@ export default function Navbar() {
 		dispatch(getCartItems(cartItems));
 	}, []);
 	useEffect(() => {
-		navigator.geolocation.getCurrentPosition((position) => {
-			const { latitude, longitude } = position.coords;
-			dispatch(getLocation({ latitude, longitude }));
-		});
 		if (searchParams.pathname === "/") {
 			setActiveItem("homepage");
 		} else {
@@ -42,38 +38,30 @@ export default function Navbar() {
 		cursor: "pointer",
 	};
 
-  const guestUser = (
-    <>
-      <Menu.Item position="right" className="signup" style={style}>
-        <LoginSignUpModal title="Sign Up" btnType="Sign Up" />
-      </Menu.Item>
-      <Menu.Item className="login" style={style}>
-        <LoginSignUpModal title="Login" btnType="Login" />
-      </Menu.Item>
-    </>
-  );
-  const authUser = (
-    <>
-      <Menu.Item
-        position="right"
-        style={style}
-        name="dashboard"
-        active={activeItem === "dashboard"}
-      >
-        <Image
-          src={user ? (user.picture ? user.picture : userLogo) : userLogo}
-          avatar
-        />
+	const guestUser = (
+		<>
+			<Menu.Item position="right" className="signup" style={style}>
+				<LoginSignUpModal title="Sign Up" btnType="Sign Up" />
+			</Menu.Item>
+			<Menu.Item className="login" style={style}>
+				<LoginSignUpModal title="Login" btnType="Login" />
+			</Menu.Item>
+		</>
+	);
+	const authUser = (
+		<>
+			<Menu.Item position="right" style={style} name="dashboard" active={activeItem === "dashboard"}>
+				<Image src={user ? (user.picture ? user.picture : userLogo) : userLogo} avatar />
 
-        <Link to="/dashboard" style={{ color: "black", cursor: "pointer" }}>
-          Dashboard
-        </Link>
-      </Menu.Item>
-      <Menu.Item style={style}>
-        <div onClick={onLogout}>Logout</div>
-      </Menu.Item>
-    </>
-  );
+				<Link to="/dashboard" style={{ color: "black", cursor: "pointer" }}>
+					Dashboard
+				</Link>
+			</Menu.Item>
+			<Menu.Item style={style}>
+				<div onClick={onLogout}>Logout</div>
+			</Menu.Item>
+		</>
+	);
 
 	return (
 		<>
@@ -131,7 +119,7 @@ export default function Navbar() {
 					exact
 					to="/cart"
 					name="cart"
-         className="Cart"
+					className="Cart"
 					active={activeItem === "cart"}
 					style={{ alignSelf: "center", marginRight: 30 }}
 				>

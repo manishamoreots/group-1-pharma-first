@@ -1,37 +1,42 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Icon, Modal } from "semantic-ui-react";
-
+import { getLocation } from "../Reducer/commonReducer";
 const MapModel = ({ contact }) => {
 	const [open, setOpen] = useState(false);
+	const dispatch = useDispatch();
 	const { locationInfo } = useSelector((state) => state.common.data);
-	const [currentLocation, setCurrentLocation] = useState({
-		lat: 28.4212,
-		lng: 77.0404,
-	});
+
 	const { isLoaded } = useLoadScript({
 		googleMapsApiKey: "AIzaSyBmc9trQvqHIrTShvRAb0MoHOFZzzKB5GY",
 	});
 	useEffect(() => {
-		if (locationInfo) {
-			setCurrentLocation({ lat: locationInfo.latitude, lng: locationInfo.longitude });
-		} else {
-			setCurrentLocation(currentLocation);
-		}
+		navigator.geolocation.getCurrentPosition((position) => {
+			const { latitude, longitude } = position.coords;
+			dispatch(getLocation({ latitude, longitude }));
+		});
 	}, []);
+	const localLocation = {
+		lat: 28.4212,
+		lng: 77.0404,
+	};
+	const apiLocation = {
+		lat: locationInfo.latitude,
+		lng: locationInfo.longitude,
+	};
 	const map = (
 		<>
 			<GoogleMap
 				zoom={12}
-				center={currentLocation}
+				center={locationInfo.latitude ? apiLocation : localLocation}
 				mapContainerStyle={{
 					height: "65vh",
 					width: "100%",
 				}}
 			>
-				<MarkerF position={currentLocation} />
+				<MarkerF position={locationInfo.latitude ? apiLocation : localLocation} />
 			</GoogleMap>
 		</>
 	);
@@ -48,16 +53,16 @@ const MapModel = ({ contact }) => {
 							onOpen={() => setOpen(true)}
 							open={open}
 							trigger={
-								<div style={{ display: "flex" }}>
-									<Icon name="map outline" size="large" style={{ marginLeft: "10px" }} />
-									<p style={{ lignHeight: "none" }}>See your Location</p>
+								<div style={{ display: "flex", cursor: "pointer" }}>
+									<Icon name="map outline" size="large" style={{ marginLeft: "10px", color: "tomato" }} />
+									<p style={{ lineHeight: "none" }}>See your Location</p>
 								</div>
 							}
 						>
 							<Modal.Header>
 								{locationInfo.city
 									? `${locationInfo.city} ${locationInfo.locality} ${locationInfo.principalSubdivision}`
-									: "Please Enable Location"}
+									: "Default OTS Location"}
 							</Modal.Header>
 							{map}
 							<Modal.Actions>
