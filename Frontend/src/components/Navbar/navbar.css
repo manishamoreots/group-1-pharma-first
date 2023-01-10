@@ -5,11 +5,9 @@
 .Logout:hover,
 .login:hover,
 .signup:hover {
-  color: crimson !important;
+    color: crimson !important;
 }
+
 .ui.secondary.pointing.menu .active.item {
-  color: crimson !important;
-}
-.Cart{
-  color:"black" !important;
+    color: crimson !important;
 }
