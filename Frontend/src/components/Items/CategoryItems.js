@@ -18,8 +18,7 @@ const CategoryItems = () => {
 	useEffect(() => {
 		dispatch(getCategoryItem(Number(id)));
 	}, [id]);
-	// const isItemInCart = cartItem.filter((item) => {});
-	// console.log(isItemInCart);
+
 	return (
 		<div>
 			<p
@@ -95,7 +94,7 @@ const CategoryItems = () => {
 												if (newData[0]) {
 													swal({ text: "Already Added" });
 												} else {
-													dispatch(addToCart(item));
+													dispatch(addToCart({ ...item, count: 1 }));
 													swal({ text: "Item Added" });
 												}
 											} else {
