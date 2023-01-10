@@ -118,7 +118,7 @@ const ItemDescription = () => {
 													if (newData[0]) {
 														swal({ text: "Already Added" });
 													} else {
-														dispatch(addToCart({...description,count:itemCount}));
+														dispatch(addToCart({ ...description, count: itemCount }));
 														swal({ text: "Item Added" });
 													}
 												} else {
