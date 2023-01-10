@@ -12,14 +12,12 @@ import { addToCart } from "../Reducer/cartReducer";
 const CategoryItems = () => {
 	const dispatch = useDispatch();
 	const { items } = useSelector((state) => state.items.data);
-	// const { cartItem } = useSelector((state) => state.cart.data);
+	const { cartItem } = useSelector((state) => state.cart.data);
 	const user = JSON.parse(localStorage.getItem("user"));
 	const { id, Cname } = useParams();
 	useEffect(() => {
 		dispatch(getCategoryItem(Number(id)));
 	}, [id]);
-	// const isItemInCart = cartItem.filter((item) => {});
-	// console.log(isItemInCart);
 	return (
 		<div>
 			<p
@@ -91,8 +89,13 @@ const CategoryItems = () => {
 									<Button
 										onClick={() => {
 											if (user) {
-												dispatch(addToCart(item));
-												swal({ text: "Item Added" });
+												const newData = cartItem.filter((c) => c.id === item.id);
+												if (newData[0]) {
+													swal({ text: "Already Added" });
+												} else {
+													dispatch(addToCart(item));
+													swal({ text: "Item Added" });
+												}
 											} else {
 												swal({ text: "Please login" });
 											}
