@@ -15,13 +15,13 @@ const SecondNavbar = () => {
 					<Menu.Item>
 						<MapModel />
 						<Input
-							style={{ marginLeft: "10px" }}
+							style={{ marginLeft: "10px", color: "tomato" }}
 							type="text"
 							icon="map marker alternate"
 							iconPosition="left"
 							placeholder="Current location "
 							size="large"
-							value={locationInfo.city}
+							value={locationInfo.city ? locationInfo.city : "Please Enable Location"}
 						/>
 					</Menu.Item>
 					<Menu.Item>

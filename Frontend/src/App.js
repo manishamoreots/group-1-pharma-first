@@ -28,9 +28,8 @@ function App() {
 
 				<Route path="/login" element={<LoginSignUpModal title="login" btnType="Login" />} />
 				<Route path="/signUp" element={<LoginSignUpModal title="Sign Up" btnType="Sign Up" />} />
-			
 			</Routes>
-			
+
 			<Footer />
 		</div>
 	);
