@@ -11,7 +11,7 @@ const LoginSignUpModal = ({ title, btnType }) => {
   const dispatch = useDispatch();
   const { isAuthenticated, errors, loading } = useSelector(
     (state) => state.auth.data
-  );
+  );                                                                                                                                                                                                      
   const [open, setOpen] = useState(false);
   const [condition, setCondition] = useState(true);
 
