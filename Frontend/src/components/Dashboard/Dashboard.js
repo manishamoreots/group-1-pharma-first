@@ -75,6 +75,7 @@ const Dashboard = () => {
 								height: "35px",
 								border: "none",
 								borderRadius: ".28571429rem",
+								cursor: "pointer",
 							}}
 							onClick={accountDelete}
 						>

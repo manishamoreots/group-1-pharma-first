@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Button, Container, Dropdown, Grid, Header, Image, Menu, Segment, Card, Rating, Icon } from "semantic-ui-react";
 import { getItemDescription } from "../Reducer/itemReducer";
@@ -10,15 +10,17 @@ import swal from "sweetalert";
 import "./itemdescription.css";
 
 const options = [
-	{ key: 1, text: "2 Jar", value: 1 },
-	{ key: 2, text: "3 Jar", value: 2 },
-	{ key: 3, text: "4 Jar", value: 3 },
-	{ key: 4, text: "5 Jar", value: 4 },
-	{ key: 5, text: "6 Jar", value: 5 },
+	{ key: 1, text: "2 item", value: 2 },
+	{ key: 2, text: "3 item", value: 3 },
+	{ key: 3, text: "4 item", value: 4 },
+	{ key: 4, text: "5 item", value: 5 },
+	{ key: 5, text: "6 item", value: 6 },
 ];
 const ItemDescription = () => {
 	const dispatch = useDispatch();
 	const { description } = useSelector((state) => state.items.data);
+	const { cartItem } = useSelector((state) => state.cart.data);
+	const [itemCount, setItemCount] = useState(1);
 	const { id } = useParams();
 	const user = JSON.parse(localStorage.getItem("user"));
 	useEffect(() => {
@@ -55,7 +57,6 @@ const ItemDescription = () => {
 									</button>
 									<div style={{ marginTop: "2%" }}>
 										<Card.Meta>
-											{" "}
 											{Math.floor(Math.random() * 500) + 94} Rating &{" "}
 											{Math.floor(Math.random() * 500) + 93} Reviews
 										</Card.Meta>
@@ -96,7 +97,16 @@ const ItemDescription = () => {
 
 										<div className="itemDescription-dropdown">
 											<Menu compact>
-												<Dropdown text="1 Jar" options={options} simple item size="tiny" />
+												<Dropdown
+													text={`${itemCount} Item`}
+													options={options}
+													simple
+													item
+													size="tiny"
+													onChange={(e, { value }) => {
+														setItemCount(value);
+													}}
+												/>
 											</Menu>
 											<span style={{ marginTop: "5%" }}>of 50 Test Strips</span>
 										</div>
@@ -104,8 +114,13 @@ const ItemDescription = () => {
 										<Button
 											onClick={() => {
 												if (user) {
-													dispatch(addToCart(description));
-													swal({ text: "Item Added" });
+													const newData = cartItem.filter((c) => c.id === description.id);
+													if (newData[0]) {
+														swal({ text: "Already Added" });
+													} else {
+														dispatch(addToCart({...description,count:itemCount}));
+														swal({ text: "Item Added" });
+													}
 												} else {
 													swal({ text: "Please login" });
 												}
