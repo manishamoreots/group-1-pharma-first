@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getCategoryItem } from "../Reducer/itemReducer";
 import { useDispatch, useSelector } from "react-redux";
-import { Button, Card, Icon, Rating } from "semantic-ui-react";
+import { Button, Card, Icon, Rating ,Popup} from "semantic-ui-react";
 import Loader from "../Loader/Loader";
 import swal from "sweetalert";
 import "./categoryitem.css";
