@@ -10,6 +10,6 @@
 .ui.secondary.pointing.menu .active.item {
   color: crimson !important;
 }
-.Cart{
-  color:"black" !important;
+ .ui.secondary.pointing.menu .active.item .Cart {
+  color: black !important;
 }
