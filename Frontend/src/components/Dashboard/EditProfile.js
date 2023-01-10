@@ -35,17 +35,10 @@ const EditProfile = ({ EditView }) => {
     });
   };
 
-  
-
   return (
     <Container>
-      <div
-       
-         
-          className="editprofile"
-       
-      >
-        <div style={{margin:"10px"}}>
+      <div className="editprofile">
+        <div style={{ margin: "15px" }}>
           <Input
             iconPosition="left"
             placeholder={userDetails?.name}
@@ -55,7 +48,7 @@ const EditProfile = ({ EditView }) => {
             <input name="name" value={userDetails?.name} onChange={change} />
           </Input>
         </div>
-        <div style={{margin:"10px"}}>
+        <div style={{ margin: "15px" }}>
           <Input
             iconPosition="left"
             placeholder={userDetails?.email}
@@ -70,7 +63,7 @@ const EditProfile = ({ EditView }) => {
             />
           </Input>
         </div>
-        <div style={{margin:"10px"}}>
+        <div style={{ margin: "15px" }}>
           <Input
             iconPosition="left"
             placeholder={
@@ -83,7 +76,12 @@ const EditProfile = ({ EditView }) => {
           </Input>
         </div>
 
-        <Button onClick={update}>Edit Details</Button>
+        <Button
+          style={{ marginLeft: "2%", marginRight: "5%" }}
+          onClick={update}
+        >
+          Edit Details
+        </Button>
       </div>
     </Container>
   );
