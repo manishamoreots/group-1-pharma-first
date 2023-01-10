@@ -15,7 +15,11 @@ const MapModel = ({ contact }) => {
 		googleMapsApiKey: "AIzaSyBmc9trQvqHIrTShvRAb0MoHOFZzzKB5GY",
 	});
 	useEffect(() => {
-		setCurrentLocation({ lat: locationInfo.latitude, lng: locationInfo.longitude });
+		if (locationInfo) {
+			setCurrentLocation({ lat: locationInfo.latitude, lng: locationInfo.longitude });
+		} else {
+			setCurrentLocation(currentLocation);
+		}
 	}, []);
 	const map = (
 		<>
@@ -50,7 +54,11 @@ const MapModel = ({ contact }) => {
 								</div>
 							}
 						>
-							<Modal.Header>{`${locationInfo.city} ${locationInfo.locality} ${locationInfo.principalSubdivision}`}</Modal.Header>
+							<Modal.Header>
+								{locationInfo.city
+									? `${locationInfo.city} ${locationInfo.locality} ${locationInfo.principalSubdivision}`
+									: "Please Enable Location"}
+							</Modal.Header>
 							{map}
 							<Modal.Actions>
 								<button
