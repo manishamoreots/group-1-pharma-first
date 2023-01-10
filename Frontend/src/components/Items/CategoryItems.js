@@ -18,6 +18,8 @@ const CategoryItems = () => {
 	useEffect(() => {
 		dispatch(getCategoryItem(Number(id)));
 	}, [id]);
+	// const isItemInCart = cartItem.filter((item) => {});
+	// console.log(isItemInCart);
 	return (
 		<div>
 			<p

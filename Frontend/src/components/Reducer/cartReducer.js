@@ -21,7 +21,7 @@ export const cartSlice = createSlice({
 				const userInfo = {
 					...action.payload,
 					userId: user.userId,
-					count: 1,
+					count: action.payload.count,
 				};
 				if (!allItems) {
 					let data = [userInfo];
