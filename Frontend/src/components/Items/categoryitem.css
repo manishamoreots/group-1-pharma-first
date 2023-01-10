@@ -1,18 +1,20 @@
 .cart-gallery {
   display: grid;
-  width: 100%;
-  grid-template-columns: auto auto auto;
-  justify-content: space-around;
+  grid-template-columns: auto auto auto auto;
+  margin-left: 2%;
 }
 
 .cart-gallery .ui.card {
-  width: 340px;
+  height: 96%;
   align-items: center;
   justify-content: center;
   border: 1px solid salmon;
 }
 li {
   margin: 0% !important;
+}
+.ui.card > :last-child {
+  justify-content: space-between !important;
 }
 
 .rating-btn {
@@ -22,7 +24,7 @@ li {
   padding: 7px 18px;
   border-radius: 4px;
   color: #fff;
-  width: 23%;
+  width: 30%;
   display: flex;
 }
 .cart-item {
