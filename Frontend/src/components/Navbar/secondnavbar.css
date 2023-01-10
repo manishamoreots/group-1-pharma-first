@@ -1,0 +1,7 @@
+.ui.secondary.menu {
+  justify-content: space-evenly !important;
+}
+
+.ui.menu .item > .input {
+  width: auto !important;
+}

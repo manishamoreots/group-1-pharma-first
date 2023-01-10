@@ -1,0 +1,33 @@
+.carousel-card {
+  height: 300px;
+  width: 250px;
+  justify-content: space-around !important;
+  padding-right: 2% !important;
+}
+.ui.card > .image {
+  margin-top: 3%;
+}
+.ui.card > .image {
+  background-color: white !important;
+}
+
+
+.carousel-card-name {
+  text-align: center;
+  color: #212121;
+}
+
+.ui.card > .content {
+  border-top: none !important;
+}
+
+.ui.card {
+  box-shadow: none !important;
+}
+
+.ui.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+}
+.ul {
+  justify-content: left;
+}

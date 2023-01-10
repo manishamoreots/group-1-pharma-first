@@ -1,0 +1,15 @@
+.ui.statistics>.statistic {
+    padding: 1%;
+    margin: 0 !important;
+    margin-top: 5% !important;
+}
+.first-statistic{
+    margin-left: -6% ;
+}
+.middle-statistic {
+margin-left: 7% ;
+margin-right:7% ;
+}
+.ui.statistics {margin-top: 3em !important;}
+
+.ui.statistic>.label, .ui.statistics .statistic>.label {margin-top: 1% !important;}

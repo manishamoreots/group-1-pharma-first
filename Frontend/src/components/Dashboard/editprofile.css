@@ -1,0 +1,12 @@
+.editprofile {
+  width: 500px;
+  box-shadow: rgba(123, 119, 116, 0.489) 0px 3px 8px;
+  margin-top: 7%;
+  margin-left: 10%;
+  height: 300px;
+  padding: 2%;
+}
+.ui.large.input {
+  font-size: 1.14285714em;
+  width: 100%;
+}

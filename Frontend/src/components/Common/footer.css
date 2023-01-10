@@ -1,0 +1,63 @@
+.footer-container {
+  background-color: #fae4c8 !important;
+}
+
+.style__copyright {
+  color: #536971;
+  opacity: 0.6;
+  margin: 12px;
+}
+
+.ui.inverted.header {
+  color: #000 !important;
+}
+.ui.inverted.link.list .item,
+.ui.inverted.link.list .item a:not(.ui),
+.ui.inverted.link.list a.item {
+  color: #666 !important;
+}
+.ui.inverted.link.list .item,
+.ui.inverted.link.list .item a:not(.ui),
+.ui.inverted.link.list a.item:hover {
+  color:tomato !important;
+}
+
+
+.facebook,
+.instagram,
+.linkedin,
+.twitter,
+.youtube {
+  color: rgb(154, 151, 151);
+}
+
+.facebook:hover {
+  background-color: #007bff;
+  cursor: pointer;
+  transform: scale(1.2);
+  color: white;
+}
+.twitter:hover {
+  background-color: #0056b3;
+  cursor: pointer;
+  transform: scale(1.2);
+  color: white;
+}
+.instagram:hover {
+  background-color: #e4405f;
+  cursor: pointer;
+  transform: scale(1.2);
+  color: white;
+}
+.linkedin:hover {
+  background-color: #0077b5;
+  transform: scale(1.2);
+  color: white;
+  cursor: pointer;
+}
+.youtube:hover {
+  background-color: red;
+  color: white;
+  transform: scale(1.2);
+  cursor: pointer;
+}
