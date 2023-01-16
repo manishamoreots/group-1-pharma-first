@@ -2,7 +2,7 @@ export const categoryItems = [
   // categoryId1 start from here {diabetics}
   {
     id: 654,
-    categoryId: 1,
+    catego0ryId: 1,
     itemName:
       "Virgo Healthcare Protivir Diet- Nutritional Supplement for Diabetic",
     offerPrice: "2333",
