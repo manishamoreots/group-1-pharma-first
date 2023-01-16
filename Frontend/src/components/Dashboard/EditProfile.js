@@ -17,6 +17,7 @@ const EditProfile = ({ EditView }) => {
 	useEffect(() => {
 		setUserDetails(user);
 	}, []);
+
 	const change = (e) => {
 		const { name, value } = e.target;
 		setUserDetails((prevState) => ({
@@ -37,51 +38,29 @@ const EditProfile = ({ EditView }) => {
 
 	return (
 		<Container>
-			<div
-				 className="editprofile"
-			>
-				 <div style={{margin:"10px"}}>
-          <Input
-            iconPosition="left"
-            placeholder={userDetails?.name}
-            size="large"
-          >
-            <Icon name="user" />
-            <input name="name" value={userDetails?.name} onChange={change} />
-          </Input>
-        </div>
-        <div style={{margin:"10px"}}>
-          <Input
-            iconPosition="left"
-            placeholder={userDetails?.email}
-            size="large"
-          >
-            <Icon name="at" />
-            <input
-              name="email"
-              disabled
-              value={userDetails?.email}
-              onChange={change}
-            />
-          </Input>
-        </div>
-        <div style={{margin:"10px"}}>
-          <Input
-            iconPosition="left"
-            placeholder={
-              userDetails.mobile ? userDetails.mobile : "Please Update"
-            }
-            size="large"
-          >
-            <Icon name="phone" />
-            <input name="mobile" value={userDetails.mobile} onChange={change} />
-          </Input>
-        </div>
+			<div className="editprofile">
+				<div style={{ margin: "10px" }}>
+					<Input iconPosition="left" placeholder={userDetails?.name} size="large">
+						<Icon name="user" />
+						<input name="name" value={userDetails?.name} onChange={change} />
+					</Input>
+				</div>
+				<div style={{ margin: "10px" }}>
+					<Input iconPosition="left" placeholder={userDetails?.email} size="large">
+						<Icon name="at" />
+						<input name="email" disabled value={userDetails?.email} onChange={change} />
+					</Input>
+				</div>
+				<div style={{ margin: "10px" }}>
+					<Input iconPosition="left" placeholder={userDetails.mobile ? userDetails.mobile : "Please Update"} size="large">
+						<Icon name="phone" />
+						<input name="mobile" value={userDetails.mobile} onChange={change} />
+					</Input>
+				</div>
 
-        <Button onClick={update}>Edit Details</Button>
-      </div>
-    </Container>
-  );
-	
+				<Button onClick={update}>Edit Details</Button>
+			</div>
+		</Container>
+	);
 };
 export default EditProfile;

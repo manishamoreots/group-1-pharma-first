@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import SignByGoogle from "./SignByGoogle";
+
 const LoginSignUpModal = ({ title, btnType }) => {
 	let navigate = useNavigate();
 	const dispatch = useDispatch();
@@ -26,6 +27,7 @@ const LoginSignUpModal = ({ title, btnType }) => {
 		if (!errors.message) {
 			setTimeout(() => {
 				setOpen(false);
+
 				navigate("/");
 			}, 1000);
 		} else {
